@@ -15,6 +15,15 @@
     </head>
     <body>
 
+        {# Confirm mail sent in the form contact #}
+        {% for message in app.flashes('success') %}
+        <div class="alert-success">
+            {{ message }}
+        </div>
+        {% endfor %}
+
+        
+        {# Link logou appear if user logged #}
         {% if app.user %}
         <a href="{{ path('app_logout') }}">Logout</a>
         {% endif %}
