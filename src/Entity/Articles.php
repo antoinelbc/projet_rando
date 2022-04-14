@@ -31,10 +31,18 @@ class Articles
     #[ORM\ManyToMany(targetEntity: Categories::class, inversedBy: 'articles')]
     private $category;
 
+    #[ORM\OneToMany(mappedBy: 'article', targetEntity: Comments::class)]
+    private $comment;
+
     public function __construct()
     {
         $this->category = new ArrayCollection();
-        $this->published_date = new \DateTime('now');
+        /* $this->published_date = new \DateTime('now'); */
+        $this->comment = new ArrayCollection();
+    }
+
+    public function __toString() {
+        return $this->id;
     }
 
     public function getId(): ?int
@@ -113,4 +121,36 @@ class Articles
 
         return $this;
     }
+
+    /**
+     * @return Collection<int, Comments>
+     */
+    public function getComment(): Collection
+    {
+        return $this->comment;
+    }
+
+    public function addComment(Comments $comment): self
+    {
+        if (!$this->comment->contains($comment)) {
+            $this->comment[] = $comment;
+            $comment->setArticle($this);
+        }
+
+        return $this;
+    }
+
+    public function removeComment(Comments $comment): self
+    {
+        if ($this->comment->removeElement($comment)) {
+            // set the owning side to null (unless already changed)
+            if ($comment->getArticle() === $this) {
+                $comment->setArticle(null);
+            }
+        }
+
+        return $this;
+    }
 }
+
+

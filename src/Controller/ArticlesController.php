@@ -32,8 +32,8 @@ class ArticlesController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $article->setUser($this->getUser());
             $article->setPublishedDate(new DateTime("now"));
-/*             dump([$form->isSubmitted(), $form->isValid()]);
- */            $articlesRepository->add($article);
+            //dump([$form->isSubmitted(), $form->isValid()]);
+            $articlesRepository->add($article);
             return $this->redirectToRoute('app_articles_index', [], Response::HTTP_SEE_OTHER);
         }
 
