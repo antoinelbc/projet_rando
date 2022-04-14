@@ -44,6 +44,10 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         $this->articles = new ArrayCollection();
     }
+    
+    public function __toString() {
+        return $this->id;
+    } 
 
     public function getId(): ?int
     {

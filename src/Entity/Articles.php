@@ -25,7 +25,7 @@ class Articles
     private $published_date;
 
     #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'articles')]
-    #[ORM\JoinColumn(nullable: false)]
+    #[ORM\JoinColumn(nullable: true)]
     private $user;
 
     #[ORM\ManyToMany(targetEntity: Categories::class, inversedBy: 'articles')]
@@ -34,6 +34,7 @@ class Articles
     public function __construct()
     {
         $this->category = new ArrayCollection();
+        $this->published_date = new \DateTime('now');
     }
 
     public function getId(): ?int
