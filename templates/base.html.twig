@@ -23,7 +23,7 @@
         {% endfor %}
 
         
-        {# Link logou appear if user logged #}
+        {# Logout link appear if user logged #}
         {% if app.user %}
         <a href="{{ path('app_logout') }}">Logout</a>
         {% endif %}
