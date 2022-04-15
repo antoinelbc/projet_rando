@@ -35,4 +35,15 @@
     <a href="{{ path('app_articles_edit', {'id': article.id}) }}">edit</a>
 
     {{ include('articles/_delete_form.html.twig') }}
+
+    <h2>Commentaires</h2>
+
+    {% for comment in article.comment %}
+        <p>{{comment.content}}</p>
+        <p>{{comment.user.email}}</p>
+    {% endfor %}
+
+    <h2>Laisser un commentaire</h2>
+    {{ include('comments/_form.html.twig') }}
+
 {% endblock %}

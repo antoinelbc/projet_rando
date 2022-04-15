@@ -3,8 +3,14 @@
 namespace App\Controller;
 
 use App\Entity\Articles;
+//
+use App\Entity\Comments;
 use App\Form\ArticlesType;
+//
+use App\Form\CommentsType;
 use App\Repository\ArticlesRepository;
+//
+use App\Repository\CommentsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -14,6 +20,9 @@ use DateTime;
 #[Route('/articles')]
 class ArticlesController extends AbstractController
 {
+    public function __construct(private CommentsRepository $commentsRepository){  
+    }
+
     #[Route('/', name: 'app_articles_index', methods: ['GET'])]
     public function index(ArticlesRepository $articlesRepository): Response
     {
@@ -43,10 +52,26 @@ class ArticlesController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'app_articles_show', methods: ['GET'])]
-    public function show(Articles $article): Response
+    #[Route('/{id}', name: 'app_articles_show', methods: ['GET', 'POST'])]
+    public function show(Request $request, Articles $article): Response
     {
+    //
+        $comment = new Comments();
+        $form = $this->createForm(CommentsType::class, $comment);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $comment
+                ->setArticle($article)
+                ->setUser($this->getUser())
+                ->setPublishedDate(new DateTime("now"));
+            $this->commentsRepository->add($comment);
+            // return $this->redirectToRoute('app_comment_index', [], Response::HTTP_SEE_OTHER);
+        }
+
         return $this->render('articles/show.html.twig', [
+            'comments' => $comment,
+            'form' => $form->createView(),
             'article' => $article,
         ]);
     }

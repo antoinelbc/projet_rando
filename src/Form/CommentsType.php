@@ -13,9 +13,9 @@ class CommentsType extends AbstractType
     {
         $builder
             ->add('content')
-            ->add('published_date')
-            ->add('article')
-            ->add('user')
+            //->add('published_date')
+            //->add('article')
+            //->add('user')
         ;
     }
 
