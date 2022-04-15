@@ -34,6 +34,9 @@ class Articles
     #[ORM\OneToMany(mappedBy: 'article', targetEntity: Comments::class)]
     private $comment;
 
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private $picture;
+
     public function __construct()
     {
         $this->category = new ArrayCollection();
@@ -148,6 +151,18 @@ class Articles
                 $comment->setArticle(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getPicture(): ?string
+    {
+        return $this->picture;
+    }
+
+    public function setPicture(?string $picture): self
+    {
+        $this->picture = $picture;
 
         return $this;
     }
