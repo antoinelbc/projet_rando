@@ -12,27 +12,27 @@
                 <td>{{ article.id }}</td>
             </tr>
             <tr>
-                <th>Title</th>
+                <th>Titre</th>
                 <td>{{ article.title }}</td>
             </tr>
             <tr>
-                <th>Content</th>
+                <th>Contenu</th>
                 <td>{{ article.content }}</td>
             </tr>
             <tr>
-                <th>Published_date</th>
+                <th>Date de publication</th>
                 <td>{{ article.publishedDate ? article.publishedDate|date('Y-m-d') : '' }}</td>
             </tr>
             <tr>
-                <th>Author</th>
+                <th>Auteur</th>
                 <td>{{ article.user.username }}</td>
             </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('app_articles_index') }}">back to list</a>
+    <a href="{{ path('app_articles_index') }}">Retour</a>
 
-    <a href="{{ path('app_articles_edit', {'id': article.id}) }}">edit</a>
+    <a href="{{ path('app_articles_edit', {'id': article.id}) }}">Modifier</a>
 
     {{ include('articles/_delete_form.html.twig') }}
 

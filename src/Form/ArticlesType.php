@@ -47,8 +47,8 @@ class ArticlesType extends AbstractType
                     new File([
                         'maxSize' => '1024k',
                         'mimeTypes' => [
-                            'application/jpg',
-                            'application/jpeg',
+                            'image/jpg',
+                            'image/jpeg',
                         ],
                         'mimeTypesMessage' => 'Veuillez fournir une extension de fichier valide ',
                     ])

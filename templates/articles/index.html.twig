@@ -9,10 +9,10 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Title</th>
-                <th>Content</th>
-                <th>Published_date</th>
-                <th>actions</th>
+                <th>Titre</th>
+                <th>Contenu</th>
+                <th>Date de publication</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -23,17 +23,17 @@
                 <td>{{ article.content }}</td>
                 <td>{{ article.publishedDate ? article.publishedDate|date('Y-m-d') : '' }}</td>
                 <td>
-                    <a href="{{ path('app_articles_show', {'id': article.id}) }}">show</a>
-                    <a href="{{ path('app_articles_edit', {'id': article.id}) }}">edit</a>
+                    <a href="{{ path('app_articles_show', {'id': article.id}) }}">Voir l'article</a>
+                    <a href="{{ path('app_articles_edit', {'id': article.id}) }}">Modifier</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="5">no records found</td>
+                <td colspan="5">Aucun article trouvé</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('app_articles_new') }}">Create new</a>
+    <a href="{{ path('app_articles_new') }}">Créer un nouvel article</a>
 {% endblock %}
