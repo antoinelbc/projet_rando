@@ -40,7 +40,7 @@ class Articles
     public function __construct()
     {
         $this->category = new ArrayCollection();
-        /* $this->published_date = new \DateTime('now'); */
+        //$this->published_date = new \DateTime('now');
         $this->comment = new ArrayCollection();
     }
 
@@ -167,5 +167,3 @@ class Articles
         return $this;
     }
 }
-
-

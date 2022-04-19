@@ -49,7 +49,12 @@ class CommentsController extends AbstractController
 
     #[Route('/{id}/edit', name: 'app_comments_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Comments $comment, CommentsRepository $commentsRepository): Response
-    {
+    {   
+        //
+        if($comment->getUser() != $this->getUser()){ 
+            return $this->json(['code' => 403, 'erreur' => 'Vous ne pouvez pas modifier le message d\'un autre utilisateur  !'], 403);
+            }
+        else{
         $form = $this->createForm(CommentsType::class, $comment);
         $form->handleRequest($request);
 
@@ -62,6 +67,7 @@ class CommentsController extends AbstractController
             'comment' => $comment,
             'form' => $form,
         ]);
+    }
     }
 
     #[Route('/{id}', name: 'app_comments_delete', methods: ['POST'])]

@@ -89,6 +89,7 @@ class ArticlesController extends AbstractController
         ]);
     }
 
+
     #[Route('/{id}', name: 'app_articles_show', methods: ['GET', 'POST'])]
     public function show(Request $request, Articles $article): Response
     {
@@ -112,6 +113,9 @@ class ArticlesController extends AbstractController
         ]);
     }
 
+    /**
+    * @IsGranted("ROLE_ADMIN")
+    */
     #[Route('/{id}/edit', name: 'app_articles_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Articles $article, ArticlesRepository $articlesRepository): Response
     {
@@ -129,6 +133,9 @@ class ArticlesController extends AbstractController
         ]);
     }
 
+    /**
+     * @IsGranted("ROLE_ADMIN")
+     */
     #[Route('/{id}', name: 'app_articles_delete', methods: ['POST'])]
     public function delete(Request $request, Articles $article, ArticlesRepository $articlesRepository): Response
     {
