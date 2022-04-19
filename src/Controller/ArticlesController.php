@@ -86,7 +86,6 @@ class ArticlesController extends AbstractController
     #[Route('/{id}', name: 'app_articles_show', methods: ['GET', 'POST'])]
     public function show(Request $request, Articles $article): Response
     {
-    //
         $comment = new Comments();
         $form = $this->createForm(CommentsType::class, $comment);
         $form->handleRequest($request);

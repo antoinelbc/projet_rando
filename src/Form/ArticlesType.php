@@ -27,7 +27,8 @@ class ArticlesType extends AbstractType
             ->add('category', EntityType::class, [
                 'class' => Categories::class,
                 'choice_label' => 'name',
-                'multiple' => true
+                'multiple' => true,
+                'expanded' => true //Multiple choices
             ])
 
             //Upload image
