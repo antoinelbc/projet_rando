@@ -25,6 +25,7 @@
         
         {# Logout link appear if user logged #}
         {% if app.user %}
+        <p>Bonjour {{ app.user.firstname }}</p>
         <a href="{{ path('app_logout') }}">Déconnexion</a>
         {% endif %}
                 

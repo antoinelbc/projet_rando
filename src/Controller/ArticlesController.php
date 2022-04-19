@@ -20,6 +20,9 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 //
 use Symfony\Component\String\Slugger\SluggerInterface;
+//
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+//
 use DateTime;
 
 #[Route('/articles')]
@@ -36,6 +39,9 @@ class ArticlesController extends AbstractController
         ]);
     }
 
+    /**
+     * @IsGranted("ROLE_ADMIN")
+     */
     #[Route('/new', name: 'app_articles_new', methods: ['GET', 'POST'])]
     public function new(Request $request, ArticlesRepository $articlesRepository, SluggerInterface $slugger): Response
     {
