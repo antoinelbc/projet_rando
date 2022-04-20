@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Articles{% endblock %}
+{% block title %}{{ article.title }}{% endblock %}
 
 {% block body %}
-    <h1>Articles</h1>
+    <h1>{{ article.title }}</h1>
 
     <img src="{{asset('uploads/articles/'~article.picture)}}" alt="#">
     <table class="table">
@@ -23,7 +23,7 @@
             </tr>
             <tr>
                 <th>Date de publication</th>
-                <td>{{ article.publishedDate ? article.publishedDate|date('Y-m-d') : '' }}</td>
+                <td>{{ article.publishedDate ? article.publishedDate|date('d-m-Y', 'Europe/Paris') : '' }}</td>
             </tr>
             <tr>
                 <th>Auteur</th>
@@ -51,7 +51,7 @@
     {% for comment in article.comment %}
         <p>{{comment.content}}</p>
         <p>{{comment.user.username}}</p>
-        <p>{{comment.publishedDate}}</p>
+        <p>{{comment.publishedDate |date('d-m-Y H:i', 'Europe/Paris')}}</p>
         {% if is_granted('ROLE_ADMIN') or comment.user == app.user%}
         <a href="{{ path('app_comments_edit', {'id': comment.id}) }}">Modifier</a>
         <a href="{{ path('app_comments_delete', {'id': comment.id}) }}">Supprimer</a>

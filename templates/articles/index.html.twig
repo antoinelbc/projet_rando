@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Articles index{% endblock %}
+{% block title %}Blog{% endblock %}
 
 {% block body %}
-    <h1>Articles index</h1>
+    <h1>Blog</h1>
 
     <table class="table">
         <thead>
@@ -21,7 +21,7 @@
                 <td>{{ article.id }}</td>
                 <td>{{ article.title }}</td>
                 <td>{{ article.content }}</td>
-                <td>{{ article.publishedDate ? article.publishedDate|date('Y-m-d') : '' }}</td>
+                <td>{{ article.publishedDate ? article.publishedDate|date('d-m-Y', 'Europe/Paris') : '' }}</td>
                 <td>
                     <a href="{{ path('app_articles_show', {'id': article.id}) }}">Voir l'article</a>
 

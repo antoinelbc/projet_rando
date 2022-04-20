@@ -1,13 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Articles{% endblock %}
+{% block title %}Modifier un article{% endblock %}
 
 {% block body %}
-    <h1>Edit Articles</h1>
+    <h1>Modifier un article</h1>
 
-    {{ include('articles/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('articles/_form.html.twig', {'button_label': 'Editer'}) }}
 
-    <a href="{{ path('app_articles_index') }}">back to list</a>
+    <a href="{{ path('app_articles_index') }}">Retour</a>
 
     {{ include('articles/_delete_form.html.twig') }}
 {% endblock %}
