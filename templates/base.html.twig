@@ -1,38 +1,83 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Welcome!{% endblock %}</title>    
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>"
+    />
+    {# Run `composer require symfony/webpack-encore-bundle` to start using
+    Symfony UX #} 
+    
+    {% block stylesheets %}
+    <link rel="stylesheet" href="#">
+    {{
+      encore_entry_link_tags("app")
+    }}
+    {% endblock %} 
+  </head>
+  <body>
+    <header>
+      <nav class="main-nav">
+        <ul class="main-nav_list">
+          <li class="main-nav__item">
+            <a href="/" class="main-nav__link">Accueil</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="/about" class="main-nav__link">A propos</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="/activities" class="main-nav__link">Activités</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="/articles" class="main-nav__link">Blog</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="/prices" class="main-nav__link">Tarifs</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="/contact" class="main-nav__link">Contact</a>
+          </li>
+          {# Logout link appear if user logged #} 
+          {% if app.user %}
+          <p>Bonjour {{ app.user.firstname }}</p>
+          <a href="{{ path('app_logout') }}">Déconnexion</a>
+          {% else %}
+          <li class="main-nav__item">
+              <a href="/login" class="main-nav__link">Se connecter</a>
+          </li>
+          <li class="main-nav__item">
+              <a href="/register" class="main-nav__link">S'inscrire</a>
+          </li>
+          {% endif %}
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head>
-    <body>
+        </ul>
+      </nav>
+  </header>
+  <main>
+    {% block body %}
+    
+    {% endblock %}
+  </main>
+  <footer class="footer">
+    
+    &copy; Copyright 2022 by <a href="#">Me</a>.
+  </footer>
+  
 
-        {# Confirm mail sent in the form contact #}
-        {% for message in app.flashes('success') %}
-        <div class="alert-success">
-            {{ message }}
-        </div>
-        {% endfor %}
+    {# Confirm mail sent in the form contact #} 
+    {% for message in app.flashes('success') %}
+    <div class="alert-success">
+      {{ message }}
+    </div>
+    {% endfor %} 
 
-        
-        {# Logout link appear if user logged #}
-        {% if app.user %}
-        <p>Bonjour {{ app.user.firstname }}</p>
-        <a href="{{ path('app_logout') }}">Déconnexion</a>
-        {% endif %}
-                
-        {% block body %}
-
-      
-        {% endblock %}
-    </body>
+    {% block javascripts %}
+    {{
+      encore_entry_script_tags("app")
+    }}
+    {% endblock %}
+  </body>
 </html>
-
