@@ -1,0 +1,59 @@
+/* :root{
+    --green--rgb: 80, 110, 85;
+    --green: rgb(var(--green--rgb));
+    --green-transparent--rgba: 80, 110, 85, 0.8;
+    --green-transparent: rgba(var(--green-transparent--rgba));
+    --grey--rgb: 175, 188, 187;
+    --grey: rgb(var(--grey--rgb));
+    --blue-grey--rgb: 132, 170, 183;
+    --blue-grey: rgb(var(--blue-grey--rgb));
+    --blue--rgb: 84, 139, 176;
+    --blue: rgb(var(--blue--rgb));
+    --dark-blue--rgb: 18, 57, 79;
+    --dark-blue: rgb(var(--dark-blue--rgb));
+  } */
+  
+  html {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* position: fixed; */
+    font-size: 62.5%;
+  }
+  
+  body {
+    flex: 1 0;
+    font-size: 1.6rem;
+    /*font-family: 'Quicksand', sans-serif;*/
+  }
+  
+  html,
+  body {
+    overflow: auto;
+  }
+  
+  ul{
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  
+  
+  /* global_container */
+  
+  .global-container {
+    margin: 0 auto;
+    max-width: 1400px;
+  }
+  
+  
+  /*Titles/
+  
+  /*Components*/
+  
+  
+  

@@ -7,24 +7,29 @@
         <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
 
-    <form action="{{ path('app_login') }}" method="post">
-        <label for="username">Email : </label>
-        <input type="text" id="username" name="_username" value="{{ last_username }}"/>
+    <div class="global-container">
+        <div class="login-form_container">
+            <form action="{{ path('app_login') }}" method="post">
+                <label for="username">Email : </label>
+                <input type="text" id="username" name="_username" value="{{ last_username }}"/>
 
-        <label for="password">Mot de passe :</label>
-        <input type="password" id="password" name="_password"/>
+                <label for="password">Mot de passe :</label>
+                <input type="password" id="password" name="_password"/>
 
-        {# Redirection after login #}
-        <input type="hidden" name="_target_path" value="/"/>
+                {# Redirection after login #}
+                <input type="hidden" name="_target_path" value="/"/>
 
 
-        <button type="submit">Connexion</button>
-    </form>
-
+                <button type="submit">Connexion</button>
+            </form>
+        </div>
     
     {% if not app.user %}
     <a href="{{ path('app_forgot_password_request') }}">Mot de passe oublié ?</a>
+    <p>Si vous n'êtes pas encore inscrit, vous pouvez <a href="/register">créer un compte</a></p>
     {% endif %}
+
+</div>
 
 
 {% endblock %}
