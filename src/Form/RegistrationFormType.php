@@ -7,6 +7,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\IsTrue;
@@ -18,10 +19,21 @@ class RegistrationFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('username', TextType::class , ['label' => 'Pseudo'])
-            ->add('first_name', TextType::class , ['label' => 'Prénom'])
-            ->add('last_name', TextType::class , ['label' => 'Nom'])
-            ->add('email') 
+            ->add('username', TextType::class , [
+                'label' => 'Pseudo',
+                'attr' => ['class' => 'form-input']
+                ])
+            ->add('first_name', TextType::class , [
+                'label' => 'Prénom',
+                'attr' => ['class' => 'form-input']
+                ])
+            ->add('last_name', TextType::class , [
+                'label' => 'Nom',
+                'attr' => ['class' => 'form-input']
+                ])
+            ->add('email', EmailType::class, [
+                'attr' => ['class' => 'form-input']
+            ]) 
             ->add('agreeTerms', CheckboxType::class, [
                 'label' => 'Accepter les conditions',
                 'mapped' => false,
@@ -35,7 +47,7 @@ class RegistrationFormType extends AbstractType
                 // instead of being set onto the object directly,
                 // this is read and encoded in the controller
                 'mapped' => false,
-                'attr' => ['autocomplete' => 'new-password'],
+                'attr' => ['autocomplete' => 'new-password', 'class' => 'form-input'],
                 'constraints' => [
                     new NotBlank([
                         'message' => 'Please enter a password',

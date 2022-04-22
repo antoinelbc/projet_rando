@@ -1,8 +1,11 @@
 .footer_container {
   display: flex;
-  padding: 40px 0px 24px 0px;
+  padding: 40px 0px 0px 0px;
   background-color: grey;
   gap: 32px;
+    h2{
+      padding-bottom: 24px;
+    }
 }
 
 .footer-start_container {

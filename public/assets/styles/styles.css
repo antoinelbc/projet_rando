@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
 *,
 ::after,
 ::before {
@@ -281,6 +282,7 @@ template {
   object-fit: contain;
 }
 
+/* Fonts */
 /* :root{
     --green--rgb: 80, 110, 85;
     --green: rgb(var(--green--rgb));
@@ -307,7 +309,8 @@ html {
 body {
   flex: 1 0;
   font-size: 1.6rem;
-  /*font-family: 'Quicksand', sans-serif;*/
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
 }
 
 html,
@@ -327,6 +330,7 @@ a {
 .global-container {
   margin: 0 auto;
   max-width: 1400px;
+  padding: 0px 16px;
 }
 
 /*Titles/
@@ -343,7 +347,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   padding: 24px;
-  gap: 16px;
+  gap: 32px;
 }
 
 .main-nav__link {
@@ -397,9 +401,12 @@ a {
 
 .footer_container {
   display: flex;
-  padding: 40px 0px 24px 0px;
+  padding: 40px 0px 0px 0px;
   background-color: grey;
   gap: 32px;
+}
+.footer_container h2 {
+  padding-bottom: 24px;
 }
 
 .footer-start_container {
@@ -488,6 +495,158 @@ a {
   background-color: green;
   border-radius: 4px;
   box-shadow: 1px 1px 5px black;
+}
+
+/* LOGIN FORM */
+.login-form_container {
+  height: 160px;
+  display: flex;
+  align-items: center;
+}
+
+.form {
+  width: 342px;
+  height: 110px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  background-color: grey;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px black;
+}
+
+.form-field {
+  display: flex;
+  position: relative;
+}
+
+.form-field:first-of-type {
+  padding-top: 16px;
+}
+
+.form-icon {
+  display: flex;
+  justify-content: center;
+  width: 27px;
+  padding: 6px;
+  background-color: white;
+  box-shadow: 1px 1px 4px black;
+}
+
+.form-input {
+  padding: 4px;
+  border: none;
+  width: 240px;
+  background: white;
+  box-shadow: 1px 1px 3px black;
+}
+
+.submit-btn {
+  width: 44px;
+  border-radius: 26px;
+  height: 46px;
+  position: absolute;
+  left: 318px;
+  top: 32px;
+  background-color: grey;
+  border: none;
+  cursor: pointer;
+  box-shadow: 1px 1px 3px black;
+}
+.submit-btn .fa-circle-arrow-right {
+  font-size: 3rem;
+}
+
+.form-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* REGISTER FORM */
+.register-form_container {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: pink;
+}
+
+.register-form_container form {
+  height: 432px;
+  position: relative;
+  background: grey;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px black;
+}
+.register-form_container form div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.register-form_container form div:last-of-type {
+  flex-direction: row;
+}
+
+.submit-btn_register {
+  left: 232px;
+  top: 378px;
+}
+
+.contact-form_container {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: salmon;
+}
+
+.contact-form {
+  width: 700px;
+  height: 420px;
+  position: relative;
+  background: grey;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px black;
+}
+.contact-form div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.contact-form .form-control {
+  padding: 4px;
+  border: none;
+  background: white;
+  box-shadow: 1px 1px 3px black;
+}
+.contact-form #contact_message {
+  resize: none;
+}
+
+.contact-submit_container {
+  align-items: center;
+}
+
+.submit-btn_contact {
+  padding: 8px;
+  width: 100px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px black;
 }
 
 /*# sourceMappingURL=styles.css.map */

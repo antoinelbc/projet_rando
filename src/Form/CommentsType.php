@@ -6,13 +6,17 @@ use App\Entity\Comments;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+
 
 class CommentsType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('content')
+            ->add('content',TextareaType::class, [
+                'label' => false
+            ])
             //->add('published_date')
             //->add('article')
             //->add('user')

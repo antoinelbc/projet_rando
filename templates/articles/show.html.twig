@@ -58,8 +58,9 @@
         {% endif %}
     {% endfor %}
 
+    {% if app.user %}
     <h2>Laisser un commentaire</h2>
     {{ include('comments/_form.html.twig') }}
-
+    {% endif %}
 
 {% endblock %}

@@ -9,6 +9,7 @@
 
     <h1>Inscription</h1>
 
+    <div class="register-form_container">
     {{ form_start(registrationForm) }}
         {{ form_row(registrationForm.username ) }}
         {{ form_row(registrationForm.first_name ) }}
@@ -19,6 +20,7 @@
         }) }}
         {{ form_row(registrationForm.agreeTerms) }}
 
-        <button type="submit" class="btn">S'inscrire</button>
+        <button type="submit" class="btn submit-btn submit-btn_register"><i class="fa-solid fa-circle-arrow-right"></i></button>
     {{ form_end(registrationForm) }}
+    </div>
 {% endblock %}

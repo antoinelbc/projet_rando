@@ -1,3 +1,6 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+
 /* :root{
     --green--rgb: 80, 110, 85;
     --green: rgb(var(--green--rgb));
@@ -25,7 +28,8 @@
   body {
     flex: 1 0;
     font-size: 1.6rem;
-    /*font-family: 'Quicksand', sans-serif;*/
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
   }
   
   html,
@@ -41,13 +45,13 @@
     text-decoration: none;
   }
 
-  
-  
+
   /* global_container */
   
   .global-container {
     margin: 0 auto;
     max-width: 1400px;
+    padding: 0px 16px;
   }
   
   
