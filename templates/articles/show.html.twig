@@ -11,11 +11,14 @@
     <h1 class="article_title">{{ article.title }}</h1>
 
     <div class="article_info">
-        {% for category in article.category %}
-        <div class="show_categories_container">
-            <span class="show_categories">{{category.name}}</span>
+        <div class="categories_container">
+            {% for category in article.category %}
+            
+                <div class="show_categories_container">
+                <span class="show_categories">{{category.name}}</span>
+                </div>
+            {% endfor %}
         </div>
-        {% endfor %}
         <div class="article_author-date">
         <p>{{ article.user.username }}</p>
         <p>{{ article.publishedDate ? article.publishedDate|date('d-m-Y', 'Europe/Paris') : '' }}</p>
@@ -53,8 +56,9 @@
         <a href="{{ path('app_comments_edit', {'id': comment.id}) }}">Modifier</a>
         <a href="{{ path('app_comments_delete', {'id': comment.id}) }}">Supprimer</a>
         {% endif %}
-    {% endfor %}
     </div>
+    {% endfor %}
+    
 
     {% if app.user %}
     <h2>Laisser un commentaire</h2>
