@@ -3,64 +3,65 @@
 {% block title %}{{ article.title }}{% endblock %}
 
 {% block body %}
-    <h1>{{ article.title }}</h1>
 
+<div class="global-container">
+    <div class="article_container">
     <img src="{{asset('uploads/articles/'~article.picture)}}" alt="#">
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ article.id }}</td>
-            </tr>
-            <tr>
-                <th>Titre</th>
-                <td>{{ article.title }}</td>
-            </tr>
 
-            <tr>
-                <th>Contenu</th>
-                <td>{{ article.content }}</td>
-            </tr>
-            <tr>
-                <th>Date de publication</th>
-                <td>{{ article.publishedDate ? article.publishedDate|date('d-m-Y', 'Europe/Paris') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Auteur</th>
-                <td>{{ article.user.username }}</td>
-            </tr>
-        </tbody>
-    </table>
+    <h1 class="article_title">{{ article.title }}</h1>
 
-    <a href="{{ path('app_articles_index') }}">Retour</a>
+    <div class="article_info">
+        {% for category in article.category %}
+        <div class="show_categories_container">
+            <span class="show_categories">{{category.name}}</span>
+        </div>
+        {% endfor %}
+        <div class="article_author-date">
+        <p>{{ article.user.username }}</p>
+        <p>{{ article.publishedDate ? article.publishedDate|date('d-m-Y', 'Europe/Paris') : '' }}</p>
+        </div>
+    </div>
+
+    <div class="article-content_container">
+        <p>{{ article.content }}</p>
+    </div>
+
+    <a href="{{ path('app_articles_index') }}">Retour à la liste des articles</a>
 
     {% if is_granted('ROLE_ADMIN') %}
         <a href="{{ path('app_articles_edit', {'id': article.id}) }}">Modifier</a>
     {% endif %}
  
-    {{ include('articles/_delete_form.html.twig') }}
+    {{ include('articles/_delete_form.html.twig') }} 
+</div>
 
-    <h2>Catégories de l'article</h2>
-              
-    {% for category in article.category %}
-    <span>{{category.name}}</span>
-    {% endfor %}
+<div class="comments-section_container">
+    <h2 class="comments_title">Commentaires</h2>
 
-    <h2>Commentaires</h2>
-
+    <div class="comments_container">
     {% for comment in article.comment %}
-        <p>{{comment.content}}</p>
+    <div class="comment">
+        <div class="comment_info">
         <p>{{comment.user.username}}</p>
         <p>{{comment.publishedDate |date('d-m-Y H:i', 'Europe/Paris')}}</p>
+        </div>
+        <div class="comment_content">
+        <p>{{comment.content}}</p>
+        </div>
+       
         {% if is_granted('ROLE_ADMIN') or comment.user == app.user%}
         <a href="{{ path('app_comments_edit', {'id': comment.id}) }}">Modifier</a>
         <a href="{{ path('app_comments_delete', {'id': comment.id}) }}">Supprimer</a>
         {% endif %}
     {% endfor %}
+    </div>
 
     {% if app.user %}
     <h2>Laisser un commentaire</h2>
     {{ include('comments/_form.html.twig') }}
     {% endif %}
+    </div>
+</div>
+</div>
 
 {% endblock %}

@@ -376,27 +376,34 @@ a {
   opacity: 0.7;
 }
 
-.main-nav__item {
-  display: block;
-  position: relative;
-}
-
 .main-nav__submenu {
   display: none;
 }
 
-.main-nav__item:hover .main-nav__submenu {
-  display: block;
-  position: absolute;
-  top: 50px;
-  left: 0;
-  background-color: #2c3840;
-  flex-direction: column;
-  width: 220px;
-}
-
 .fa-circle-user {
   font-size: 2.5rem;
+}
+
+.submenu_container {
+  display: none;
+  background-color: black;
+}
+
+.submenu_list {
+  display: flex;
+  flex-direction: column;
+}
+
+.subemenu_item {
+  position: relative;
+}
+
+.main-nav__item:hover .submenu_container {
+  display: block;
+  position: absolute;
+  top: 52px;
+  right: -134px;
+  width: 222px;
 }
 
 .footer_container {
@@ -647,6 +654,89 @@ a {
   cursor: pointer;
   border-radius: 5px;
   box-shadow: 1px 1px 3px black;
+}
+
+/* Show Articles */
+.article_container {
+  display: flex;
+  flex-direction: column;
+  background: #d2d4dc;
+}
+
+.article_title,
+.comments_title {
+  text-align: center;
+}
+
+/* .article_info{
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+ */
+.article_info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.show_categories {
+  background: rgba(130, 139, 178, 0.11);
+  padding: 8px;
+}
+
+.article_author-date {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.article-content_container {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.comments-section_container {
+  /*   display: flex;
+  flex-direction: column;
+  align-items: center; */
+  padding-top: 40px;
+  background: salmon;
+}
+
+.comments_container {
+  display: flex;
+  justify-content: center;
+  padding: 16px 0px;
+}
+
+.comment {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+  gap: 8px;
+  background: #e5e6eb;
+  padding: 24px 0px;
+  border-radius: 4px;
+}
+
+.comment_info {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 4px;
+  box-shadow: 0px 2px 0px black;
+}
+
+.comment_content {
+  display: flex;
 }
 
 /*# sourceMappingURL=styles.css.map */
