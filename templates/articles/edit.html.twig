@@ -6,8 +6,7 @@
     <h1>Modifier un article</h1>
 
     {{ include('articles/_form.html.twig', {'button_label': 'Editer'}) }}
+    {{ include('articles/_delete_form.html.twig') }}
 
     <a href="{{ path('app_articles_index') }}">Retour</a>
-
-    {{ include('articles/_delete_form.html.twig') }}
 {% endblock %}

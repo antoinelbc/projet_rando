@@ -50,7 +50,7 @@
               {# Logout link appear if user logged #} 
               {% if app.user %}
               <span class="hello_user">Bonjour {{ app.user.firstname }}</span>
-              <a href="{{ path('app_logout') }}" class="main-nav__link">Déconnexion</a>
+              <a href="{{ path('app_logout') }}" class="main-nav__link">Se déconnecter</a>
               {% else %}
               <li class="main-nav__item">
                 <a href="/login" class="main-nav__link">

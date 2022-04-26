@@ -1,10 +1,12 @@
 .footer_container {
   display: flex;
   padding: 40px 0px 0px 0px;
-  background-color: grey;
+  background-color: #fefefe;
   gap: 32px;
+  box-shadow: 1px 1px 5px #808080;
     h2{
       padding-bottom: 24px;
+      color: #428a13;
     }
 }
 
@@ -25,7 +27,7 @@
 
 .footer-menu_container {
   padding-bottom: 12px;
-  box-shadow: 0px 2px 0px black;
+  box-shadow: 0px 2px 0px #428a13;
 }
 
 .footer-menu_list {
@@ -44,6 +46,10 @@
 .footer-menu__link,
 .footer-legal__link {
   color: black;
+}
+
+.footer-menu__link:hover{
+  color: #f5d24b;
 }
 
 .footer-legal_container {
@@ -82,6 +88,10 @@
 .fa-brands {
   color: black;
   font-size: 3rem;
+}
+
+.fa-brands:hover{
+  color:#f5d24b;
 }
 
 .footer-button_container {
