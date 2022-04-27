@@ -11,6 +11,8 @@ use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 //
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Validator\Constraints\File;
 
 class ArticlesType extends AbstractType
@@ -18,14 +20,22 @@ class ArticlesType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('title')
-            ->add('content')
+            ->add('title', TextType::class , [
+                'label' => 'Titre de l\'article',
+                'attr' => ['class' => 'new-article_input']
+            ])
+            ->add('content',TextareaType::class, [
+                'label' => 'Contenu de l\'article',
+                'attr' => ['rows' => 20, 'class' => 'new-article_input']
+            ]) 
+            
             //->add('published_date')
            //->add('user')
            
            //Access to the property name of the Categories Class
             ->add('category', EntityType::class, [
                 'class' => Categories::class,
+                'label' => 'Catégorie(s)',
                 'choice_label' => 'name',
                 'multiple' => true,
                 'expanded' => true //Multiple choices
@@ -34,6 +44,7 @@ class ArticlesType extends AbstractType
             //Upload image
             ->add('image', FileType::class, [
                 'label' => 'Insérer une image d\'en tête (format jpg ou jpeg)',
+                'attr' => ['class' => 'new-article_input'],
 
                 // unmapped means that this field is not associated to any entity property
                 'mapped' => false,

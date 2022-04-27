@@ -15,7 +15,8 @@ class CommentsType extends AbstractType
     {
         $builder
             ->add('content',TextareaType::class, [
-                'label' => false
+                'label' => false,
+                'attr' => ['class' => 'comment-input']
             ])
             //->add('published_date')
             //->add('article')

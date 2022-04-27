@@ -1,4 +1,8 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Envoyer') }}</button>
+{{ form_widget(form) }}
+<div class="comment-submit_container">
+  <button class="btn article-action_button">
+    {{ button_label|default('Envoyer') }}
+  </button>
+</div>
 {{ form_end(form) }}
