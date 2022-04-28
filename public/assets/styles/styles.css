@@ -337,6 +337,14 @@ a {
 /*Titles/
 
 /*Components*/
+.mountain-background {
+  height: 15em;
+  background-image: url("../images/mountain-background.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: repeat;
+}
+
 .main-nav_container {
   display: flex;
   justify-content: center;
@@ -415,6 +423,11 @@ a {
   top: 56px;
   right: -134px;
   width: 222px;
+}
+
+.hello_user span {
+  font-weight: bold;
+  color: #428a13;
 }
 
 .footer_container {
@@ -523,6 +536,52 @@ a {
   background-color: green;
   border-radius: 4px;
   box-shadow: 1px 1px 5px black;
+}
+
+/* Reset Password */
+/* General Components */
+.reset-password_container,
+.reset-password-form_container form {
+  display: flex;
+  gap: 16px;
+}
+
+.reset-password_container {
+  flex-direction: column;
+}
+
+.reset-password-form_container form {
+  position: relative;
+}
+.reset-password-form_container form div {
+  display: flex;
+  gap: 8px;
+}
+.reset-password-form_container form div label {
+  color: #428a13;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.reset-password-form_container form div input {
+  width: 24em;
+  height: 1.8em;
+  padding: 4px;
+  background: #fefefe;
+  box-shadow: 0px 0px 1px black;
+}
+.reset-password-form_container form div input:focus {
+  outline: none;
+  box-shadow: 1px 1px rgba(66, 138, 19, 0.8), -1px -1px rgba(66, 138, 19, 0.8);
+}
+.reset-password-form_container form .submit-btn {
+  width: 2.6em;
+  height: 2.6em;
+  top: -0.5em;
+  left: 28.2em;
+}
+.reset-password-form_container form .submit-btn .fa-circle-arrow-right {
+  font-size: 2.2rem;
 }
 
 /* LOGIN FORM */
@@ -668,19 +727,26 @@ a {
   top: 37em;
 }
 
+.contact-page_container {
+  height: 42em;
+  background-image: url("../images/mountain_refuge.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .contact-form_container {
   height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: salmon;
 }
 
 .contact-form {
   width: 700px;
   height: 420px;
   position: relative;
-  background: grey;
+  background-color: #fefefe;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -693,11 +759,19 @@ a {
   flex-direction: column;
   gap: 8px;
 }
+.contact-form div label {
+  font-weight: bold;
+  color: #428a13;
+}
 .contact-form .form-control {
   padding: 4px;
   border: none;
   background: white;
   box-shadow: 1px 1px 3px black;
+}
+.contact-form .form-control:focus {
+  outline: none;
+  box-shadow: 1px 1px rgba(66, 138, 19, 0.8), -1px -1px rgba(66, 138, 19, 0.8);
 }
 .contact-form #contact_message {
   resize: none;
@@ -710,10 +784,20 @@ a {
 .submit-btn_contact {
   padding: 8px;
   width: 100px;
+  font-weight: bold;
   border: none;
   cursor: pointer;
   border-radius: 5px;
   box-shadow: 1px 1px 3px black;
+  color: #fefefe;
+  background-color: #428a13;
+  transition: 0.5s;
+}
+
+.submit-btn_contact:hover {
+  background-color: #54952a;
+  color: #fefefe;
+  box-shadow: 1px 1px 5px black;
 }
 
 /* Show Articles */
@@ -839,6 +923,7 @@ a {
   display: flex;
   justify-content: space-evenly;
   padding: 48px 0px;
+  gap: 48px;
 }
 
 .article-card {
@@ -846,6 +931,7 @@ a {
   background: #f1f3f1;
   border-radius: 4px;
   box-shadow: àpx 0px 1px black;
+  cursor: grab;
 }
 
 .article-card_picture {
@@ -889,6 +975,10 @@ a {
   color: white;
   background-color: #428a13;
   /*   background-position: -100% 100%; */
+}
+
+.tns-visually-hidden {
+  display: none;
 }
 
 /* New Article */
@@ -975,6 +1065,33 @@ a {
 /* Edit Article */
 .article-admin-edit-form {
   padding-bottom: 24px;
+}
+
+.categories-table_container table {
+  width: 50%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+.categories-table_container table thead {
+  background-color: #f5d24b;
+}
+.categories-table_container table thead th {
+  padding: 8px;
+}
+.categories-table_container table tbody tr {
+  background: #fefefe;
+}
+.categories-table_container table tbody tr:nth-child(2n) {
+  background-color: #ddd;
+}
+.categories-table_container table td {
+  text-align: center;
+  padding: 8px;
+}
+.categories-table_container table .actions-btn_container {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
 }
 
 .home-header_image {

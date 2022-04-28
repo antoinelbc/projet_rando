@@ -146,19 +146,26 @@
 
 //CONTACT FORM
 
+.contact-page_container{
+  height: 42em;
+  background-image: url("../images/mountain_refuge.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .contact-form_container {
   height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: salmon;
 }
 
 .contact-form {
   width: 700px;
   height: 420px;
   position: relative;
-  background: grey;
+  background-color: #fefefe;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -169,12 +176,21 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+    label{
+      font-weight: bold;
+      color: #428a13;
+    }
   }
   .form-control{
   padding: 4px;
   border: none;
   background: white;
   box-shadow: 1px 1px 3px black;
+  }
+  .form-control:focus{
+    outline: none;
+      box-shadow: 1px 1px rgba(66,138,19, 0.8),
+        -1px -1px rgba(66,138,19, 0.8);
   }
   #contact_message {
     resize: none;
@@ -188,8 +204,18 @@
 .submit-btn_contact {
   padding: 8px;
   width: 100px;
+  font-weight: bold;
   border: none;
   cursor: pointer;
   border-radius: 5px;
   box-shadow: 1px 1px 3px black;
+  color: #fefefe;
+  background-color:#428a13;
+  transition: 0.5s;
+}
+
+.submit-btn_contact:hover{
+  background-color: #54952a;
+  color: #fefefe;
+  box-shadow: 1px 1px 5px black;
 }

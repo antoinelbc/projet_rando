@@ -1,22 +1,26 @@
-{% extends 'base.html.twig' %}
+{% extends 'base.html.twig' %} {% block title %}Réinitialisez votre mot de
+passe{% endblock %} {% block body %}
+<div class="global-container">
+  {% for flash_error in app.flashes('reset_password_error') %}
+  <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+  {% endfor %}
+  <h1>Réinitialisez votre mot de passe</h1>
 
-{% block title %}Réinitialisez votre mot de passe{% endblock %}
+  <div class="reset-password_container">
+    <div>
+      <p>
+        Entrez votre adresse e-mail et nous vous enverrons un lien pour
+        réinitialiser votre mot de passe.
+      </p>
+    </div>
+    <div class="reset-password-form_container">
+      {{ form_start(requestForm) }}
+      {{ form_row(requestForm.email) }}
 
-{% block body %}
-    {% for flash_error in app.flashes('reset_password_error') %}
-        <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
-    {% endfor %}
-    <h1>Réinitialisez votre mot de passe</h1>
-
-    {{ form_start(requestForm) }}
-        {{ form_row(requestForm.email) }}
-        <div>
-            <small>
-                Entrez votre adresse e-mail et nous vous enverrons un
-                lien pour réinitialiser votre mot de passe.
-            </small>
-        </div>
-
-        <button class="btn btn-primary">Confirmer</button>
-    {{ form_end(requestForm) }}
+      <button class="btn btn-primary submit-btn"> <i class="fa-solid fa-circle-arrow-right"></i></button>
+      {{ form_end(requestForm) }}
+    </div>
+  </div>
+</div>
+<div class="mountain-background"></div>
 {% endblock %}

@@ -49,7 +49,7 @@
             <li class="main-nav__item">
               {# Logout link appear if user logged #} 
               {% if app.user %}
-              <span class="hello_user">Bonjour {{ app.user.firstname }}</span>
+              <p class="hello_user">Bonjour <span>{{ app.user.firstname }}</span></p>
               <a href="{{ path('app_logout') }}" class="main-nav__link">Se déconnecter</a>
               {% else %}
               <li class="main-nav__item">
@@ -176,9 +176,8 @@
     {% endfor %} 
 
     {% block javascripts %}
-    {{
-      encore_entry_script_tags("app")
-    }}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+      <script type="text/javascript" src="{{ asset('assets/scripts/blog_carousel.js') }}"></script>
     {% endblock %}
   </body>
 </html>

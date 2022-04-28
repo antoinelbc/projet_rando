@@ -1,0 +1,28 @@
+.categories-table_container {
+  table {
+    width: 50%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    thead {
+      background-color: #f5d24b;
+      th {
+        padding: 8px;
+      }
+    }
+    tbody tr {
+      background: #fefefe;
+    }
+    tbody tr:nth-child(2n){
+        background-color: #ddd;
+    }
+    td {
+      text-align: center;
+      padding: 8px;
+    }
+    .actions-btn_container {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+  }
+}

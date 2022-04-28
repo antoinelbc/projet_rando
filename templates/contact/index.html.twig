@@ -1,36 +1,32 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}Contact{% endblock %}
-
-{% block body %}
+{% extends 'base.html.twig' %} {% block title %}Contact{% endblock %} {% block
+body %}
 
 <h1>Contact</h1>
+<div class="contact-page_container">
+  <div class="global-container">
+    <div class="contact-form_container">
+      <div class="contact-form">
+        <div class="form-group">
+          {{ form_start(contact_form) }}
+          {{ form_row(contact_form.firstName, {'attr': {'class': 'form-control'
+          }}) }}
+        </div>
+        <div class="form-group">
+          {{ form_row(contact_form.email, {'attr': {'class': 'form-control'}})
+          }}
+        </div>
+        <div class="form-group">
+          {{ form_row(contact_form.message, {'attr': {'class': 'form-control'}})
+          }}
+        </div>
 
-<div class="contact-form_container">
-
-<div class="contact-form">
-    <div class="form-group">
-{{ form_start(contact_form) }}
-    {{ form_row(contact_form.firstName, {'attr': {'class': 'form-control'}}) }}
-
-
+        <div class="form-group contact-submit_container">
+          <input type="submit" value="Envoyer" class="btn submit-btn_contact" />
+        </div>
+        {{ form_end(contact_form) }}
+      </div>
+    </div>
+  </div>
 </div>
-<div class="form-group">
-    {{ form_row(contact_form.email, {'attr': {'class': 'form-control'}}) }}
 
-</div>
-<div class="form-group">
-    {{ form_row(contact_form.message, {'attr': {'class': 'form-control'}}) }}
-
-</div>
-
-<div class="form-group contact-submit_container">
-    <input type="submit" value="Envoyer" class="btn submit-btn_contact">
-</div>
-{{ form_end(contact_form) }}
-</div>
-
-</div>
-
-</div>
 {% endblock %}

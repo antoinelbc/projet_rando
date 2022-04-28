@@ -1,35 +1,45 @@
-{% extends 'base.html.twig' %}
+{% extends 'base.html.twig' %} {% block title %}Catégories{% endblock %} {%
+block body %}
+<div class="global-container">
+  <h1>Liste des catégories</h1>
 
-{% block title %}Categories index{% endblock %}
-
-{% block body %}
-    <h1>Categories index</h1>
-
+  <div class="categories-table_container">
     <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nom</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
         {% for category in categories %}
-            <tr>
-                <td>{{ category.id }}</td>
-                <td>{{ category.name }}</td>
-                <td>
-                    <a href="{{ path('app_categories_show', {'id': category.id}) }}">show</a>
-                    <a href="{{ path('app_categories_edit', {'id': category.id}) }}">edit</a>
-                </td>
-            </tr>
+        <tr>
+          <td>{{ category.id }}</td>
+          <td>{{ category.name }}</td>
+          <td class="actions-btn_container">
+            <div class="return-btn_container">
+              <a href="{{ path('app_categories_show', { id: category.id }) }}"
+                >Voir la catégorie</a
+              >
+            </div>
+            <div class="return-btn_container">
+              <a href="{{ path('app_categories_edit', { id: category.id }) }}"
+                >Modifier la catégorie</a
+              >
+            </div>
+          </td>
+        </tr>
         {% else %}
-            <tr>
-                <td colspan="3">no records found</td>
-            </tr>
+        <tr>
+          <td colspan="3">Aucune catégorie trouvée</td>
+        </tr>
         {% endfor %}
-        </tbody>
+      </tbody>
     </table>
-
-    <a href="{{ path('app_categories_new') }}">Create new</a>
+  </div>
+  <div class="return-btn_container">
+    <a href="{{ path('app_categories_new') }}">Créer une nouvelle catégorie</a>
+  </div>
+</div>
 {% endblock %}

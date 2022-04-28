@@ -125,6 +125,7 @@
   display: flex;
   justify-content: space-evenly;
   padding: 48px 0px;
+  gap: 48px;
 }
 
 .article-card {
@@ -132,6 +133,7 @@
   background: #f1f3f1;
   border-radius: 4px;
   box-shadow: àpx 0px 1px black;
+  cursor: grab;
 }
 
 .article-card_picture {
@@ -176,4 +178,8 @@
   color: rgba(255, 255, 255, 1);
   background-color: #428a13;
   /*   background-position: -100% 100%; */
+}
+
+.tns-visually-hidden{
+  display: none;
 }

@@ -60,4 +60,10 @@
   /*Components*/
   
   
-  
+  .mountain-background{
+    height: 15em;
+    background-image: url("../images/mountain-background.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat;
+  }
