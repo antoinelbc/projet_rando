@@ -1,3 +1,5 @@
+/* INDEX */
+
 .categories-table_container {
   table {
     width: 50%;
@@ -26,3 +28,18 @@
     }
   }
 }
+
+/* NEW CATEGORY */
+
+.category-form_container form{
+    display: flex;
+    gap: 16px;
+    div{
+      display: flex;
+      gap: 16px;
+    }
+    input{
+      width: 15em;
+    }
+}
+
