@@ -72,7 +72,7 @@
   display: flex;
   justify-content: flex-start;
   padding: 20px 0px;
-  a {
+  a, button{
     font-weight: bold;
     padding: 8px;
     color: #428a13;
@@ -80,8 +80,9 @@
     border: 1px solid #428a13;
     border-radius: 10px;
     transition: 0.5s;
+    cursor: pointer;
   }
-  a:hover {
+  a:hover, button:hover {
     color: #fefefe;
     background-color: #428a13;
   }

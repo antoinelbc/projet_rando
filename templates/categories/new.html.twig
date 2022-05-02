@@ -2,8 +2,10 @@
 {% block body %}
 <div class="global-container">
   <h1>Créer une nouvelle catégorie</h1>
-  <div class="category-form_container">
+  <div class="category-form_container new-category_container">
+    <div class="return-btn_container">
     {{ include("categories/_form.html.twig") }}
+  </div>
   </div>
   <div class="return-btn_container">
     <a href="{{ path('app_categories_index') }}">Retour</a>

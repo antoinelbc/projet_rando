@@ -14,8 +14,8 @@
     tbody tr {
       background: #fefefe;
     }
-    tbody tr:nth-child(2n){
-        background-color: #ddd;
+    tbody tr:nth-child(2n) {
+      background-color: #ddd;
     }
     td {
       text-align: center;
@@ -29,17 +29,33 @@
   }
 }
 
-/* NEW CATEGORY */
-
-.category-form_container form{
+.category-form_container form {
+  display: flex;
+  gap: 16px;
+  div {
     display: flex;
     gap: 16px;
-    div{
-      display: flex;
-      gap: 16px;
-    }
-    input{
-      width: 15em;
-    }
+  }
+  input {
+    width: 15em;
+  }
 }
 
+/* SHOW CATEGORY */
+
+.show-categories_container {
+  display: flex;
+}
+
+/* EDIT CATEGORY */
+
+.edit-category_container,
+.new-category_container {
+  form div {
+    display: flex;
+    align-items: center;
+  }
+  form input {
+    height: 2em;
+  }
+}

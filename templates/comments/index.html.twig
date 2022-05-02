@@ -1,37 +1,54 @@
-{% extends 'base.html.twig' %}
+{% extends 'base.html.twig' %} {% block title %}Commentaires{% endblock %} {%
+block body %}
+<div class="global-container">
+  <h1>Liste des commentaires</h1>
 
-{% block title %}Comments index{% endblock %}
-
-{% block body %}
-    <h1>Comments index</h1>
-
+  <div class="categories-table_container comments-index_container">
     <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Content</th>
-                <th>Published_date</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Commentaire</th>
+          <th>Date de publication</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
         {% for comment in comments %}
-            <tr>
-                <td>{{ comment.id }}</td>
-                <td>{{ comment.content }}</td>
-                <td>{{ comment.publishedDate ? comment.publishedDate|date('d-m-y H:i:s', 'Europe/Paris') : '' }}</td>
-                <td>
-                    <a href="{{ path('app_comments_show', {'id': comment.id}) }}">Voir le commentaire</a>
-                    <a href="{{ path('app_comments_edit', {'id': comment.id}) }}">Modifier</a>
-                </td>
-            </tr>
+        <tr>
+          <td>{{ comment.id }}</td>
+          <td>{{ comment.content }}</td>
+          <td>
+            {{ comment.publishedDate ? comment.publishedDate|date('d-m-y H:i:s', 'Europe/Paris') : '' }}
+          </td>
+          <td class="actions-btn_container">
+            <div class="return-btn_container">
+              <a href="{{ path('app_comments_show', { id: comment.id }) }}"
+                >Voir ce commentaire</a
+              >
+            </div>
+            <div class="return-btn_container">
+              <a
+                class="index-edit_btn"
+                href="{{ path('app_comments_edit', { id: comment.id }) }}"
+                >Modifier ce commentaire</a
+              >
+            </div>
+            <div class="return-btn_container">
+            {{ include("comments/_delete_form.html.twig") }}
+          </div>
+          </td>
+        </tr>
         {% else %}
-            <tr>
-                <td colspan="4">Aucun commentaire trouvé</td>
-            </tr>
+        <tr>
+          <td colspan="4">Aucun commentaire trouvé</td>
+        </tr>
         {% endfor %}
-        </tbody>
+      </tbody>
     </table>
-
+  </div>
+  <div class="return-btn_container">
     <a href="{{ path('app_comments_new') }}">Créer un nouveau commentaire</a>
+  </div>
+</div>
 {% endblock %}
