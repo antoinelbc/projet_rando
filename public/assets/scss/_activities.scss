@@ -21,9 +21,21 @@
 .main-activities_container {
   display: flex;
   justify-content: space-between;
+  /*   height: 1700px; 
+  position: relative; */
+}
+
+.activities-aside_bar {
+  height: 36em;
+  position: sticky;
+  top: 0;
+  padding-top: 16px;
 }
 
 .activities-icons_container {
+  /*   position: sticky;
+  top: 0; 
+  height: 600px; */
   display: flex;
   flex-direction: column;
   align-items: center;

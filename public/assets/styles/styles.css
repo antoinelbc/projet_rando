@@ -310,11 +310,11 @@ body {
   font-weight: 400;
 }
 
+/* 
 html,
 body {
   overflow: auto;
-}
-
+} */
 ul {
   list-style-type: none;
 }
@@ -1248,9 +1248,21 @@ h1,
 .main-activities_container {
   display: flex;
   justify-content: space-between;
+  /*   height: 1700px; 
+  position: relative; */
+}
+
+.activities-aside_bar {
+  height: 36em;
+  position: sticky;
+  top: 0;
+  padding-top: 16px;
 }
 
 .activities-icons_container {
+  /*   position: sticky;
+  top: 0; 
+  height: 600px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1367,5 +1379,63 @@ h1,
   box-shadow: 0px 10px 20px rgba(245, 210, 75, 0.4);
   transform: translateY(-4px);
 } */
+.prices-page_container {
+  margin: 3em 0;
+  background-color: #fefefe;
+  background-image: url("../images/background-body.png");
+}
+
+.prices-card_container {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.prices-card {
+  width: 22em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #a6a6a6;
+}
+
+.prices-tables_container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+.prices-tables_container table {
+  width: 50%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+.prices-tables_container table caption {
+  font-weight: bold;
+  border: 1px solid #ddd;
+  padding: 24px;
+}
+.prices-tables_container table thead {
+  background-color: #f5d24b;
+}
+.prices-tables_container table thead th {
+  text-align: left;
+  padding: 8px;
+}
+.prices-tables_container table tbody tr {
+  background: #fefefe;
+}
+.prices-tables_container table tbody tr td:last-child {
+  text-align: right;
+}
+.prices-tables_container table tbody tr:nth-child(2n) {
+  background-color: #ddd;
+}
+.prices-tables_container table td {
+  padding: 8px;
+}
 
 /*# sourceMappingURL=styles.css.map */

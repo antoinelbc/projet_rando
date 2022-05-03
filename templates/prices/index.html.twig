@@ -1,20 +1,137 @@
-{% extends 'base.html.twig' %}
+{% extends 'base.html.twig' %} {% block title %}Tarifs{% endblock %} {% block
+body %}
+<div class="prices-page_container">
+  <div class="global-container">
+    <div class="title_container">
+      <h1>Tarifs</h1>
+    </div>
+    <div class="general-content_container">
+      <h2>Plusieurs formules</h2>
+      <div class="prices-card_container">
+        <div class="prices-card">
+          <h3>Abonnement semestriel</h3>
+          <p>
+            Non sint aliquam ut repellendus quia sit dolor enim sed iure
+            aperiam. Vero expedita in rerum similique et nulla similique ut enim
+            saepe ut placeat error ut nisi praesentium.
+          </p>
+          <p>A partir de 30 €</p>
+        </div>
 
-{% block title %}Hello PricesController!{% endblock %}
+        <div class="prices-card">
+          <h3>Abonnement annuel</h3>
+          <p>
+            Id ipsum error est alias dolorem aut beatae repellat et voluptatem
+            nihil. In voluptatibus porro in aperiam atque sit veritatis error
+            eos laboriosam.
+          </p>
+          <p>A partir de 50 €</p>
+        </div>
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+        <div class="prices-card">
+          <h3>Formule découverte</h3>
+          <p>
+            Lorem ipsum dolor sit amet. Ut corporis aliquam qui voluptas
+            cupiditate et vero assumenda id itaque dicta et fugit omnis qui
+            fugiat nihil eum tempore iusto.
+          </p>
+          <p>Gratuit (3 sorties au choix)</p>
+        </div>
+      </div>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+      <div class="prices-tables_container">
+        <h2>Tarifs 2022-2023</h2>
+        <table class="annual-price_table">
+          <caption>
+            Abonnement Annuel
+          </caption>
+          <thead>
+            <tr>
+              <th>Catégorie</th>
+              <th>Cotisation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Moins de 30 ans</td>
+              <td>50 €</td>
+            </tr>
+            <tr>
+              <td>30 ans et plus au 1er janvier 2023</td>
+              <td>65 €</td>
+            </tr>
+            <tr>
+              <td>Couple</td>
+              <td>90 €</td>
+            </tr>
+            <tr>
+              <td>Demandeurs d'emploi et bénéficiaire des minimas sociaux</td>
+              <td>40 €</td>
+            </tr>
+          </tbody>
+        </table>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/antoi/Desktop/Projets/projet_rando/rando_project/src/Controller/PricesController.php'|file_link(0) }}">src/Controller/PricesController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/antoi/Desktop/Projets/projet_rando/rando_project/templates/prices/index.html.twig'|file_link(0) }}">templates/prices/index.html.twig</a></code></li>
-    </ul>
+        <table class="semestrial-price_table">
+          <caption>
+            Abonnement semestriel
+          </caption>
+          <thead>
+            <tr>
+              <th>Catégorie</th>
+              <th>Cotisation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Moins de 30 ans</td>
+              <td>30 €</td>
+            </tr>
+            <tr>
+              <td>30 ans et plus au 1er janvier 2023</td>
+              <td>45 €</td>
+            </tr>
+            <tr>
+              <td>Couple</td>
+              <td>65 €</td>
+            </tr>
+            <tr>
+              <td>Demandeurs d'emploi et bénéficiaire des minimas sociaux</td>
+              <td>25 €</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="discover_table">
+          <caption>
+            Formule découverte - 3 sorties pour découvrir le club
+          </caption>
+          <thead>
+            <tr>
+              <th>Catégorie</th>
+              <th>Cotisation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Moins de 30 ans</td>
+              <td>Gratuit</td>
+            </tr>
+            <tr>
+              <td>30 ans et plus au 1er janvier 2023</td>
+              <td>Gratuit</td>
+            </tr>
+            <tr>
+              <td>Couple</td>
+              <td>Gratuit</td>
+            </tr>
+            <tr>
+              <td>Demandeurs d'emploi et bénéficiaire des minimas sociaux</td>
+              <td>Gratuit</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 </div>
 {% endblock %}
