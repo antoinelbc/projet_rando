@@ -1,6 +1,7 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cantora+One&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Cantora+One&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
 
 /* :root{
     --green--rgb: 66, 138, 19;
@@ -43,7 +44,7 @@ a {
 h1,
 .main-nav__link {
   font-weight: 400;
-  font-family: "Cantora One", sans-serif;
+  font-family: 'Tapestry', cursive;;
 }
 
 /* global_container */

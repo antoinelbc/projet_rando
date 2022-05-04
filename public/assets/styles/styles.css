@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cantora+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tapestry&display=swap");
 *,
 ::after,
 ::before {
@@ -286,6 +286,7 @@ template {
 }
 
 /* Fonts */
+/* @import url("https://fonts.googleapis.com/css2?family=Cantora+One&display=swap"); */
 /* :root{
     --green--rgb: 66, 138, 19;
     --green: rgb(var(--green--rgb));
@@ -326,7 +327,7 @@ a {
 h1,
 .main-nav__link {
   font-weight: 400;
-  font-family: "Cantora One", sans-serif;
+  font-family: "Tapestry", cursive;
 }
 
 /* global_container */
@@ -986,7 +987,6 @@ h1,
 /* New Article */
 .article-admin-page_container {
   display: flex;
-  background-image: linear-gradient(to top, rgba(245, 210, 75, 0.1) 0%, #fefefe 100%);
 }
 
 .article-admin-form_container {
@@ -1050,7 +1050,8 @@ h1,
   justify-content: flex-start;
   padding: 20px 0px;
 }
-.return-btn_container a, .return-btn_container button {
+.return-btn_container a,
+.return-btn_container button {
   font-weight: bold;
   padding: 8px;
   color: #428a13;
@@ -1060,7 +1061,8 @@ h1,
   transition: 0.5s;
   cursor: pointer;
 }
-.return-btn_container a:hover, .return-btn_container button:hover {
+.return-btn_container a:hover,
+.return-btn_container button:hover {
   color: #fefefe;
   background-color: #428a13;
 }
@@ -1166,13 +1168,75 @@ h1,
 }
 
 .home-header_image {
-  height: 30em;
-  background-image: url("../images/home_background.jpg");
+  height: 40em;
+  position: relative;
+  background-image: url("../images/home_header.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  gap: 32px;
+  padding-bottom: 6em;
+}
+.home-header_image h1 {
+  font-family: "Tapestry", cursive;
+  color: #fefefe;
+  font-size: 8rem;
+  font-weight: bold;
+  opacity: 0.9;
+  text-shadow: 1px 1px 5px black;
+  border-bottom: 5px solid rgba(254, 254, 254, 0.5);
+}
+.home-header_image .home-slogan_container {
+  margin-left: 15em;
+}
+.home-header_image .home-slogan_container p {
+  font-family: "Tapestry", cursive;
+  font-size: 4rem;
+  color: #fefefe;
+  text-shadow: 2px 1px 2px black;
+}
+
+.home-header_image::before {
+  content: "";
+  position: absolute;
+  top: 2em;
+  left: 2em;
+  bottom: 2em;
+  right: 2em;
+  outline: 8px solid rgba(254, 254, 254, 0.5);
+}
+
+.home_container {
+  padding: 5em 0em;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.home_container .home-section-title_container {
+  text-align: center;
+}
+.home_container .home-section-title_container h2 {
+  /*   font-family: "Tapestry", cursive; */
+}
+.home_container p {
+  line-height: 1.6em;
+  text-align: justify;
+}
+
+.to-about_row {
+  display: flex;
+}
+
+.to-about_item {
+  flex: 1 0;
+}
+
+.to-about_picture {
+  height: 18em;
 }
 
 .general-content_container {
@@ -1384,29 +1448,77 @@ h1,
   background-color: #fefefe;
   background-image: url("../images/background-body.png");
 }
+.prices-page_container .title_container {
+  display: flex;
+  justify-content: center;
+}
+.prices-page_container h1 {
+  margin: 16px 0px;
+  position: relative;
+  display: inline;
+}
+.prices-page_container h1::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  background-color: #f5d24b;
+  height: 2px;
+  width: 100%;
+}
 
 .prices-card_container {
+  margin-top: 2em;
   display: flex;
   justify-content: space-between;
   gap: 32px;
 }
 
-.prices-card {
-  width: 22em;
+.prices-card,
+.prices-tables_container,
+.tables_container {
   display: flex;
   flex-direction: column;
+}
+
+.prices-card {
+  width: 22em;
   align-items: center;
   gap: 16px;
+  border: 1px solid #ddd;
+  box-shadow: 1px 1px 5px #ddd;
   border-radius: 8px;
-  padding: 16px;
-  background-color: #a6a6a6;
+  padding: 44px;
+  background-color: #fefefe;
+  transition: transform 0.3s ease;
+}
+.prices-card h3 {
+  color: #66addc;
+  font-weight: bold;
+  font-size: 2.2rem;
+}
+.prices-card p:last-of-type {
+  display: flex;
+  gap: 8px;
+}
+.prices-card span {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #66addc;
+}
+
+.prices-card:hover {
+  transform: scale(1.05);
 }
 
 .prices-tables_container {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+  margin-top: 2em;
+  /*   gap: 40px; */
+}
+.prices-tables_container .tables_container {
+  margin-top: 2em;
   align-items: center;
+  gap: 48px;
 }
 .prices-tables_container table {
   width: 50%;
@@ -1415,6 +1527,7 @@ h1,
 }
 .prices-tables_container table caption {
   font-weight: bold;
+  background-color: #fefefe;
   border: 1px solid #ddd;
   padding: 24px;
 }
@@ -1436,6 +1549,10 @@ h1,
 }
 .prices-tables_container table td {
   padding: 8px;
+}
+
+.prices-info_container {
+  margin-top: 4em;
 }
 
 /*# sourceMappingURL=styles.css.map */

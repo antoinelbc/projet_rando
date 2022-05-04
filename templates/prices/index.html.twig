@@ -3,7 +3,7 @@ body %}
 <div class="prices-page_container">
   <div class="global-container">
     <div class="title_container">
-      <h1>Tarifs</h1>
+      <h1>Nos tarifs</h1>
     </div>
     <div class="general-content_container">
       <h2>Plusieurs formules</h2>
@@ -15,7 +15,10 @@ body %}
             aperiam. Vero expedita in rerum similique et nulla similique ut enim
             saepe ut placeat error ut nisi praesentium.
           </p>
-          <p>A partir de 30 €</p>
+          <p>A partir de <span>30 €</span></p>
+          <div class="card-btn_container">
+            <a href="#biannual-package">En savoir plus</a>
+          </div>
         </div>
 
         <div class="prices-card">
@@ -25,7 +28,10 @@ body %}
             nihil. In voluptatibus porro in aperiam atque sit veritatis error
             eos laboriosam.
           </p>
-          <p>A partir de 50 €</p>
+          <p>A partir de <span>50 €</span></p>
+          <div class="card-btn_container">
+            <a href="#annual-package">En savoir plus</a>
+          </div>
         </div>
 
         <div class="prices-card">
@@ -35,101 +41,115 @@ body %}
             cupiditate et vero assumenda id itaque dicta et fugit omnis qui
             fugiat nihil eum tempore iusto.
           </p>
-          <p>Gratuit (3 sorties au choix)</p>
+          <p><span>Gratuit</span></p>
+          <div class="card-btn_container">
+            <a href="#discover-package">En savoir plus</a>
+          </div>
         </div>
       </div>
 
       <div class="prices-tables_container">
         <h2>Tarifs 2022-2023</h2>
-        <table class="annual-price_table">
-          <caption>
-            Abonnement Annuel
-          </caption>
-          <thead>
-            <tr>
-              <th>Catégorie</th>
-              <th>Cotisation</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Moins de 30 ans</td>
-              <td>50 €</td>
-            </tr>
-            <tr>
-              <td>30 ans et plus au 1er janvier 2023</td>
-              <td>65 €</td>
-            </tr>
-            <tr>
-              <td>Couple</td>
-              <td>90 €</td>
-            </tr>
-            <tr>
-              <td>Demandeurs d'emploi et bénéficiaire des minimas sociaux</td>
-              <td>40 €</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="tables_container">
+          <table id="annual-package"class="annual-price_table">
+            <caption>
+              Abonnement Annuel
+            </caption>
+            <thead>
+              <tr>
+                <th>Catégorie</th>
+                <th>Cotisation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Moins de 30 ans</td>
+                <td>50 €</td>
+              </tr>
+              <tr>
+                <td>30 ans et plus au 1er janvier 2023</td>
+                <td>65 €</td>
+              </tr>
+              <tr>
+                <td>Couple</td>
+                <td>90 €</td>
+              </tr>
+              <tr>
+                <td>
+                  Demandeurs d'emploi et bénéficiaires des minimas sociaux *
+                </td>
+                <td>40 €</td>
+              </tr>
+            </tbody>
+          </table>
 
-        <table class="semestrial-price_table">
-          <caption>
-            Abonnement semestriel
-          </caption>
-          <thead>
-            <tr>
-              <th>Catégorie</th>
-              <th>Cotisation</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Moins de 30 ans</td>
-              <td>30 €</td>
-            </tr>
-            <tr>
-              <td>30 ans et plus au 1er janvier 2023</td>
-              <td>45 €</td>
-            </tr>
-            <tr>
-              <td>Couple</td>
-              <td>65 €</td>
-            </tr>
-            <tr>
-              <td>Demandeurs d'emploi et bénéficiaire des minimas sociaux</td>
-              <td>25 €</td>
-            </tr>
-          </tbody>
-        </table>
+          <table id="biannual-package" class="semestrial-price_table">
+            <caption>
+              Abonnement semestriel
+            </caption>
+            <thead>
+              <tr>
+                <th>Catégorie</th>
+                <th>Cotisation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Moins de 30 ans</td>
+                <td>30 €</td>
+              </tr>
+              <tr>
+                <td>30 ans et plus au 1er janvier 2023</td>
+                <td>45 €</td>
+              </tr>
+              <tr>
+                <td>Couple</td>
+                <td>65 €</td>
+              </tr>
+              <tr>
+                <td>
+                  Demandeurs d'emploi et bénéficiaires des minimas sociaux *
+                </td>
+                <td>25 €</td>
+              </tr>
+            </tbody>
+          </table>
 
-        <table class="discover_table">
-          <caption>
-            Formule découverte - 3 sorties pour découvrir le club
-          </caption>
-          <thead>
-            <tr>
-              <th>Catégorie</th>
-              <th>Cotisation</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Moins de 30 ans</td>
-              <td>Gratuit</td>
-            </tr>
-            <tr>
-              <td>30 ans et plus au 1er janvier 2023</td>
-              <td>Gratuit</td>
-            </tr>
-            <tr>
-              <td>Couple</td>
-              <td>Gratuit</td>
-            </tr>
-            <tr>
-              <td>Demandeurs d'emploi et bénéficiaire des minimas sociaux</td>
-              <td>Gratuit</td>
-            </tr>
-          </tbody>
-        </table>
+          <table id="discover-package" class="discover_table">
+            <caption>
+              Formule découverte - 3 sorties pour découvrir le club
+            </caption>
+            <thead>
+              <tr>
+                <th>Catégorie</th>
+                <th>Cotisation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Moins de 30 ans</td>
+                <td>Gratuit</td>
+              </tr>
+              <tr>
+                <td>30 ans et plus au 1er janvier 2023</td>
+                <td>Gratuit</td>
+              </tr>
+              <tr>
+                <td>Couple</td>
+                <td>Gratuit</td>
+              </tr>
+              <tr>
+                <td>
+                  Demandeurs d'emploi et bénéficiaires des minimas sociaux *
+                </td>
+                <td>Gratuit</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="prices-info_container">
+          <p>* Sur présentation d'un justificatif</p>
+        </div>
       </div>
     </div>
   </div>

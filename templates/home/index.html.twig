@@ -1,23 +1,46 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}Hello HomeController!{% endblock %}
-
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+{% extends 'base.html.twig' %} {% block title %}Accueil{% endblock %} {% block
+body %}
 
 <div class="home-header_image">
-    
+  <div class="home-title_container">
+    <h1>Pyrénnées Rando Club</h1>
+  </div>
+  <div class="home-slogan_container">
+    <p>La montagne à vos pieds</p>
+  </div>
 </div>
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/antoi/Desktop/Projets/projet_rando/rando_project/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/antoi/Desktop/Projets/projet_rando/rando_project/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
+<div class="global-container">
+  <div class="to-about_container home_container">
+    <div class="home-section-title_container">
+      <h2>Découvrir le club</h2>
+    </div>
+    <div class="to-about_row">
+      <p class="to-about_item">
+        Lorem ipsum dolor sit amet. Quo magni saepe eum tempore id quos quis.
+        Eum voluptas pariatur et veritatis enim sit consequatur molestiae eos
+        voluptatem doloremque ad omnis repellat est odit obcaecati. Eum odio
+        voluptatum vel internos internos est reiciendis aliquid. Et accusamus
+        tempora sit laboriosam facere quo quaerat laudantium ab ipsam sunt ex
+        fuga voluptatem cum blanditiis corporis. Aut vero illo est cumque
+        doloribus aut dolor beatae ut temporibus velit vel totam accusamus. Sit
+        ipsam expedita nam unde velit sed sunt voluptatem cum nesciunt iure ut
+        facere iure! Non dolorem necessitatibus qui rerum autem qui possimus
+        tenetur? Sit rerum voluptatem eum esse reiciendis ut totam cupiditate et
+        fuga molestiae. 33 asperiores minus ab obcaecati aliquid ut dolor
+        molestiae in nihil consectetur ut quae veniam ea dolorem repudiandae. Ut
+        iste esse et sint quaerat aut quos vero et reprehenderit recusandae aut
+        ratione saepe est voluptate voluptatem.
+      </p>
+      <div class="adaptive-img--contain to-about_picture to-about_item">
+        <span>
+          <img
+            src="{{ asset('assets/images/hikers_shinning_valley.jpg') }}"
+            alt=""
+          />
+        </span>
+      </div>
+    </div>
+  </div>
 </div>
 {% endblock %}

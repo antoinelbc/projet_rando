@@ -2,11 +2,6 @@
 
 .article-admin-page_container {
   display: flex;
-  background-image: linear-gradient(
-    to top,
-    rgba(245, 210, 75, 0.1) 0%,
-    #fefefe 100%
-  );
 }
 
 .article-admin-form_container {
@@ -72,7 +67,8 @@
   display: flex;
   justify-content: flex-start;
   padding: 20px 0px;
-  a, button{
+  a,
+  button {
     font-weight: bold;
     padding: 8px;
     color: #428a13;
@@ -82,7 +78,8 @@
     transition: 0.5s;
     cursor: pointer;
   }
-  a:hover, button:hover {
+  a:hover,
+  button:hover {
     color: #fefefe;
     background-color: #428a13;
   }
