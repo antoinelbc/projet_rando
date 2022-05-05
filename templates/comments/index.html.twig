@@ -10,6 +10,7 @@ block body %}
           <th>Id</th>
           <th>Commentaire</th>
           <th>Date de publication</th>
+          <th>Article lié</th>
           <th>Actions</th>
         </tr>
       </thead>
@@ -21,6 +22,7 @@ block body %}
           <td>
             {{ comment.publishedDate ? comment.publishedDate|date('d-m-y H:i:s', 'Europe/Paris') : '' }}
           </td>
+          <td> {{ comment.article.title }}</td>
           <td class="actions-btn_container">
             <div class="return-btn_container">
               <a href="{{ path('app_comments_show', { id: comment.id }) }}"
@@ -47,8 +49,8 @@ block body %}
       </tbody>
     </table>
   </div>
-  <div class="return-btn_container">
+  <!-- <div class="return-btn_container">
     <a href="{{ path('app_comments_new') }}">Créer un nouveau commentaire</a>
-  </div>
+  </div> -->
 </div>
 {% endblock %}
