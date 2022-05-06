@@ -10,12 +10,12 @@ body %}
   </div>
 </div>
 
-<div class="global-container">
-  <div class="to-about_container home_container">
+<div class="to-about_container home_container">
+  <div class="global-container">
     <div class="home-section-title_container">
       <h2>Découvrir le club</h2>
     </div>
-    <div class="to-about_row">
+    <div class="to-about_row home_row">
       <p class="to-about_item">
         Lorem ipsum dolor sit amet. Quo magni saepe eum tempore id quos quis.
         Eum voluptas pariatur et veritatis enim sit consequatur molestiae eos
@@ -43,4 +43,149 @@ body %}
     </div>
   </div>
 </div>
+
+<div class="to-activities_container home_container">
+  <div class="global-container">
+    <div class="home-section-title_container">
+      <h2>Choisissez votre activité</h2>
+    </div>
+    <div class="to-activities_row home_row">
+      <div class="home-activity-card">
+        <a href="/activities#hiking-card">
+          <div class="adaptive-img--cover home-card_picture">
+            <span>
+              <img
+                src="{{ asset('assets/images/home_card_hiking.jpg') }}"
+                alt="randonnée"
+              />
+            </span>
+          </div>
+          <div class="activity-card_info">
+            <p>
+              Lorem ipsum dolor sit amet. Quo magni saepe eum tempore id quos
+              quis. Eum voluptas pariatur et veritatis enim sit consequatur
+              molestiae eos voluptatem doloremque ad omnis repellat est odit
+              obcaecati
+            </p>
+          </div>
+          <div class="activity-card-bottom">
+            <h3>Randonnée</h3>
+          </div>
+        </a>
+      </div>
+
+      <div class="home-activity-card">
+        <a href="activities#trek-card">
+          <div class="adaptive-img--cover home-card_picture">
+            <span>
+              <img
+                src="{{ asset('assets/images/home_card_trek.jpg') }}"
+                alt="trek"
+              />
+            </span>
+          </div>
+          <div class="activity-card_info">
+            <p>
+              Lorem ipsum dolor sit amet. Quo magni saepe eum tempore id quos
+              quis. Eum voluptas pariatur et veritatis enim sit consequatur
+              molestiae eos voluptatem doloremque ad omnis repellat est odit
+              obcaecati
+            </p>
+          </div>
+          <div class="activity-card-bottom">
+            <h3>Trek</h3>
+          </div>
+        </a>
+      </div>
+
+      <div class="home-activity-card">
+        <a href="activities#trail-card">
+          <div class="adaptive-img--cover home-card_picture">
+            <span>
+              <img
+                src="{{ asset('assets/images/home_card_trail.jpg') }}"
+                alt="trail"
+              />
+            </span>
+          </div>
+          <div class="activity-card_info">
+            <p>
+              Lorem ipsum dolor sit amet. Quo magni saepe eum tempore id quos
+              quis. Eum voluptas pariatur et veritatis enim sit consequatur
+              molestiae eos voluptatem doloremque ad omnis repellat est odit
+              obcaecati
+            </p>
+          </div>
+          <div class="activity-card-bottom">
+            <h3>Trail</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="home-picture-transition"></div>
+
+<div class="to-prices_container home-container">
+  <div class="global-container">
+    <div class="central_row home_row">
+      <div class="home-prices-card">
+        <h2>Prêt pour l'aventure ?</h2>
+        <p>
+          Lorem ipsum dolor sit amet. Quo magni saepe eum tempore id quos quis.
+          Eum voluptas pariatur et veritatis enim sit consequatur molestiae eos
+          voluptatem doloremque ad omnis repellat est odit obcaecati
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet. Quo magni saepe eum tempore id quos quis.
+          Eum voluptas pariatur et veritatis enim sit consequatur molestiae eos
+          voluptatem doloremque ad omnis repellat est odit obcaecati
+        </p>
+        <div>
+          <div class="card-btn_container">
+            <a href="/prices">Essayez notre formule découverte</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="level_container">
+        <h2>Des niveaux de difficulté adaptés à chacun</h2>
+        <div class="level-columns_container">
+          <div class="level-column">
+            <i class="fa-solid fa-mountain easy-icon"></i>
+            <span>Facile</span>
+            <ul class="level-list">
+              <li>Randonnées uniquement</li>
+              <li>Adapté aux novices</li>
+              <li>Randonnées courtes</li>
+              <li>Faible dénivelé</li>
+            </ul>
+          </div>
+          <div class="level-column">
+            <i class="fa-solid fa-mountain medium-icon"></i>
+            <span>Moyen</span>
+            <ul class="level-list">
+              <li>Randonnées, trek, trail</li>
+              <li>Marcheurs réguliers</li>
+              <li>Durée moyenne à longue</li>
+              <li>Dénivelé moyen</li>
+            </ul>
+          </div>
+          <div class="level-column">
+            <i class="fa-solid fa-mountain hard-icon"></i>
+            <span>Difficile</span>
+            <ul class="level-list">
+              <li>Randonnées, trek, trail</li>
+              <li>Adapté aux sportifs</li>
+              <li>Durée moyenne à longue</li>
+              <li>Dénivelé moyen à fort</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% endblock %}

@@ -42,14 +42,14 @@
 }
 
 .home_container {
-  padding: 5em 0em;
+  padding: 5em 0em 8em 0em;
   display: flex;
   flex-direction: column;
   gap: 40px;
-  .home-section-title_container{
+  .home-section-title_container {
     text-align: center;
-    h2{
-    /*   font-family: "Tapestry", cursive; */
+    h2 {
+      /*   font-family: "Tapestry", cursive; */
     }
   }
   p {
@@ -57,6 +57,12 @@
     text-align: justify;
   }
 }
+
+.home_row {
+  padding-top: 3em;
+}
+
+/* TO ABOUT */
 
 .to-about_row {
   display: flex;
@@ -68,4 +74,175 @@
 
 .to-about_picture {
   height: 18em;
+}
+
+/* TO ACTIVITIES */
+
+.to-activities_container {
+  background-color: rgba(242, 242, 242, 0.4);
+}
+
+.to-activities_row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8em;
+}
+
+.home-activity-card {
+  max-width: 20em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  /*   gap: 16px; */
+  flex: 1 0;
+  background-color: #fefefe;
+  padding-bottom: 16px;
+  border-radius: 12px 12px 12px 12px;
+  /* border: 1px solid #ddd; */
+  box-shadow: 1px 1px 5px #ddd;
+  transition: transform 0.3s ease;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.home-activity-card:hover {
+  transform: scale(1.05);
+}
+
+.home-card_picture {
+  height: 15em;
+  width: 20em;
+  img {
+    border-radius: 12px 12px 0px 0px;
+  }
+}
+
+.activity-card-bottom {
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+}
+
+.activity-card_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 0px 16px 40px 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 52px;
+  opacity: 0;
+  background-color: rgba(245, 210, 75, 0.4);
+  border-radius: 12px 12px 0px 0px;
+  transition: 1s ease;
+}
+
+.activity-card_info:hover {
+  opacity: 1;
+}
+
+/* PICTURE TRANSITION */
+
+.home-picture-transition {
+  height: 32em;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../images/backpack-guy.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* CENTRAL */
+
+.central_row {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3em;
+}
+
+.home-prices-card {
+  width: 40em;
+  height: 20em;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: absolute;
+  top: -10em;
+  left: 2em;
+  padding: 16px;
+  background-color: rgba(242, 242, 242, 0.9);
+  border-radius: 12px;
+  .card-btn_container {
+    display: flex;
+    justify-content: end;
+  }
+}
+
+.level_container {
+  width: 60em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12em;
+  padding: 3em;
+  background-color: #ddd;
+  border-radius: 12px;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  url("../images/mountain_lake.jpg");
+  background-position:center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  h2{
+    color: #fefefe;
+  }
+}
+
+.level-columns_container {
+  display: flex;
+  align-items: baseline;
+  padding-top: 2em;
+}
+
+.level-column {
+  width: 15em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  span{
+    font-weight: bold;
+    color: #fefefe;
+  }
+}
+
+.fa-mountain{
+  color: #428a13;
+}
+
+.easy-icon {
+  font-size: 1.8em;
+}
+
+.medium-icon {
+  font-size: 3em;
+}
+
+.hard-icon {
+  font-size: 4.2em;
+}
+
+.level-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: #fefefe;
 }

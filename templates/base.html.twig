@@ -37,7 +37,7 @@
               <a href="/activities" class="main-nav__link">Activités</a>
             </li>
             <li class="main-nav__item">
-              <a href="/articles" class="main-nav__link">Blog</a>
+              <a href="/blog" class="main-nav__link">Blog</a>
             </li>
             <li class="main-nav__item">
               <a href="/prices" class="main-nav__link">Tarifs</a>
@@ -45,12 +45,17 @@
             <li class="main-nav__item">
               <a href="/contact" class="main-nav__link">Contact</a>
             </li>
+
+
             <!-- Login nav with submenu -->
             <li class="main-nav__item">
               {# Logout link appear if user logged #} 
               {% if app.user %}
+              <div class="hello-user_container">
                 <p class="hello_user">Bonjour <span>{{ app.user.firstname }}</span></p>
-                <a href="{{ path('app_logout') }}" class="main-nav__link">Se déconnecter</a>
+                <a href="{{ path('app_logout') }}" class="main-nav__link"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+              </div>
+              </li>
               {% else %}
               <li class="main-nav__item">
                 <a href="/login" class="main-nav__link">
@@ -66,9 +71,29 @@
                     </li>
                   </ul>
                 </div>
+                </li>
               {% endif %}
             </li>
+            {% if is_granted('ROLE_ADMIN') %}
+            <li class="main-nav__item admin__item">
+              <a href="#" class="main-nav__link">Espace Admin</a>
+              <div class="submenu-admin_container">
+                <ul class="main-nav_list submenu_list">
+                  <li class="main-nav__item submenu__item">
+                    <a href="/categories" class="main-nav__link submenu__link">Gestion des catégories</a>
+                  </li>
+                  <li class="main-nav__item submenu__item">
+                    <a href="/articles" class="main-nav__link submenu__link">Gestion des articles</a>
+                  </li>
+                  <li class="main-nav__item submenu__item">
+                    <a href="/comments" class="main-nav__link submenu__link">Gestion des commentaires</a>
+                  </li>
+                </ul>
+              </div>
+              </li>
+            {% endif %}
           </ul>
+        </div>
       </nav>
     </header>
     <main>
