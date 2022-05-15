@@ -1,5 +1,3 @@
-console.log('hello');
-
 let slider = tns({
     container: ".my-slider",
     items: 3,
@@ -7,7 +5,7 @@ let slider = tns({
     mouseDrag: true,
     "slideBy": 1,
     "nav": false,
-    arrowKeys: false
+    arrowKeys: false,
 })
 
 //Fixes the bug when pressing the right arrow which shifts the window

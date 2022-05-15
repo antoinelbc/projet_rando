@@ -188,4 +188,62 @@ body %}
   </div>
 </div>
 
+<div class="home-blog_container home_container">
+  <div class="global-container">
+    <div class="home-blog-text_container">
+      <div class="home-section-title_container">
+        <h2>Réagissez à nos derniers articles</h2>
+      </div>
+      <p>
+        Créer un compte sur notre site vous permet de poster des commentaires
+        sur notre blog
+      </p>
+
+      <div class="card-btn_container">
+        <a href="/register">M'inscrire maintenant</a>
+      </div>
+    </div>
+  </div>
+  <div class="articles-cards_container my-slider">
+    {% for article in articles %}
+    <div class="article-card">
+      <div class="article-card_picture adaptive-img--contain">
+        <span>
+          <img src="{{asset('uploads/articles/'~article.picture)}}" alt="#" />
+        </span>
+      </div>
+      <div class="article-card_info">
+        <div class="article-card_title">
+          {{ article.title }}
+        </div>
+        <div class="article-card_date">
+          {{ article.publishedDate ? article.publishedDate|date('d-m-Y', 'Europe/Paris') : '' }}
+        </div>
+
+        <div class="return-btn_container">
+          <a href="{{ path('app_articles_show', { id: article.id }) }}"
+            >Voir l'article</a
+          >
+          {% if is_granted('ROLE_ADMIN') %}
+          <a href="{{ path('app_articles_edit', { id: article.id }) }}"
+            >Modifier</a
+          >
+          <div class="return-btn_container">
+            {{ include("articles/_delete_form.html.twig") }}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="home-soon_container home_container">
+  <div class="global-container">
+    <span>A bientôt !</span>
+  </div>
+</div>
+<div class="mountain-background"></div>
+
 {% endblock %}

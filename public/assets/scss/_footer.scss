@@ -25,6 +25,10 @@
   gap: 32px;
 }
 
+.footer-logo_container{
+  height: 18em;
+}
+
 .footer-menu_container {
   padding-bottom: 12px;
   box-shadow: 0px 2px 0px #428a13;
@@ -46,6 +50,8 @@
 .footer-menu__link,
 .footer-legal__link {
   color: black;
+  font-size:1.2em;
+  font-weight: 600;
 }
 
 .footer-menu__link:hover{
@@ -101,7 +107,13 @@
     padding: 12px;
     color: white;
     background-color: green;
+    font-weight: bold;
     border-radius: 4px;
     box-shadow: 1px 1px 5px black;
+    transition: 0.5s ease;
+  }
+  .button:hover{
+    color: black;
+    background-color:#f5d24b;
   }
 }

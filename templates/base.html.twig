@@ -23,9 +23,16 @@
     {% endblock %} 
   </head>
   <body>
-    <header>
+    <header class="header">
       <nav class="main-nav">
         <div class="main-nav_container">
+          <a href="/">
+          <div class="logo_container adaptive-img--cover">
+            <span>
+              <img src= "{{ asset('assets/images/logo.png') }}" alt="logo">
+            </span>
+          </div>
+        </a>
           <ul class="main-nav_list">
             <li class="main-nav__item">
               <a href="/" class="main-nav__link">Accueil</a>
@@ -104,8 +111,10 @@
     <footer class="footer">
     <div class="footer_container">
       <section class="footer-start_container">
-        <div class="footer-logo_container">
-          <!-- Balise image avec logo -->
+        <div class="footer-logo_container adaptive-img--contain">
+          <span>
+            <img src= "{{ asset('assets/images/logo.png') }}" alt="logo">
+          </span>
         </div>
       </section>
       <div class="footer-middle_container">
@@ -193,7 +202,7 @@
     </div>  
     </footer>
     
-    {# Confirm mail sent in the form contact #} 
+    
     {% for message in app.flashes('success') %}
     <div class="alert-success">
       {{ message }}

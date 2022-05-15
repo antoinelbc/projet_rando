@@ -1,3 +1,17 @@
+/******************* ACTIVITIES GENERAL *************************/
+
+.activities-icons_container,
+.activities-icon_card,
+.activity-card_container,
+.activity-card,
+.level-hiking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/******************* ACTIVITIES *************************/
+
 .activities-page_container {
   margin: 3em 0;
   background-color: #fefefe;
@@ -21,24 +35,16 @@
 .main-activities_container {
   display: flex;
   justify-content: space-between;
-  /*   height: 1700px; 
-  position: relative; */
 }
 
 .activities-aside_bar {
-  height: 36em;
+  height: 29em;
   position: sticky;
   top: 0;
   padding-top: 16px;
 }
 
 .activities-icons_container {
-  /*   position: sticky;
-  top: 0; 
-  height: 600px; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 16px;
   h2 {
     padding-bottom: 16px;
@@ -46,36 +52,37 @@
 }
 
 .activities-icon_card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 16px;
-  border: 1px solid black;
+  border: 1px solid #f3f3f3;
   border-radius: 5px;
   width: 8em;
   padding: 2em;
+  background-color: #fefefe;
+  box-shadow: 0px 1px 4px #ddd;
   strong {
-    color: #428a13;
+    color: black;
+    transition: 0.2s ease;
   }
   i {
     font-size: 2.5em;
+    color: #f5d24b;
+    transition: 0.3s ease;
+  }
+}
+
+.activities-icon_card:hover {
+  i {
     color: #428a13;
   }
 }
 
 .activity-card_container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin: 5em 0;
   gap: 40px;
 }
 
 .activity-card {
   width: 40em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 16px;
   border: 1px solid #ddd;
   border-radius: 12px;
@@ -99,27 +106,6 @@
   flex-direction: column;
 }
 
-.level-hiking {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  i {
-    font-size: 2em;
-  }
-}
-
-.easy-hiking {
-  color: #66addc;
-}
-
-.medium-hiking {
-  color: orange;
-}
-
-.hard-hiking {
-  color: red;
-}
-
 .card-pictures_container {
   display: flex;
   gap: 16px;
@@ -137,7 +123,6 @@
     background-color: rgba(245, 210, 75, 0.7);
     color: black;
     font-weight: bold;
-    /*  border: 0.5px solid rgba(245, 210, 75, 0.4);; */
     border-radius: 5px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.5s ease 0s;
@@ -147,8 +132,3 @@
     color: black;
   }
 }
-
-/* .card-btn_container:hover{
-  box-shadow: 0px 10px 20px rgba(245, 210, 75, 0.4);
-  transform: translateY(-4px);
-} */

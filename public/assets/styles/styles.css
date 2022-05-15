@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tapestry&display=swap");
 *,
@@ -350,9 +349,16 @@ h1,
 
 .main-nav_container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
   background-color: #fefefe;
   box-shadow: 0px 0px 4px #808080;
+}
+
+.logo_container {
+  height: 8em;
+  width: 8em;
+  top: 8px;
 }
 
 .main-nav_list {
@@ -367,7 +373,7 @@ h1,
   position: relative;
   color: black;
   transition: color 0.5s;
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: bold;
 }
 
@@ -487,6 +493,10 @@ h1,
   gap: 32px;
 }
 
+.footer-logo_container {
+  height: 18em;
+}
+
 .footer-menu_container {
   padding-bottom: 12px;
   box-shadow: 0px 2px 0px #428a13;
@@ -508,6 +518,8 @@ h1,
 .footer-menu__link,
 .footer-legal__link {
   color: black;
+  font-size: 1.2em;
+  font-weight: 600;
 }
 
 .footer-menu__link:hover {
@@ -564,8 +576,14 @@ h1,
   padding: 12px;
   color: white;
   background-color: green;
+  font-weight: bold;
   border-radius: 4px;
   box-shadow: 1px 1px 5px black;
+  transition: 0.5s ease;
+}
+.footer-button_container .button:hover {
+  color: black;
+  background-color: #f5d24b;
 }
 
 /* Reset Password */
@@ -774,7 +792,7 @@ h1,
 
 .contact-form {
   width: 700px;
-  height: 420px;
+  height: 472px;
   position: relative;
   background-color: #fefefe;
   display: flex;
@@ -783,6 +801,7 @@ h1,
   padding: 24px;
   border-radius: 8px;
   box-shadow: 2px 2px 8px black;
+  justify-content: center;
 }
 .contact-form div {
   display: flex;
@@ -957,16 +976,22 @@ h1,
 }
 
 .article-card {
+  height: 32em;
   padding: 24px;
-  background: #f1f3f1;
-  border-radius: 4px;
-  box-shadow: àpx 0px 1px black;
+  background: #fefefe;
+  border-radius: 24px;
+  box-shadow: 5px 5px 5px solid black;
   cursor: grab;
+}
+
+.tns-item {
+  box-shadow: 1px 1px 5px #ddd;
+  width: 24em;
 }
 
 .article-card_picture {
   height: 13em;
-  width: 21em;
+  /*   width: 21em; */
 }
 
 .article-card_info {
@@ -976,14 +1001,19 @@ h1,
   gap: 16px;
   padding: 16px 0px;
 }
+.article-card_info .article-card_title {
+  font-weight: bold;
+}
+.article-card_info .return-btn_container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+}
+.article-card_info .return-btn_container a {
+  text-transform: uppercase;
+}
 
-/* .article-card_button a{
-  padding: 6px;
-  color: white;
-  background-color: green;
-  border-radius: 4px;
-  box-shadow: 1px 1px 5px black;
-} */
 .article-card_button {
   display: flex;
   justify-content: center;
@@ -1246,6 +1276,7 @@ h1,
   outline: 8px solid rgba(254, 254, 254, 0.5);
 }
 
+/******************* HOME GENERAL *************************/
 .home_container {
   padding: 5em 0em 8em 0em;
   display: flex;
@@ -1256,7 +1287,7 @@ h1,
   text-align: center;
 }
 .home_container .home-section-title_container h2 {
-  /*   font-family: "Tapestry", cursive; */
+  font-family: "Tapestry", cursive;
 }
 .home_container p {
   line-height: 1.6em;
@@ -1267,7 +1298,44 @@ h1,
   padding-top: 3em;
 }
 
-/* TO ABOUT */
+.to-about_container,
+.to-prices_container,
+.home-soon_container {
+  background-image: url("../images/background-body.png");
+}
+
+.to-activities_container,
+.home-blog_container {
+  background-color: rgba(225, 225, 225, 0.4);
+}
+
+.home-activity-card,
+.activity-card_info,
+.home-prices-card,
+.level_container,
+.level-column,
+.level-list,
+.home-blog-text_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-activity-card,
+.activity-card_info,
+.level_container,
+.level-column,
+.home-blog-text_container {
+  align-items: center;
+}
+
+.home-activity-card,
+.activity-card-bottom,
+.activity-card_info,
+.central_row {
+  justify-content: center;
+}
+
+/******************* TO ABOUT *************************/
 .to-about_row {
   display: flex;
 }
@@ -1280,11 +1348,7 @@ h1,
   height: 18em;
 }
 
-/* TO ACTIVITIES */
-.to-activities_container {
-  background-color: rgba(242, 242, 242, 0.4);
-}
-
+/******************* TO ACTIVITIES *************************/
 .to-activities_row {
   display: flex;
   justify-content: space-between;
@@ -1293,17 +1357,11 @@ h1,
 
 .home-activity-card {
   max-width: 20em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  padding-bottom: 16px;
   position: relative;
-  /*   gap: 16px; */
   flex: 1 0;
   background-color: #fefefe;
-  padding-bottom: 16px;
   border-radius: 12px 12px 12px 12px;
-  /* border: 1px solid #ddd; */
   box-shadow: 1px 1px 5px #ddd;
   transition: transform 0.3s ease;
 }
@@ -1317,31 +1375,26 @@ h1,
 }
 
 .home-card_picture {
-  height: 15em;
   width: 20em;
+  height: 15em;
 }
 .home-card_picture img {
   border-radius: 12px 12px 0px 0px;
 }
 
 .activity-card-bottom {
-  display: flex;
-  justify-content: center;
   padding-top: 16px;
+  display: flex;
 }
 
 .activity-card_info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
   padding: 0px 16px 40px 16px;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 52px;
+  gap: 16px;
   opacity: 0;
   background-color: rgba(245, 210, 75, 0.4);
   border-radius: 12px 12px 0px 0px;
@@ -1352,7 +1405,7 @@ h1,
   opacity: 1;
 }
 
-/* PICTURE TRANSITION */
+/******************* PICTURE TRANSITION *************************/
 .home-picture-transition {
   height: 32em;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/backpack-guy.jpg");
@@ -1361,19 +1414,16 @@ h1,
   background-repeat: no-repeat;
 }
 
-/* CENTRAL */
+/******************* CENTRAL CONTENT *************************/
 .central_row {
   position: relative;
   display: flex;
-  justify-content: center;
-  padding-bottom: 3em;
+  padding-bottom: 8em;
 }
 
 .home-prices-card {
   width: 40em;
   height: 20em;
-  display: flex;
-  flex-direction: column;
   gap: 16px;
   position: absolute;
   top: -10em;
@@ -1389,9 +1439,6 @@ h1,
 
 .level_container {
   width: 60em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin-top: 12em;
   padding: 3em;
   background-color: #ddd;
@@ -1413,9 +1460,6 @@ h1,
 
 .level-column {
   width: 15em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 1em;
 }
 .level-column span {
@@ -1440,15 +1484,31 @@ h1,
 }
 
 .level-list {
-  display: flex;
-  flex-direction: column;
   gap: 16px;
   color: #fefefe;
 }
 
+/******************* HOME BLOG *************************/
+.home-blog-text_container {
+  gap: 16px;
+}
+
+/******************* HOME END *************************/
+.home-soon_container {
+  font-family: Tapestry;
+  font-size: 2em;
+  padding: 5em 0em 0em 0em;
+}
+
+/******************* ABOUT GENERAL *************************/
+.general-content_container,
+.content_container {
+  display: flex;
+}
+
+/******************* ABOUT  *************************/
 .general-content_container {
   padding: 32px 0px 48px 0px;
-  display: flex;
   flex-direction: column;
   gap: 20px;
 }
@@ -1458,10 +1518,6 @@ h1,
 .general-content_container p {
   line-height: 1.6em;
   text-align: justify;
-}
-
-.content_container {
-  display: flex;
 }
 
 .column {
@@ -1496,6 +1552,18 @@ h1,
   width: 100%;
 }
 
+/******************* ACTIVITIES GENERAL *************************/
+.activities-icons_container,
+.activities-icon_card,
+.activity-card_container,
+.activity-card,
+.level-hiking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/******************* ACTIVITIES *************************/
 .activities-page_container {
   margin: 3em 0;
   background-color: #fefefe;
@@ -1519,24 +1587,16 @@ h1,
 .main-activities_container {
   display: flex;
   justify-content: space-between;
-  /*   height: 1700px; 
-  position: relative; */
 }
 
 .activities-aside_bar {
-  height: 36em;
+  height: 29em;
   position: sticky;
   top: 0;
   padding-top: 16px;
 }
 
 .activities-icons_container {
-  /*   position: sticky;
-  top: 0; 
-  height: 600px; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 16px;
 }
 .activities-icons_container h2 {
@@ -1544,36 +1604,35 @@ h1,
 }
 
 .activities-icon_card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 16px;
-  border: 1px solid black;
+  border: 1px solid #f3f3f3;
   border-radius: 5px;
   width: 8em;
   padding: 2em;
+  background-color: #fefefe;
+  box-shadow: 0px 1px 4px #ddd;
 }
 .activities-icon_card strong {
-  color: #428a13;
+  color: black;
+  transition: 0.2s ease;
 }
 .activities-icon_card i {
   font-size: 2.5em;
+  color: #f5d24b;
+  transition: 0.3s ease;
+}
+
+.activities-icon_card:hover i {
   color: #428a13;
 }
 
 .activity-card_container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin: 5em 0;
   gap: 40px;
 }
 
 .activity-card {
   width: 40em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 16px;
   border: 1px solid #ddd;
   border-radius: 12px;
@@ -1597,27 +1656,6 @@ h1,
   flex-direction: column;
 }
 
-.level-hiking {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.level-hiking i {
-  font-size: 2em;
-}
-
-.easy-hiking {
-  color: #66addc;
-}
-
-.medium-hiking {
-  color: orange;
-}
-
-.hard-hiking {
-  color: red;
-}
-
 .card-pictures_container {
   display: flex;
   gap: 16px;
@@ -1636,7 +1674,6 @@ h1,
   background-color: rgba(245, 210, 75, 0.7);
   color: black;
   font-weight: bold;
-  /*  border: 0.5px solid rgba(245, 210, 75, 0.4);; */
   border-radius: 5px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.5s ease 0s;
@@ -1646,10 +1683,6 @@ h1,
   color: black;
 }
 
-/* .card-btn_container:hover{
-  box-shadow: 0px 10px 20px rgba(245, 210, 75, 0.4);
-  transform: translateY(-4px);
-} */
 .prices-page_container {
   margin: 3em 0;
   background-color: #fefefe;
@@ -1720,7 +1753,6 @@ h1,
 
 .prices-tables_container {
   margin-top: 2em;
-  /*   gap: 40px; */
 }
 .prices-tables_container .tables_container {
   margin-top: 2em;

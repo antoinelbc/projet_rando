@@ -1,6 +1,14 @@
+/******************* ABOUT GENERAL *************************/
+
+.general-content_container,
+.content_container {
+  display: flex;
+}
+
+/******************* ABOUT  *************************/
+
 .general-content_container {
   padding: 32px 0px 48px 0px;
-  display: flex;
   flex-direction: column;
   gap: 20px;
   h2 {
@@ -10,10 +18,6 @@
     line-height: 1.6em;
     text-align: justify;
   }
-}
-
-.content_container {
-  display: flex;
 }
 
 .column {
