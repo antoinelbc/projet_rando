@@ -2,7 +2,7 @@
 body%}
 
 <div class="global-container">
-  <h1>Liste des catégories</h1>
+  <h1>Liste des articles</h1>
 
   <div class="categories-table_container">
     <table class="table">
@@ -23,17 +23,17 @@ body%}
           <td>{{ article.user.username }}</td>
           <td>{{ article.publishedDate ? article.publishedDate|date('d-m-Y', 'Europe/Paris') : '' }}</td>
           <td class="actions-btn_container">
-            <div class="return-btn_container">
+            <div class="admin-btn_container">
               <a href="{{ path('app_articles_show', { id: article.id }) }}"
                 >Voir l'article</a
               >
             </div>
-            <div class="return-btn_container">
+            <div class="admin-btn_container">
               <a href="{{ path('app_articles_edit', { id: article.id }) }}"
                 >Modifier l'article</a
               >
             </div>
-            <div class="return-btn_container">
+            <div class="admin-btn_container">
             {{ include('articles/_delete_form.html.twig') }}
           </div>
           </td>
@@ -46,7 +46,7 @@ body%}
       </tbody>
     </table>
   </div>
-  <div class="return-btn_container">
+  <div class="admin-btn_container">
     <a href="{{ path('app_articles_new') }}">Créer un nouvel article</a>
   </div>
 </div>

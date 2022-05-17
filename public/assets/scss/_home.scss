@@ -65,14 +65,14 @@
 }
 
 .to-about_container,
-.to-prices_container,
-.home-soon_container {
+.home-soon_container,
+.home-blog_container {
   background-image: url("../images/background-body.png");
 }
 
 .to-activities_container,
-.home-blog_container {
-  background-color: rgba(225, 225, 225, 0.4);
+.to-prices_container {
+  background-color: rgba(243,243,243,0.6)
 }
 
 .home-activity-card,
@@ -269,5 +269,5 @@
 .home-soon_container {
   font-family: Tapestry;
   font-size: 2em;
-  padding: 5em 0em 0em 0em;
+  padding: 0em;
 }

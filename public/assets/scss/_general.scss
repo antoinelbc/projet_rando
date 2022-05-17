@@ -3,14 +3,16 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Cantora+One&display=swap"); */
 @import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
 
-/* :root{
-    --green--rgb: 66, 138, 19;
-    --green: rgb(var(--green--rgb));
-    --yellow--rgb: 245, 210, 75;
-    --yellow: rgb(var(--yellow--rgb));
-    --light-grey--rgb: 242, 242, 242;
-    --light-grey: rgb(var(--light-grey--rgb));
-  } */
+/* 
+:root{
+  --green: #428a13;
+  --yellow: #f5d24b;
+  --pale-yellow: rgba(245, 210, 75, 0.7);
+  --blue: #66addc;
+  --white: #fefefe;
+  --grey: #ddd;
+  --pale-grey: rgba(243, 243, 243, 0.6);
+} */
 
 html {
   top: 0;
@@ -26,6 +28,7 @@ body {
   font-size: 1.6rem;
   font-family: "Nunito", Verdana, sans-serif;
   font-weight: 400;
+  overflow-x: hidden;
 }
 /* 
 html,

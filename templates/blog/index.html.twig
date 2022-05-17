@@ -1,49 +1,58 @@
 {% extends 'base.html.twig' %} {% block title %}Blog{% endblock %} {% block body
 %}
-
-<div class="global-container">
-  <h1>Blog</h1>
-</div>
-<div class="articles-cards_container my-slider">
-  {% for article in articles %}
-  <div class="article-card">
-    <div class="article-card_picture adaptive-img--contain">
-      <span>
-        <img src="{{asset('uploads/articles/'~article.picture)}}" alt="#" />
-      </span>
-    </div>
-    <div class="article-card_info">
-      <div class="article-card_title">
-        {{ article.title }}
+<div class="blog-page_container">
+  <div class="global-container">
+    <h1>Blog</h1>
+  </div>
+  <div class="articles-cards_container my-slider">
+    {% for article in articles %}
+    <div class="article-card">
+      <div class="article-card_picture adaptive-img--contain">
+        <span>
+          <img src="{{asset('uploads/articles/'~article.picture)}}" alt="#" />
+        </span>
       </div>
-      <div class="article-card_date">
-        {{ article.publishedDate ? article.publishedDate|date('d-m-Y', 'Europe/Paris') : '' }}
-      </div>
-
-      <div class="return-btn_container">
-        <a href="{{ path('app_articles_show', { id: article.id }) }}"
-          >Voir l'article</a
-        >
-        {% if is_granted('ROLE_ADMIN') %}
-        <a href="{{ path('app_articles_edit', { id: article.id }) }}"
-          >Modifier</a
-        >
-        <div class="return-btn_container">
-          {{ include("articles/_delete_form.html.twig") }}
+      <div class="article-card_info">
+        <div class="article-card_title">
+          {{ article.title }}
         </div>
-        {% endif %}
+        <div class="article-card_date">
+          {{ article.publishedDate ? article.publishedDate|date('d-m-Y', 'Europe/Paris') : '' }}
+        </div>
+
+        <div class="blog-btn_container">
+          <div>
+            <a href="{{ path('app_articles_show', { id: article.id }) }}"
+              >Voir l'article</a
+            >
+          </div>
+          <!-- {% if is_granted('ROLE_ADMIN') %}
+          <div class="admin-actions_container">
+          <div>
+            <a href="{{ path('app_articles_edit', { id: article.id }) }}"
+              >Modifier</a
+            >
+          </div>
+
+          <div class="blog-btn_container">
+            {{ include("articles/_delete_form.html.twig") }}
+          </div>
+        </div>
+
+          {% endif %} -->
+        </div>
       </div>
     </div>
+    {% endfor %}
   </div>
-  {% endfor %}
-</div>
 
-<div class="global-container">
-  {% if is_granted('ROLE_ADMIN') %}
-  <div class="return-btn_container">
-    <a href="{{ path('app_articles_new') }}">Créer un nouvel article</a>
+  <div class="global-container">
+    {% if is_granted('ROLE_ADMIN') %}
+    <div class="blog-btn_container">
+      <a href="{{ path('app_articles_new') }}">Créer un nouvel article</a>
+    </div>
+    {% endif %}
   </div>
-  {% endif %}
 </div>
 
 {% endblock %}

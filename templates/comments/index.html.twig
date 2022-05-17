@@ -24,19 +24,19 @@ block body %}
           </td>
           <td> {{ comment.article.title }}</td>
           <td class="actions-btn_container">
-            <div class="return-btn_container">
+            <div class="admin-btn_container">
               <a href="{{ path('app_comments_show', { id: comment.id }) }}"
                 >Voir ce commentaire</a
               >
             </div>
-            <div class="return-btn_container">
+            <div class="admin-btn_container">
               <a
                 class="index-edit_btn"
                 href="{{ path('app_comments_edit', { id: comment.id }) }}"
                 >Modifier ce commentaire</a
               >
             </div>
-            <div class="return-btn_container">
+            <div class="admin-btn_container">
             {{ include("comments/_delete_form.html.twig") }}
           </div>
           </td>

@@ -100,20 +100,4 @@
   color:#f5d24b;
 }
 
-.footer-button_container {
-  display: flex;
-  justify-content: center;
-  .button {
-    padding: 12px;
-    color: white;
-    background-color: green;
-    font-weight: bold;
-    border-radius: 4px;
-    box-shadow: 1px 1px 5px black;
-    transition: 0.5s ease;
-  }
-  .button:hover{
-    color: black;
-    background-color:#f5d24b;
-  }
-}
+

@@ -18,17 +18,17 @@ block body %}
           <td>{{ category.id }}</td>
           <td>{{ category.name }}</td>
           <td class="actions-btn_container">
-            <div class="return-btn_container">
+            <div class="admin-btn_container">
               <a href="{{ path('app_categories_show', { id: category.id }) }}"
                 >Voir la catégorie</a
               >
             </div>
-            <div class="return-btn_container">
+            <div class="admin-btn_container">
               <a href="{{ path('app_categories_edit', { id: category.id }) }}"
                 >Modifier la catégorie</a
               >
             </div>
-            <div class="return-btn_container">
+            <div class="admin-btn_container">
             {{ include('categories/_delete_form.html.twig') }}
           </div>
           </td>
@@ -41,7 +41,7 @@ block body %}
       </tbody>
     </table>
   </div>
-  <div class="return-btn_container">
+  <div class="admin-btn_container">
     <a href="{{ path('app_categories_new') }}">Créer une nouvelle catégorie</a>
   </div>
 </div>

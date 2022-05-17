@@ -143,7 +143,7 @@ body %}
           voluptatem doloremque ad omnis repellat est odit obcaecati
         </p>
         <div>
-          <div class="card-btn_container">
+          <div class="yellow-btn_container">
             <a href="/prices">Essayez notre formule découverte</a>
           </div>
         </div>
@@ -196,10 +196,11 @@ body %}
       </div>
       <p>
         Créer un compte sur notre site vous permet de poster des commentaires
-        sur notre blog
+        sur notre blog. C'est aussi une façon d'échanger autour d'une passion
+        commune.
       </p>
 
-      <div class="card-btn_container">
+      <div class="yellow-btn_container">
         <a href="/register">M'inscrire maintenant</a>
       </div>
     </div>
@@ -220,18 +221,18 @@ body %}
           {{ article.publishedDate ? article.publishedDate|date('d-m-Y', 'Europe/Paris') : '' }}
         </div>
 
-        <div class="return-btn_container">
+        <div class="blog-btn_container">
           <a href="{{ path('app_articles_show', { id: article.id }) }}"
             >Voir l'article</a
           >
-          {% if is_granted('ROLE_ADMIN') %}
+          <!-- {% if is_granted('ROLE_ADMIN') %}
           <a href="{{ path('app_articles_edit', { id: article.id }) }}"
             >Modifier</a
           >
-          <div class="return-btn_container">
+          <div class="blog-btn_container">
             {{ include("articles/_delete_form.html.twig") }}
           </div>
-          {% endif %}
+          {% endif %} -->
         </div>
       </div>
     </div>

@@ -45,46 +45,6 @@
   }
 }
 
-.article-action_button {
-  color: #fff;
-  background-color: #222;
-  text-transform: uppercase;
-  margin: 0 auto;
-  padding: 16px 24px;
-  border-radius: 24px;
-  transition: 0.5s;
-  cursor: pointer;
-  font-family: inherit;
-}
-
-.article-action_button:hover {
-  color: rgba(255, 255, 255, 1);
-  background-color: #428a13;
-  /*   background-position: -100% 100%; */
-}
-
-.return-btn_container {
-  display: flex;
-  justify-content: flex-start;
-  padding: 20px 0px;
-  a,
-  button {
-    font-weight: bold;
-    padding: 8px;
-    color: #428a13;
-    background: #fefefe;
-    border: 1px solid #428a13;
-    border-radius: 10px;
-    transition: 0.5s;
-    cursor: pointer;
-  }
-  a:hover,
-  button:hover {
-    color: #fefefe;
-    background-color: #428a13;
-  }
-}
-
 /* Edit Article */
 
 .article-admin-edit-form {

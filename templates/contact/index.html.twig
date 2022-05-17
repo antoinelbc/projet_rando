@@ -12,6 +12,7 @@ body %}
           {{ form_start(contact_form) }}
           {{ form_row(contact_form.firstName, {'attr': {'class': 'form-control'
 
+
           }}) }}
         </div>
         <div class="form-group">
@@ -24,7 +25,13 @@ body %}
         </div>
 
         <div class="form-group contact-submit_container">
-          <input type="submit" value="Envoyer" class="btn submit-btn_contact" />
+          <div class="contact-btn_container">
+            <input
+              type="submit"
+              value="Envoyer"
+              class="btn"
+            />
+          </div>
         </div>
         {{ form_end(contact_form) }}
       </div>
