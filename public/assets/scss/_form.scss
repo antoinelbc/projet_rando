@@ -1,63 +1,39 @@
-/* LOGIN FORM */
+/******************* FORMS GENERAL *************************/
 
-.login-page_container {
-  height: 60em;
-  background-image: url("../images/login_background.jpg");
+.login-page_container,
+.register-page_container {
+  display: flex;
+  align-items: center;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
 }
 
-.login-form_container {
-  height: 16em;
-  background-color: #fefefe;
+.login-form_container,
+.register-form_container form {
+  background-color: rgba(243, 243, 243, 0.98);
   border-radius: 8px;
   box-shadow: 2px 2px 8px black;
-  h1 {
-    text-align: center;
-    padding-top: 16px;
-  }
 }
 
-.form {
-  width: 342px;
-  height: 72px;
-  margin: 0 auto;
+.login-form_container form,
+.register-form_container form {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 16px;
   align-items: center;
-  background-color: #fefefe;
-}
-
-.form-field {
-  display: flex;
-  position: relative;
-}
-.form-field:first-of-type {
-  padding-top: 16px;
-}
-
-.form-icon {
-  display: flex;
-  justify-content: center;
-  width: 27px;
-  padding: 6px;
-  background-color: #fefefe;
-  box-shadow: 1px 1px 4px black;
-  color: #428a13;
 }
 
 .form-input {
   padding: 4px;
-  //border: 1px solid black;
-  border: none;
   width: 240px;
   background: #fefefe;
-  box-shadow: 1px 1px 3px black;
+  border: 1px solid #dadada;
+  border-left: none;
+}
+.form-input:focus {
+  outline: none;
 }
 
 .submit-btn {
@@ -65,8 +41,6 @@
   border-radius: 26px;
   height: 46px;
   position: absolute;
-  left: 318px;
-  top: 32px;
   background-color: #fefefe;
   border: none;
   cursor: pointer;
@@ -75,6 +49,56 @@
     font-size: 3rem;
     color: #428a13;
   }
+}
+
+.submit-btn:hover {
+  box-shadow: 2px 1px 2px black;
+  .fa-circle-arrow-right {
+    color: #f5d24b;
+  }
+}
+
+/******************* LOGIN FORM *************************/
+
+.login-page_container {
+  height: 56em;
+  background-image: url("../images/login_background.jpg");
+}
+
+.login-form_container {
+  height: 17em;
+  margin-bottom: 3em;
+  h1 {
+    text-align: center;
+    padding-top: 16px;
+  }
+  form {
+    width: 342px;
+    height: 72px;
+    margin: 0 auto;
+  }
+  .form-field {
+    display: flex;
+    position: relative;
+  }
+  .form-field:first-of-type {
+    padding-top: 16px;
+  }
+  .form-icon {
+    display: flex;
+    justify-content: center;
+    width: 27px;
+    padding: 6px;
+    background-color: #fefefe;
+    border: 1px solid #dadada;
+    border-right: none;
+    color: #428a13;
+  }
+}
+
+.submit-btn_login {
+  left: 318px;
+  top: 32px;
 }
 
 .form-info {
@@ -90,38 +114,17 @@
   font-weight: bold;
 }
 
-/* REGISTER FORM */
+/******************* REGISTER FORM *************************/
 
 .register-page_container {
   height: 60em;
   background-image: url("../images/register_background.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
 }
-
-/* .register-form_container {
-  height: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: pink;
-} */
 
 .register-form_container form {
   height: 36em;
   width: 24em;
-  position: relative;
-  background-color: #fefefe;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
   padding: 24px;
-  border-radius: 8px;
-  box-shadow: 2px 2px 8px black;
   div {
     display: flex;
     flex-direction: column;
@@ -129,6 +132,9 @@
     label {
       color: #428a13;
       font-weight: bold;
+    }
+    input {
+      border: 1px solid #dadada;
     }
   }
   div:last-of-type {
@@ -143,80 +149,3 @@
   left: 13em;
   top: 37em;
 }
-
-//CONTACT FORM
-
-.contact-page_container {
-  height: 42em;
-  background-image: url("../images/mountain_refuge.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.contact-form_container {
-  height: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.contact-form {
-  width: 700px;
-  height: 472px;
-  position: relative;
-  background-color: #fefefe;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 24px;
-  border-radius: 8px;
-  box-shadow: 2px 2px 8px black;
-  justify-content: center;
-  div {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    label {
-      font-weight: bold;
-      color: #428a13;
-    }
-  }
-  .form-control {
-    padding: 4px;
-    border: none;
-    background: white;
-    box-shadow: 1px 1px 3px black;
-  }
-  .form-control:focus {
-    outline: none;
-    box-shadow: 1px 1px rgba(66, 138, 19, 0.8), -1px -1px rgba(66, 138, 19, 0.8);
-  }
-  #contact_message {
-    resize: none;
-  }
-}
-
-.contact-submit_container {
-  align-items: center;
-}
-
-/* .submit-btn_contact {
-  padding: 8px;
-  width: 100px;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  box-shadow: 1px 1px 3px black;
-  color: #fefefe;
-  background-color: #428a13;
-  transition: 0.5s;
-}
-
-.submit-btn_contact:hover {
-  background-color: #54952a;
-  color: #fefefe;
-  box-shadow: 1px 1px 5px black;
-}
- */

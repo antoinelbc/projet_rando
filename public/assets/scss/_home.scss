@@ -72,7 +72,7 @@
 
 .to-activities_container,
 .to-prices_container {
-  background-color: rgba(243,243,243,0.6)
+  background-color: rgba(243, 243, 243, 0.6);
 }
 
 .home-activity-card,
@@ -105,20 +105,24 @@
 
 .to-about_row {
   display: flex;
+  flex-wrap: wrap;
 }
 .to-about_item {
   flex: 1 0;
+  min-width: 528px;
 }
 .to-about_picture {
   height: 18em;
+  min-width: 542px;
 }
 
 /******************* TO ACTIVITIES *************************/
 
 .to-activities_row {
   display: flex;
-  justify-content: space-between;
-  gap: 8em;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 6em;
 }
 
 .home-activity-card {
@@ -191,8 +195,9 @@
 }
 
 .home-prices-card {
-  width: 40em;
-  height: 20em;
+  max-width: 40em;
+  min-width: 460px;
+  height: 19em;
   gap: 16px;
   position: absolute;
   top: -10em;

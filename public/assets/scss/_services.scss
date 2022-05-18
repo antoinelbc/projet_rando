@@ -1,12 +1,13 @@
-/* Reset Password */
 
-/* General Components */
+/* RESET PASSWORD GENERAL */
 
 .reset-password_container,
 .reset-password-form_container form {
   display: flex;
   gap: 16px;
 }
+
+/* RESET PASSWORD */
 
 .reset-password_container {
   flex-direction: column;
@@ -28,7 +29,7 @@
       height: 1.8em;
       padding: 4px;
       background: #fefefe;
-      box-shadow: 0px 0px 1px black;
+      border: 1px solid #dadada;
     }
     input:focus {
       outline: none;
