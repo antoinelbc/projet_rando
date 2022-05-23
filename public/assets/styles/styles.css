@@ -442,6 +442,7 @@ h1,
   background-color: #f5d24b;
 }
 
+/******************* MAIN MENU *************************/
 .main-nav_container {
   display: flex;
   justify-content: space-evenly;
@@ -530,7 +531,9 @@ h1,
 }
 
 .hello-user_container {
+  padding-left: 5em;
   display: flex;
+  align-items: center;
   gap: 16px;
 }
 
@@ -540,10 +543,14 @@ h1,
 }
 
 .admin__item {
+  position: absolute;
+  top: 3.8em;
+  left: 48em;
   cursor: pointer;
-  border: 1px solid #66addc;
-  color: #66addc;
   font-weight: bold;
+}
+.admin__item .main-nav__link {
+  color: #66addc;
 }
 
 .submenu-admin_container {
@@ -556,11 +563,101 @@ h1,
 .main-nav__item:hover .submenu-admin_container {
   display: block;
   position: absolute;
-  top: 52px;
+  top: 30px;
   right: -40px;
   width: 222px;
 }
 
+.hamburger-menu_nav {
+  display: none;
+}
+
+/******************* HAMBURGER MENU *************************/
+.hamburger, .to-the-top {
+  position: fixed;
+  z-index: 100;
+  right: 1rem;
+  padding: 18px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0px 0px 1px;
+}
+
+.hamburger {
+  top: 1rem;
+  background: #428a13;
+}
+.hamburger .close-icon {
+  display: none;
+}
+
+.to-the-top {
+  top: 7rem;
+  background: #f5d24b;
+}
+
+.to-the-top {
+  display: none;
+}
+
+.hamburger-menu {
+  position: fixed;
+  transform: translateX(-100%);
+  transition: transform 0.2s;
+  width: 30%;
+  min-width: 265px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background-color: rgba(243, 243, 243, 0.96);
+  list-style: none;
+  padding-top: 2rem;
+  box-shadow: 1px 0px 3px black;
+}
+
+.hamburger-menu_item {
+  display: block;
+  margin: 2rem 4rem;
+  font-weight: 400;
+  font-family: "Tapestry", cursive;
+  font-size: 2.4rem;
+  color: black;
+  text-decoration: none;
+  outline: none;
+}
+
+.hamburger-menu_item:hover {
+  color: #428a13;
+}
+
+.showHamburgerMenu {
+  transform: translateX(0);
+}
+
+.user-block_mobile {
+  margin-top: 2em;
+  padding: 18px 0px;
+  border: 1px solid black;
+}
+.user-block_mobile .hello-user_container {
+  padding: 0em 4em;
+  font-size: 2rem;
+}
+
+/******************* RESPONSIVE NAVBAR *************************/
+@media screen and (max-width: 1077px) {
+  .main-nav_list {
+    display: none;
+  }
+
+  .hamburger-menu_nav {
+    display: block;
+  }
+}
 .footer_container {
   display: flex;
   padding: 40px 0px 0px 0px;
@@ -819,6 +916,9 @@ h1,
   gap: 16px;
   padding: 40px;
 }
+.form-info p {
+  text-align: center;
+}
 
 .form-info a {
   color: #428a13;
@@ -860,6 +960,40 @@ h1,
   top: 37em;
 }
 
+/******************* RESPONSIVE FORM *************************/
+@media screen and (max-width: 480px) {
+  .login-form_container {
+    width: 18em;
+    height: 22em;
+  }
+  .login-form_container form {
+    width: 288px;
+  }
+  .login-form_container .form-input {
+    width: 218px;
+  }
+  .login-form_container .form-info {
+    padding: 7em 1em 2em 1em;
+  }
+
+  .submit-btn_login {
+    left: 128px;
+    top: 114px;
+  }
+
+  .register-form_container form {
+    width: 18em;
+    height: 38em;
+  }
+  .register-form_container form h1 {
+    text-align: center;
+  }
+
+  .submit-btn_register {
+    left: 9em;
+    top: 40em;
+  }
+}
 /******************* ARTICLES GENERAL *************************/
 .article_container,
 .article_info,
@@ -1188,7 +1322,7 @@ h1,
 
 /******************* HOME GENERAL *************************/
 .home_container {
-  padding: 5em 0em 8em 0em;
+  padding: 5em 0em 5em 0em;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -1248,7 +1382,7 @@ h1,
 /******************* TO ABOUT *************************/
 .to-about_row {
   display: flex;
-  flex-wrap: wrap;
+  /*   flex-wrap: wrap; */
 }
 
 .to-about_item {
@@ -1266,7 +1400,7 @@ h1,
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 6em;
+  gap: 2em;
 }
 
 .home-activity-card {
@@ -1415,6 +1549,145 @@ h1,
   padding: 0em;
 }
 
+/******************* HOME RESPONSIVE *************************/
+@media screen and (max-width: 1058px) {
+  .to-about_row {
+    flex-wrap: wrap;
+    gap: 3em;
+  }
+}
+@media screen and (max-width: 884px) {
+  .home-header_image h1 {
+    font-size: 6rem;
+  }
+
+  .home-slogan_container p {
+    font-size: 3rem;
+  }
+
+  .level_container {
+    width: 44em;
+  }
+}
+@media screen and (max-width: 748px) {
+  .home-header_image h1 {
+    font-size: 5rem;
+  }
+
+  .home-header_image .home-slogan_container {
+    margin-left: 0em;
+  }
+
+  .home-slogan_container p {
+    font-size: 2.5rem;
+    margin: 0em;
+  }
+
+  .level_container {
+    width: 32em;
+  }
+  .level_container h2 {
+    text-align: center;
+  }
+  .level_container .level-columns_container {
+    flex-direction: column;
+    gap: 3em;
+  }
+  .level_container .level-columns_container .level-list {
+    align-items: center;
+  }
+}
+@media screen and (max-width: 582px) {
+  .home-header_image {
+    height: 21em;
+  }
+
+  .home-header_image h1 {
+    font-size: 4rem;
+  }
+
+  .home-header_image .home-slogan_container p {
+    font-size: 3rem;
+  }
+
+  .to-about_row {
+    justify-content: center;
+  }
+  .to-about_row .to-about_item {
+    min-width: 20em;
+    max-width: 20em;
+  }
+
+  .home-prices-card {
+    max-width: 20em;
+    min-width: 20em;
+    height: 25em;
+    left: 0;
+  }
+
+  .level_container {
+    margin-top: 18em;
+  }
+}
+@media screen and (max-width: 480px) {
+  .home-title_container {
+    margin-top: 13em;
+  }
+
+  .home-header_image h1 {
+    font-size: 3.8rem;
+    margin: 0em 4em;
+    text-align: center;
+  }
+
+  .home-slogan_container {
+    /*     display:none; */
+    margin-bottom: 4em;
+  }
+
+  .home-header_image .home-slogan_container p {
+    font-size: 2.4rem;
+    margin: 0em 4em 3em 4em;
+  }
+
+  .mountain-background {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (max-width: 348px) {
+  .to-about_row .to-about_item {
+    min-width: 16em;
+    max-width: 16em;
+  }
+
+  .home-activity-card {
+    max-width: 16em;
+  }
+  .home-activity-card .home-card_picture {
+    max-width: 16em;
+    height: 11em;
+  }
+  .home-activity-card .activity-card_info p {
+    display: none;
+  }
+
+  .home-picture-transition {
+    height: 22em;
+  }
+
+  .home-prices-card {
+    min-width: 18em;
+    height: 28em;
+  }
+  .home-prices-card .yellow-btn_container a {
+    padding: 12px 2px;
+  }
+
+  .level_container {
+    width: 18em;
+  }
+}
 /******************* ABOUT GENERAL *************************/
 .general-content_container,
 .content_container {
@@ -1457,9 +1730,11 @@ h1,
   justify-content: center;
 }
 .about-page_container h1 {
+  font-size: 3.2rem;
   margin: 16px 0px;
   position: relative;
   display: inline;
+  text-align: center;
 }
 .about-page_container h1::after {
   content: "";
@@ -1471,6 +1746,26 @@ h1,
   width: 100%;
 }
 
+/******************* ABOUT RESPONSIVE *************************/
+@media screen and (max-width: 1313px) {
+  .content_container {
+    gap: 3em;
+  }
+}
+@media screen and (max-width: 396px) {
+  .about-page_container h2 {
+    padding-top: 1em;
+  }
+
+  .content_container {
+    gap: 0em;
+    justify-content: center;
+  }
+  .content_container .about-picture {
+    min-width: 12em;
+    height: 12em;
+  }
+}
 /******************* ACTIVITIES GENERAL *************************/
 .activities-icons_container,
 .activities-icon_card,
@@ -1625,10 +1920,8 @@ h1,
 }
 
 .prices-card {
-  /*  width: 22em; */
   flex: 1 0;
   max-width: 22em;
-  max-height: 359px;
   align-items: center;
   gap: 16px;
   border: 1px solid #ddd;
@@ -1700,6 +1993,21 @@ h1,
   margin-top: 4em;
 }
 
+/******************* PRICES RESPONSIVE *************************/
+@media screen and (max-width: 1099px) {
+  .prices-card_container {
+    justify-content: center;
+  }
+
+  .prices-card {
+    min-width: 33em;
+  }
+}
+@media screen and (max-width: 572px) {
+  .prices-card {
+    min-width: 18em;
+  }
+}
 /******************* BLOG GENERAL *************************/
 .blog-btn_container,
 .article-card_info {

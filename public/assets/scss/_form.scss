@@ -107,6 +107,9 @@
   align-items: center;
   gap: 16px;
   padding: 40px;
+  p {
+    text-align: center;
+  }
 }
 
 .form-info a {
@@ -148,4 +151,38 @@
 .submit-btn_register {
   left: 13em;
   top: 37em;
+}
+
+/******************* RESPONSIVE FORM *************************/
+
+@media screen and (max-width: 480px) {
+  .login-form_container {
+    width: 18em;
+    height: 22em;
+    form {
+      width: 288px;
+    }
+    .form-input {
+      width: 218px;
+    }
+    .form-info {
+      padding: 7em 1em 2em 1em;
+    }
+  }
+  .submit-btn_login {
+    left: 128px;
+    top: 114px;
+  }
+
+  .register-form_container form {
+    width: 18em;
+    height: 38em;
+    h1 {
+      text-align: center;
+    }
+  }
+  .submit-btn_register {
+    left: 9em;
+    top: 40em;
+  }
 }

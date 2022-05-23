@@ -44,7 +44,7 @@
 /******************* HOME GENERAL *************************/
 
 .home_container {
-  padding: 5em 0em 8em 0em;
+  padding: 5em 0em 5em 0em;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -105,7 +105,7 @@
 
 .to-about_row {
   display: flex;
-  flex-wrap: wrap;
+  /*   flex-wrap: wrap; */
 }
 .to-about_item {
   flex: 1 0;
@@ -122,7 +122,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 6em;
+  gap: 2em;
 }
 
 .home-activity-card {
@@ -276,3 +276,132 @@
   font-size: 2em;
   padding: 0em;
 }
+
+/******************* HOME RESPONSIVE *************************/
+
+@media screen and(max-width: 1058px) {
+  .to-about_row {
+    flex-wrap: wrap;
+    gap: 3em;
+  }
+}
+
+@media screen and(max-width: 884px) {
+  .home-header_image h1 {
+    font-size: 6rem;
+  }
+  .home-slogan_container p {
+    font-size: 3rem;
+  }
+  .level_container {
+    width: 44em;
+  }
+}
+
+@media screen and(max-width: 748px) {
+  .home-header_image h1 {
+    font-size: 5rem;
+  }
+  .home-header_image .home-slogan_container {
+    margin-left: 0em;
+  }
+  .home-slogan_container p {
+    font-size: 2.5rem;
+    margin: 0em;
+  }
+  .level_container {
+    width: 32em;
+    h2 {
+      text-align: center;
+    }
+    .level-columns_container {
+      flex-direction: column;
+      gap: 3em;
+      .level-list {
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 582px) {
+  .home-header_image {
+    height: 21em;
+  }
+  .home-header_image h1 {
+    font-size: 4rem;
+  }
+  .home-header_image .home-slogan_container p {
+    font-size: 3rem;
+  }
+  .to-about_row {
+    justify-content: center;
+    .to-about_item {
+      min-width: 20em;
+      max-width: 20em;
+    }
+  }
+  .home-prices-card {
+    max-width: 20em;
+    min-width: 20em;
+    height: 25em;
+    left: 0;
+  }
+  .level_container {
+    margin-top: 18em;
+  }
+}
+
+@media screen and(max-width: 480px) {
+  .home-title_container {
+    margin-top: 13em;
+  }
+  .home-header_image h1 {
+    font-size: 3.8rem;
+    margin: 0em 4em;
+    text-align: center;
+  }
+  .home-slogan_container {
+    /*     display:none; */
+    margin-bottom: 4em;
+  }
+  .home-header_image .home-slogan_container p {
+    font-size: 2.4rem;
+    margin: 0em 4em 3em 4em;
+  }
+  .mountain-background{
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and(max-width: 348px){
+  .to-about_row .to-about_item {
+    min-width: 16em;
+    max-width: 16em;
+  }
+  .home-activity-card{
+    max-width: 16em;
+    .home-card_picture{
+      max-width:16em;
+      height: 11em;
+    }
+    .activity-card_info p{
+      display:none;
+    }
+  }
+  .home-picture-transition{
+    height: 22em;
+  }
+  .home-prices-card{
+    min-width:18em;
+    height: 28em;
+    .yellow-btn_container a{
+      padding: 12px 2px;
+    }
+  }
+  .level_container{
+    width:18em;
+  }
+}
+

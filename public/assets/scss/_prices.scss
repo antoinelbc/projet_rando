@@ -38,10 +38,8 @@
 }
 
 .prices-card {
-  /*  width: 22em; */
   flex: 1 0;
   max-width: 22em;
-  max-height: 359px;
   align-items: center;
   gap: 16px;
   border: 1px solid #ddd;
@@ -112,3 +110,25 @@
 .prices-info_container {
   margin-top: 4em;
 }
+
+/******************* PRICES RESPONSIVE *************************/
+
+@media screen and (max-width: 1099px){
+  .prices-card_container{
+    justify-content: center;
+  }
+  .prices-card{
+    min-width: 33em;
+  }
+}
+
+@media screen and (max-width: 572px){
+  .prices-card{
+    min-width: 18em;
+    
+  }
+}
+ 
+
+
+ 
