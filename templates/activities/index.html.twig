@@ -1,169 +1,211 @@
-{% extends 'base.html.twig' %} {% block title %}Activités{% endblock %} {% block
-body %}
+{% extends 'base.html.twig' %} 
+
+{% block title %}Activités{% endblock %} 
+
+{% block body %}
+
 <div class="activities-page_container">
-  <div class="global-container">
-    <div class="title_container">
-      <h1>Activités</h1>
-    </div>
-    <div class="general-content_container">
-      <p>
-        Lorem ipsum dolor sit amet. Hic expedita expedita et libero aperiam ex
-        magnam illo qui obcaecati porro ex placeat dicta. Sed iure distinctio ab
-        molestiae ducimus qui dolorum fugit aut temporibus quasi eos voluptates
-        nulla ut quia dolorem. Cum perspiciatis provident quo quos doloribus vel
-        fuga facere non provident accusamus eum iusto odio sed accusamus.
-      </p>
-
-      <div class="main-activities_container">
-        <aside class="activities-aside_bar">
-          <div class="activities-icons_container">
-            <h2>Différentes activités</h2>
-            <a href="#hiking-card">
-              <div class="activities-icon_card">
-                <strong>Randonnée</strong>
-                <div class="icon_container">
-                  <i class="fa-solid fa-person-hiking"></i>
-                </div>
-              </div>
-            </a>
-            <a href="#trek-card">
-              <div class="activities-icon_card">
-                <strong>Trek</strong>
-                <div class="icon_container">
-                  <i class="fa-solid fa-campground"></i>
-                </div>
-              </div>
-            </a>
-            <a href="#trail-card">
-              <div class="activities-icon_card">
-                <strong>Trail</strong>
-                <div class="icon_container">
-                  <i class="fa-solid fa-person-running"></i>
-                </div>
-              </div>
-            </a>
-          </div>
-        </aside>
-
-        <div class="activity-card_container">
-          <div class="activity-card" id="hiking-card">
-            <h3>Randonnée</h3>
-            <p>
-              Eum quae maxime sit neque laboriosam est rerum quia sed alias
-              velit ex harum suscipit ea distinctio sequi At saepe recusandae.
-              Est tempora nobis ad suscipit iste sit iure dolore et animi
-              officia. Nulla porro hic repellendus quos ut sunt voluptatem et
-              beatae cumque est autem omnis ea nobis dolorem non facere
-              asperiores!
-            </p>
-            <div class="card-pictures_container">
-              <div class="adaptive-img--cover card_pictures">
-                <span>
-                  <img
-                    src="{{ asset('assets/images/hiking_walkers.jpg') }}"
-                    alt="Groupe de randonneurs face à la montagne"
-                  />
-                </span>
-              </div>
-              <div class="adaptive-img--cover card_pictures">
-                <span>
-                  <img
-                    src="{{ asset('assets/images/hiking_valley.jpg') }}"
-                    alt="Des randonneurs faisant une pause dans une vallée"
-                  />
-                </span>
-              </div>
-            </div>
-            <div class="yellow-btn_container">
-              <a href="/prices">Voir les tarifs</a>
-            </div>
-          </div>
-
-          <div class="activity-card" id="trek-card">
-            <h3>Trek</h3>
-            <p>
-              Sit eius ipsa et quia voluptas est nostrum iure ex neque
-              dignissimos ea iste ratine. Ea enim tenetur eos quam quia nam
-              dolor culpa non obcaecati galisum qui nihil eius sit delectus
-              enim. Hic voluptas tempore ut itaque eius non nihil esse. 33 dolor
-              nostrum et dolores aliquid ex unde quo eveniet distinctio qui sunt
-              magnam ad unde voluptate.
-            </p>
-            <div class="card-pictures_container">
-              <div class="adaptive-img--cover card_pictures">
-                <span>
-                  <img
-                    src="{{ asset('assets/images/trek_snow.jpg') }}"
-                    alt="Trek dans les montagnes enneigées"
-                  />
-                </span>
-              </div>
-              <div class="adaptive-img--cover card_pictures">
-                <span>
-                  <img
-                    src="{{ asset('assets/images/trek_bivouac.jpg') }}"
-                    alt="Bivouac dans les montagnes"
-                  />
-                </span>
-              </div>
-            </div>
-            <div class="yellow-btn_container">
-              <a href="/prices">Voir les tarifs</a>
-            </div>
-          </div>
-
-          <div class="activity-card" id="trail-card">
-            <h3>Trail</h3>
-            <p>
-              Sit exercitationem natus hic doloremque impedit qui atque tempore
-              sit quibusdam consequatur et velit nemo. Non consequatur
-              praesentium ut tempore veniam aut nostrum obcaecati. Et placeat
-              quod et unde explicabo 33 nihil earum sed atque ipsum.
-            </p>
-            <div class="card-pictures_container">
-              <div class="adaptive-img--cover card_pictures">
-                <span>
-                  <img
-                    src="{{ asset('assets/images/trail_run.jpg') }}"
-                    alt="Des coureurs dans la forêt"
-                  />
-                </span>
-              </div>
-              <div class="adaptive-img--cover card_pictures">
-                <span>
-                  <img
-                    src="{{ asset('assets/images/trail_jump.jpg') }}"
-                    alt="Un coureur dans les roches"
-                  />
-                </span>
-              </div>
-            </div>
-
-            <div class="yellow-btn_container">
-              <a href="/prices">Voir les tarifs</a>
-            </div>
-          </div>
+    <div class="global-container">
+        <div class="title_container">
+            <h1>Activités</h1>
         </div>
+        <div class="general-content_container">
+            <p>
+                Lorem ipsum dolor sit amet. Hic expedita expedita et libero
+                aperiam ex magnam illo qui obcaecati porro ex placeat dicta. Sed
+                iure distinctio ab molestiae ducimus qui dolorum fugit aut
+                temporibus quasi eos voluptates nulla ut quia dolorem. Cum
+                perspiciatis provident quo quos doloribus vel fuga facere non
+                provident accusamus eum iusto odio sed accusamus.
+            </p>
 
-        <aside class="activities-aside_bar">
-          <div class="level-hiking_container">
-            <h2>Différents niveaux de difficulté</h2>
-            <div class="level-hiking easy-hiking">
-              <p>Facile</p>
-              <i class="fa-solid fa-mountain easy-icon"></i>
+            <div class="main-activities_container">
+                <aside class="activities-aside_bar">
+                    <div class="activities-icons_container">
+                        <h2>Différentes activités</h2>
+                        <a href="#hiking-card">
+                            <div class="activities-icon_card">
+                                <strong>Randonnée</strong>
+                                <div class="icon_container">
+                                    <i class="fa-solid fa-person-hiking"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#trek-card">
+                            <div class="activities-icon_card">
+                                <strong>Trek</strong>
+                                <div class="icon_container">
+                                    <i class="fa-solid fa-campground"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#trail-card">
+                            <div class="activities-icon_card">
+                                <strong>Trail</strong>
+                                <div class="icon_container">
+                                    <i class="fa-solid fa-person-running"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </aside>
+
+                <div class="activity-card_container">
+                    <article class="hiking">
+                        <div class="activity-card" id="hiking-card">
+                            <h3>Randonnée</h3>
+                            <p>
+                                Eum quae maxime sit neque laboriosam est rerum
+                                quia sed alias velit ex harum suscipit ea
+                                distinctio sequi At saepe recusandae. Est
+                                tempora nobis ad suscipit iste sit iure dolore
+                                et animi officia. Nulla porro hic repellendus
+                                quos ut sunt voluptatem et beatae cumque est
+                                autem omnis ea nobis dolorem non facere
+                                asperiores!
+                            </p>
+                            <div class="card-pictures_container">
+                                <div class="adaptive-img--cover card_pictures">
+                                    <span>
+                                        <img
+                                            src="{{
+                                                asset(
+                                                    'assets/images/hiking_walkers.jpg'
+                                                )
+                                            }}"
+                                            alt="Groupe de randonneurs face à la montagne"
+                                        />
+                                    </span>
+                                </div>
+                                <div class="adaptive-img--cover card_pictures">
+                                    <span>
+                                        <img
+                                            src="{{
+                                                asset(
+                                                    'assets/images/hiking_valley.jpg'
+                                                )
+                                            }}"
+                                            alt="Des randonneurs faisant une pause dans une vallée"
+                                        />
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="yellow-btn_container">
+                                <a href="/prices">Voir les tarifs</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="trek">
+                        <div class="activity-card" id="trek-card">
+                            <h3>Trek</h3>
+                            <p>
+                                Sit eius ipsa et quia voluptas est nostrum iure
+                                ex neque dignissimos ea iste ratine. Ea enim
+                                tenetur eos quam quia nam dolor culpa non
+                                obcaecati galisum qui nihil eius sit delectus
+                                enim. Hic voluptas tempore ut itaque eius non
+                                nihil esse. 33 dolor nostrum et dolores aliquid
+                                ex unde quo eveniet distinctio qui sunt magnam
+                                ad unde voluptate.
+                            </p>
+                            <div class="card-pictures_container">
+                                <div class="adaptive-img--cover card_pictures">
+                                    <span>
+                                        <img
+                                            src="{{
+                                                asset(
+                                                    'assets/images/trek_snow.jpg'
+                                                )
+                                            }}"
+                                            alt="Trek dans les montagnes enneigées"
+                                        />
+                                    </span>
+                                </div>
+                                <div class="adaptive-img--cover card_pictures">
+                                    <span>
+                                        <img
+                                            src="{{
+                                                asset(
+                                                    'assets/images/trek_bivouac.jpg'
+                                                )
+                                            }}"
+                                            alt="Bivouac dans les montagnes"
+                                        />
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="yellow-btn_container">
+                                <a href="/prices">Voir les tarifs</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="trail">
+                        <div class="activity-card" id="trail-card">
+                            <h3>Trail</h3>
+                            <p>
+                                Sit exercitationem natus hic doloremque impedit
+                                qui atque tempore sit quibusdam consequatur et
+                                velit nemo. Non consequatur praesentium ut
+                                tempore veniam aut nostrum obcaecati. Et placeat
+                                quod et unde explicabo 33 nihil earum sed atque
+                                ipsum.
+                            </p>
+                            <div class="card-pictures_container">
+                                <div class="adaptive-img--cover card_pictures">
+                                    <span>
+                                        <img
+                                            src="{{
+                                                asset(
+                                                    'assets/images/trail_run.jpg'
+                                                )
+                                            }}"
+                                            alt="Des coureurs dans la forêt"
+                                        />
+                                    </span>
+                                </div>
+                                <div class="adaptive-img--cover card_pictures">
+                                    <span>
+                                        <img
+                                            src="{{
+                                                asset(
+                                                    'assets/images/trail_jump.jpg'
+                                                )
+                                            }}"
+                                            alt="Un coureur dans les roches"
+                                        />
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="yellow-btn_container">
+                                <a href="/prices">Voir les tarifs</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <aside class="activities-aside_bar">
+                    <div class="level-hiking_container">
+                        <h2>Différents niveaux de difficulté</h2>
+                        <div class="level-hiking easy-hiking">
+                            <p>Facile</p>
+                            <i class="fa-solid fa-mountain easy-icon"></i>
+                        </div>
+                        <div class="level-hiking medium-hiking">
+                            <p>Moyen</p>
+                            <i class="fa-solid fa-mountain medium-icon"></i>
+                        </div>
+                        <div class="level-hiking hard-hiking">
+                            <p>Difficile</p>
+                            <i class="fa-solid fa-mountain hard-icon"></i>
+                        </div>
+                    </div>
+                </aside>
             </div>
-            <div class="level-hiking medium-hiking">
-              <p>Moyen</p>
-              <i class="fa-solid fa-mountain medium-icon"></i>
-            </div>
-            <div class="level-hiking hard-hiking">
-              <p>Difficile</p>
-              <i class="fa-solid fa-mountain hard-icon"></i>
-            </div>
-          </div>
-        </aside>
-      </div>
+        </div>
     </div>
-  </div>
 </div>
+
 {% endblock %}

@@ -1,3 +1,77 @@
+/******************* TITLES *************************/
+
+h1,
+.main-nav__link {
+  font-weight: 400;
+  font-family: "Tapestry", cursive;
+}
+
+.about-page_container,
+.activities-page_container,
+.blog-page_container,
+.prices-page_container {
+  h1 {
+    font-size: 3.2rem;
+    margin: 16px 0px;
+    position: relative;
+    display: inline;
+    text-align: center;
+  }
+  h1::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--yellow);
+    height: 2px;
+    width: 100%;
+  }
+}
+
+.about-page_container,
+.activities-page_container,
+.prices-page_container {
+  h2 {
+    color: var(--green);
+  }
+}
+
+/******************* CONTAINERS *************************/
+
+.global-container {
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 0px 16px;
+}
+
+.about-page_container,
+.activities-page_container,
+.blog-page_container,
+.prices-page_container {
+  margin: 3em 0;
+}
+
+/******************* BACKGROUNDS *************************/
+
+.about-page_container,
+.activities-page_container,
+.article-admin-page_container,
+.blog-page_container,
+.to-about_container,
+.home-soon_container,
+.home-blog_container,
+.prices-page_container {
+  background-color: var(--white);
+  background-image: url("../images/background-body.png");
+}
+
+.mountain-background {
+  height: 15em;
+  background-image: url("../images/mountain-background.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: repeat;
+}
 
 /******************* BUTTONS *************************/
 
@@ -13,7 +87,7 @@
     transition: all 0.5s ease 0s;
   }
   a:hover {
-    background-color: #f5d24b;
+    background-color: var(--yellow);
     color: black;
   }
 }
@@ -26,9 +100,9 @@
   button {
     font-weight: bold;
     padding: 16px;
-    color: #428a13;
-    background: #fefefe;
-    border: 1px solid #428a13;
+    color: var(--green);
+    background: var(--white);
+    border: 1px solid var(--green);
     border-radius: 10px;
     transition: 0.5s;
     cursor: pointer;
@@ -38,8 +112,8 @@
   }
   a:hover,
   button:hover {
-    color: #fefefe;
-    background-color: #428a13;
+    color: var(--white);
+    background-color: var(--green);
   }
 }
 
@@ -57,15 +131,13 @@
     background-color: #f7db6e;
     font-weight: 600;
     border-radius: 4px;
-    /* box-shadow: 0px 1px 1px black; */
-    border: 1px solid #e7e7e7
-    ;
+    border: 1px solid #e7e7e7;
     transition: 0.5s ease;
   }
   a:hover,
   button:hover {
     color: black;
-    background-color: #f5d24b;
+    background-color: var(--yellow);
   }
 }
 
@@ -77,19 +149,18 @@
     cursor: pointer;
   }
   .button,
-  .btn
-   {
+  .btn {
     padding: 12px;
     color: white;
-    background-color: green;
+    background-color: var(--green);
     font-weight: bold;
     border-radius: 4px;
     box-shadow: 0px 1px 1px black;
     transition: 0.5s ease;
-   }
+  }
   .button:hover,
   .btn:hover {
     color: black;
-    background-color: #f5d24b;
+    background-color: var(--yellow);
   }
 }

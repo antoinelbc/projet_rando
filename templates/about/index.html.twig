@@ -1,109 +1,137 @@
-{% extends 'base.html.twig' %} {% block title %}A propos{% endblock %} {% block
-body %}
+{% extends 'base.html.twig' %} 
+
+{% block title %}A propos{% endblock %} 
+
+{% block body %}
+
 <div class="about-page_container">
-  <div class="global-container">
-    <div class="title_container">
-      <h1>Qui sommes-nous ?</h1>
+    <div class="global-container">
+        <div class="title_container">
+            <h1>Qui sommes-nous ?</h1>
+        </div>
+
+        <div class="general-content_container">
+            <p>
+                Lorem ipsum dolor sit amet. Ex quos atque et magnam reiciendis
+                eos nihil laboriosam ut perspiciatis saepe eum obcaecati tempora
+                est accusamus enim At vero voluptas? Et quia quia qui quod
+                quibusdam repudiandae suscipit est quae reprehenderit et
+                cupiditate molestiae id consectetur facere. In magnam fugit ut
+                quis doloribus ea nemo ipsum est modi mollitia sit autem
+                delectus qui
+            </p>
+
+            <section class="club-story">
+                <h2>L'histoire du club</h2>
+                <div class="content_container">
+                    <div class="column">
+                        <p>
+                            Lorem ipsum dolor sit amet. Ex quos atque et magnam
+                            reiciendis eos nihil laboriosam ut perspiciatis
+                            saepe eum obcaecati tempora est accusamus enim At
+                            vero voluptas? Et quia quia qui quod quibusdam
+                            repudiandae suscipit est quae reprehenderit et
+                            cupiditate molestiae id consectetur facere. In
+                            magnam fugit ut quis doloribus ea nemo ipsum est
+                            modi mollitia sit autem delectus qui dolor ullam? Ad
+                            aperiam incidunt At commodi voluptatum qui debitis
+                            necessitatibus minus voluptate sed enim alias.
+                        </p>
+                        <p>
+                            dolor ullam? Ad aperiam incidunt At commodi
+                            voluptatum qui debitis necessitatibus minus
+                            voluptate sed enim alias. Qui libero quos tempore
+                            dolorem est aliquam iste optio enim. In voluptas
+                            officiis eos sint necessitatibus sit amet illo At
+                            porro consequatur. Sit commodi nihil qui asperiores
+                            nihil qui voluptate delectus. Est consequatur
+                            commodi et galisum natus sed quaerat ratione quo
+                            perspiciatis deleniti et consequuntur quia et
+                            delectus facere.
+                        </p>
+                    </div>
+                    <div class="column">
+                        <div class="adaptive-img--contain about-picture">
+                            <span>
+                                <img
+                                    src="{{
+                                        asset('assets/images/hikers-group.jpg')
+                                    }}"
+                                    alt="les fondateurs du club"
+                                />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="common-hobby">
+                <h2>Une passion commune</h2>
+                <div class="content_container">
+                    <div>
+                        <p>
+                            repudiandae suscipit est quae reprehenderit et
+                            cupiditate molestiae id consectetur facere. In
+                            magnam fugit ut quis doloribus ea nemo ipsum est
+                            modi mollitia sit autem delectus qui dolor ullam? Ad
+                            aperiam incidunt At commodi voluptatum qui debitis
+                            necessitatibus minus voluptate sed enim alias.
+                        </p>
+                        <p>
+                            dolor ullam? Ad aperiam incidunt At commodi
+                            voluptatum qui debitis necessitatibus minus
+                            voluptate sed enim alias. Qui libero quos tempore
+                            dolorem est aliquam iste optio enim. In voluptas
+                            officiis eos sint necessitatibus sit amet illo At
+                            porro consequatur.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="useless-informations">
+                <h2>Informations Utiles</h2>
+                <div class="content_container">
+                    <div class="column">
+                        <p>
+                            Lorem ipsum dolor sit amet. Ut velit cumque eos
+                            incidunt ducimus et perspiciatis iusto. Est
+                            consectetur quas non fugiat placeat id nemo
+                            consequatur aut voluptatem consectetur sed eligendi
+                            nisi. Ut soluta excepturi in ratione quis ut
+                            voluptate sint et deleniti ipsam! Ea iusto obcaecati
+                            qui nisi officia eum consequuntur quia in
+                            repellendus sint. Est omnis officiis ut rerum
+                            consectetur ut voluptates ipsum aut ullam quidem 33
+                            nemo quod. Sit soluta rerum At accusamus fugiat aut
+                            beatae quam est sequi eaque! Sed inventore autem in
+                            enim autem aut temporibus quidem aut possimus fuga.
+                            Qui asperiores quia qui molestiae tempore est
+                            laudantium dignissimos 33 illum deleniti. Et quia
+                            harum sit dolorem autem et quasi repudiandae et
+                            debitis alias.Lorem ipsum dolor sit amet. Ut velit
+                            cumque eos incidunt ducimus et perspiciatis iusto.
+                            Est consectetur quas non fugiat placeat id nemo
+                            consequatur aut voluptatem consectetur sed eligendi
+                            nisi.
+                        </p>
+                    </div>
+                    <div class="column">
+                        <div class="adaptive-img--contain about-picture">
+                            <span>
+                                <img
+                                    src="{{
+                                        asset(
+                                            'assets/images/hiker_sunshine.jpg'
+                                        )
+                                    }}"
+                                    alt=""
+                                />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </div>
-
-    <div class="general-content_container">
-      <p>
-        Lorem ipsum dolor sit amet. Ex quos atque et magnam reiciendis eos nihil
-        laboriosam ut perspiciatis saepe eum obcaecati tempora est accusamus
-        enim At vero voluptas? Et quia quia qui quod quibusdam repudiandae
-        suscipit est quae reprehenderit et cupiditate molestiae id consectetur
-        facere. In magnam fugit ut quis doloribus ea nemo ipsum est modi
-        mollitia sit autem delectus qui
-      </p>
-
-      <h2>L'histoire du club</h2>
-      <div class="content_container">
-        <div class="column">
-          <p>
-            Lorem ipsum dolor sit amet. Ex quos atque et magnam reiciendis eos
-            nihil laboriosam ut perspiciatis saepe eum obcaecati tempora est
-            accusamus enim At vero voluptas? Et quia quia qui quod quibusdam
-            repudiandae suscipit est quae reprehenderit et cupiditate molestiae
-            id consectetur facere. In magnam fugit ut quis doloribus ea nemo
-            ipsum est modi mollitia sit autem delectus qui dolor ullam? Ad
-            aperiam incidunt At commodi voluptatum qui debitis necessitatibus
-            minus voluptate sed enim alias.
-          </p>
-          <p>
-            dolor ullam? Ad aperiam incidunt At commodi voluptatum qui debitis
-            necessitatibus minus voluptate sed enim alias. Qui libero quos
-            tempore dolorem est aliquam iste optio enim. In voluptas officiis
-            eos sint necessitatibus sit amet illo At porro consequatur. Sit
-            commodi nihil qui asperiores nihil qui voluptate delectus. Est
-            consequatur commodi et galisum natus sed quaerat ratione quo
-            perspiciatis deleniti et consequuntur quia et delectus facere.
-          </p>
-        </div>
-        <div class="column">
-          <div class="adaptive-img--contain about-picture">
-            <span>
-              <img
-                src="{{ asset('assets/images/hikers-group.jpg') }}"
-                alt="les fondateurs du club"
-              />
-            </span>
-          </div>
-        </div>
-      </div>
-      <h2>Une passion commune</h2>
-      <div class="content_container">
-        <div>
-          <p>
-            repudiandae suscipit est quae reprehenderit et cupiditate molestiae
-            id consectetur facere. In magnam fugit ut quis doloribus ea nemo
-            ipsum est modi mollitia sit autem delectus qui dolor ullam? Ad
-            aperiam incidunt At commodi voluptatum qui debitis necessitatibus
-            minus voluptate sed enim alias.
-          </p>
-          <p>
-            dolor ullam? Ad aperiam incidunt At commodi voluptatum qui debitis
-            necessitatibus minus voluptate sed enim alias. Qui libero quos
-            tempore dolorem est aliquam iste optio enim. In voluptas officiis
-            eos sint necessitatibus sit amet illo At porro consequatur.
-          </p>
-        </div>
-      </div>
-
-      <h2>Informations Utiles</h2>
-      <div class="content_container">
-        <div class="column">
-          <p>
-            Lorem ipsum dolor sit amet. Ut velit cumque eos incidunt ducimus et
-            perspiciatis iusto. Est consectetur quas non fugiat placeat id nemo
-            consequatur aut voluptatem consectetur sed eligendi nisi. Ut soluta
-            excepturi in ratione quis ut voluptate sint et deleniti ipsam! Ea
-            iusto obcaecati qui nisi officia eum consequuntur quia in
-            repellendus sint. Est omnis officiis ut rerum consectetur ut
-            voluptates ipsum aut ullam quidem 33 nemo quod. Sit soluta rerum At
-            accusamus fugiat aut beatae quam est sequi eaque! Sed inventore
-            autem in enim autem aut temporibus quidem aut possimus fuga. Qui
-            asperiores quia qui molestiae tempore est laudantium dignissimos 33
-            illum deleniti. Et quia harum sit dolorem autem et quasi repudiandae
-            et debitis alias.Lorem ipsum dolor sit amet. Ut velit cumque eos
-            incidunt ducimus et perspiciatis iusto. Est consectetur quas non
-            fugiat placeat id nemo consequatur aut voluptatem consectetur sed
-            eligendi nisi.
-          </p>
-        </div>
-        <div class="column">
-          <div class="adaptive-img--contain about-picture">
-            <span>
-              <img
-                src="{{ asset('assets/images/hiker_sunshine.jpg') }}"
-                alt=""
-              />
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
-
 
 {% endblock %}

@@ -1,98 +1,69 @@
-{% extends 'base.html.twig' %} {% block title %}Articles{% endblock %} {% block
-body%}
+{% extends 'base.html.twig' %} 
+
+{% block title %}Articles{% endblock %} 
+
+{% block body%}
 
 <div class="global-container">
-  <h1>Liste des articles</h1>
+    <h1>Liste des articles</h1>
 
-  <div class="admin-table_container article-table_container">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Id</th>
-          <th>Titre</th>
-          <th>Auteur</th>
-          <th>Date de publication</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for article in articles %}
-        <tr>
-          <td>{{ article.id }}</td>
-          <td>{{ article.title }}</td>
-          <td>{{ article.user.username }}</td>
-          <td>{{ article.publishedDate ? article.publishedDate|date('d-m-Y', 'Europe/Paris') : '' }}</td>
-          <td class="actions-btn_container">
-            <div class="admin-btn_container">
-              <a href="{{ path('app_articles_show', { id: article.id }) }}"
-                >Voir l'article</a
-              >
-            </div>
-            <div class="admin-btn_container">
-              <a href="{{ path('app_articles_edit', { id: article.id }) }}"
-                >Modifier l'article</a
-              >
-            </div>
-            <div class="admin-btn_container">
-            {{ include('articles/_delete_form.html.twig') }}
-          </div>
-          </td>
-        </tr>
-        {% else %}
-        <tr>
-          <td colspan="3">Aucun article trouvé</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-  </div>
-  <div class="admin-btn_container">
-    <a href="{{ path('app_articles_new') }}">Créer un nouvel article</a>
-  </div>
+    <div class="admin-table_container article-table_container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Titre</th>
+                    <th>Auteur</th>
+                    <th>Date de publication</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for article in articles %}
+                <tr>
+                    <td>{{ article.id }}</td>
+                    <td>{{ article.title }}</td>
+                    <td>{{ article.user.username }}</td>
+                    <td>
+                        {{ article.publishedDate ? article.publishedDate|date('d-m-Y', 'Europe/Paris') : '' }}
+                    </td>
+                    <td class="actions-btn_container">
+                        <div class="admin-btn_container">
+                            <a
+                                href="{{
+                                    path('app_articles_show', {
+                                        id: article.id
+                                    })
+                                }}"
+                                >Voir l'article</a
+                            >
+                        </div>
+                        <div class="admin-btn_container">
+                            <a
+                                href="{{
+                                    path('app_articles_edit', {
+                                        id: article.id
+                                    })
+                                }}"
+                                >Modifier l'article</a
+                            >
+                        </div>
+                        <div class="admin-btn_container">
+                            {{ include("articles/_delete_form.html.twig") }}
+                        </div>
+                    </td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="3">Aucun article trouvé</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="admin-btn_container">
+        <a href="{{ path('app_articles_new') }}">Créer un nouvel article</a>
+    </div>
 </div>
 
-
-<!-- <div class="global-container">
-  <h1>Blog</h1>
-
-  <div class="articles-cards_container my-slider">
-    {% for article in articles %}
-    <div class="article-card">
-      <div class="article-card_picture adaptive-img--contain">
-        <span>
-          <img src="{{asset('uploads/articles/'~article.picture)}}" alt="#" />
-        </span>
-      </div>
-      <div class="article-card_info">
-        <div class="article-card_title">
-          {{ article.title }}
-        </div>
-        <div class="article-card_date">
-          {{ article.publishedDate ? article.publishedDate|date('d-m-Y', 'Europe/Paris') : '' }}
-        </div>
-
-        <div class="article-card_button">
-          <a href="{{ path('app_articles_show', { id: article.id }) }}"
-            >Voir l'article</a
-          >
-          {% if is_granted('ROLE_ADMIN') %}
-          <a href="{{ path('app_articles_edit', { id: article.id }) }}"
-            >Modifier</a
-          >
-          <div class="return-btn_container">
-            {{ include('articles/_delete_form.html.twig') }}
-          </div>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-
-  {% if is_granted('ROLE_ADMIN') %}
-  <div class="article-card_button">
-    <a href="{{ path('app_articles_new') }}">Créer un nouvel article</a>
-  </div>
-  {% endif %}
-</div> -->
 {% endblock %}

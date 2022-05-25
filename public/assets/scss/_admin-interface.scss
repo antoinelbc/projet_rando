@@ -4,18 +4,18 @@
   table {
     width: 68%;
     border-collapse: collapse;
-    border: 1px solid #ddd;
+    border: 1px solid var(--grey);
     thead {
-      background-color: #f5d24b;
+      background-color: var(--yellow);
       th {
         padding: 8px;
       }
     }
     tbody tr {
-      background: #fefefe;
+      background: var(--white);
     }
     tbody tr:nth-child(2n) {
-      background-color: #ddd;
+      background-color: var(--grey);
     }
     td {
       text-align: center;
@@ -65,7 +65,6 @@
 
 .article-admin-page_container {
   display: flex;
-  background-image: url("../images/background-body.png");
 }
 
 .article-admin-form_container {
@@ -134,5 +133,5 @@
 }
 
 .table-show_comment {
-  outline: 1px solid #ddd;
+  outline: 1px solid var(--grey);
 }

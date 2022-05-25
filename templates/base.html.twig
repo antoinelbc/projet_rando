@@ -1,279 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Welcome!{% endblock %}</title>    
-    <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>"
-    />
-    {# Run `composer require symfony/webpack-encore-bundle` to start using
-    Symfony UX #} 
-    
-    {% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('assets/styles/styles.css') }}">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
-    {{
-      encore_entry_link_tags("app")
-    }}
-    {% endblock %} 
-  </head>
-  <body>
-    <header class="header">
-      <nav class="main-nav">
-        <div class="main-nav_container">
-          <a href="/">
-          <div class="logo_container adaptive-img--cover">
-            <span>
-              <img src= "{{ asset('assets/images/logo.png') }}" alt="logo">
-            </span>
-          </div>
-        </a>
-          <ul class="main-nav_list">
-            <li class="main-nav__item">
-              <a href="/" class="main-nav__link">Accueil</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="/about" class="main-nav__link">A propos</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="/activities" class="main-nav__link">Activités</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="/blog" class="main-nav__link">Blog</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="/prices" class="main-nav__link">Tarifs</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="/contact" class="main-nav__link">Contact</a>
-            </li>
-        
-
-
-            <!-- Login nav with submenu -->
-            <li class="main-nav__item">
-              {% if app.user %}
-              <div class="hello-user_container">
-                <p class="hello_user">Bonjour <span>{{ app.user.firstname }}</span></p>
-                <a href="{{ path('app_logout') }}" class="main-nav__link"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
-              </div>
-              </li>
-              {% else %}
-              <li class="main-nav__item">
-                <a href="/login" class="main-nav__link">
-                  <i class="fa-solid fa-circle-user"></i>
-                </a>
-                <div class="submenu_container">
-                  <ul class="main-nav_list submenu_list">
-                    <li class="main-nav__item submenu__item">
-                      <a href="/login" class="main-nav__link submenu__link">Se connecter</a>
-                    </li>
-                    <li class="main-nav__item submenu__item">
-                      <a href="/register" class="main-nav__link submenu__link">S'inscrire</a>
-                    </li>
-                  </ul>
-                </div>
-                </li>
-              {% endif %}
-            </li>
-            {% if is_granted('ROLE_ADMIN') %}
-            <li class="main-nav__item admin__item">
-              <a href="#" class="main-nav__link">Espace Admin</a>
-              <div class="submenu-admin_container">
-                <ul class="main-nav_list submenu_list">
-                  <li class="main-nav__item submenu__item">
-                    <a href="/categories" class="main-nav__link submenu__link">Gestion des catégories</a>
-                  </li>
-                  <li class="main-nav__item submenu__item">
-                    <a href="/articles" class="main-nav__link submenu__link">Gestion des articles</a>
-                  </li>
-                  <li class="main-nav__item submenu__item">
-                    <a href="/comments" class="main-nav__link submenu__link">Gestion des commentaires</a>
-                  </li>
-                </ul>
-              </div>
-              </li>
-            {% endif %}
-          </ul>
-        </div>
-      </nav>
-
-      <!-- HAMBURGER MENU -->
-      <nav class="hamburger-menu_nav">
-        <div class="hamburger-menu_container">
-          <ul class="hamburger-menu">
-            <li><a class="hamburger-menu_item" href="/">Accueil</a></li>
-            <li><a class="hamburger-menu_item" href="/about">A propos</a></li>
-            <li><a class="hamburger-menu_item" href="/activities">Activités</a></li>
-            <li><a class="hamburger-menu_item" href="/blog">Blog</a></li>
-            <li><a class="hamburger-menu_item" href="/prices">Tarifs</a></li>
-            <li><a class="hamburger-menu_item" href="/contact">Contact</a></li>
-            
-            <div class="user-block_mobile">
-            {% if app.user %}
-              <div class="hello-user_container">
-                <p class="hello_user">Bonjour <span>{{ app.user.firstname }}</span></p>
-                <a href="{{ path('app_logout') }}" class="hamburger-menu_item logout-mobile"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
-              </div>
-            </li>
-            {% else %}
-            <li>
-              <a href="/login" class="hamburger-menu_item">Se connecter</a>
-            </li>
-            <li>
-              <a href="/register" class="hamburger-menu_item">S'inscrire</a>
-            </li>
-            </div>
-              </ul>
-              {% endif %}
-              {% if is_granted('ROLE_ADMIN') %}
-            
-              <div class="admin-block_mobile"> 
-                  <li>
-                    <a href="/categories" class="hamburger-menu_item">Gestion des catégories</a>
-                  </li>
-                  <li>
-                    <a href="/articles" class="hamburger-menu_item">Gestion des articles</a>
-                  </li>
-                  <li class=>
-                    <a href="/comments" class="hamburger-menu_item">Gestion des commentaires</a>
-                  </li>
-              </div>
-            {% endif %}
-
-<!--             <div>
-            <li><a class="hamburger-menu_item" href="#">Se connecter</a></li>
-            <li><a class="hamburger-menu_item" href="#">S'inscrire</a></li>
-            </div> -->
-
-          </ul>
-          <button class="hamburger">
-            <i class="burger-icon fa-solid fa-bars"></i>
-            <i class="close-icon fa-solid fa-xmark"></i>
-          </button>
-          <button class="to-the-top">
-            <i class="arrow-up-icon fa-solid fa-arrow-up"></i>
-          </button>
-        </div>
-      </nav>
-
-    </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{% block title %}Pyrénnées Rando Club{% endblock %}</title>
+        <!--    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>" /> -->
+        {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('assets/styles/styles.css') }}" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+        {{ encore_entry_link_tags("app") }}
+        {% endblock %}
+    </head>
+    <body>
+        {% include 'template-parts/header.html.twig' %}
     <main>
-    {% block body %}
-    
-    {% endblock %}
+        {% block body %} 
+        
+        {% endblock %}
     </main>
-    <footer class="footer">
-    <div class="footer_container">
-      <section class="footer-start_container">
-        <div class="footer-logo_container adaptive-img--contain">
-          <span>
-            <img src= "{{ asset('assets/images/logo.png') }}" alt="logo">
-          </span>
+        {% include 'template-parts/footer.html.twig' %} 
+        
+        {% for message in app.flashes('success') %}
+        <div class="alert-success">
+            {{ message }}
         </div>
-      </section>
-      <div class="footer-middle_container">
-      <section class="footer-menu">
-        <div class="footer-menu_container">
-          <h2>Menu</h2>
-          <ul class="footer-menu_list">
-            <div class="footer-menu_col">
-            <li class="footer-menu__item">
-              <a href="/" class="footer-menu__link">Accueil</a>
-            </li>
-            <li class="footer-menu__item">
-              <a href="/about" class="footer-menu__link">A propos</a>
-            </li>
-            <li class="footer-menu__item">
-              <a href="/activities" class="footer-menu__link">Activités</a>
-            </li>
-          </div>
-          <div class="footer-menu_col">
-            <li class="footer-menu__item">
-              <a href="/articles" class="footer-menu__link">Blog</a>
-            </li>
-            <li class="footer-menu__item">
-              <a href="/prices" class="footer-menu__link">Tarifs</a>
-            </li>
-            <li class="footer-menu__item">
-              <a href="/contact" class="footer-menu__link">Contact</a>
-            </li>
-          </div>
-          </ul>
-        </div>
-      </section>
-      <section class="footer-legal">
-        <div class="footer-legal_container">
-          <ul class="footer-legal--list">
-            <div class="footer-legal_row">
-            <li class="footer-legal__item">
-              <a href="#" class="footer-legal__link">Mentions légales</a>
-            </li>
-            <li class="footer-legal__item">
-              <a href="#" class="footer-legal__link">Politique de confidentialité</a>
-            </li>
-          </div>
-          <div class="footer-legal_row">
-            <li class="footer-legal__item">
-              <p class="footer-legal__copyright">&copy; Copyright 2022 by <a href="#">Me</a>.</p>
-            </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </div>
-    <div class="footer-end_container">
-      <section class="footer-social-link">
-        <div class="footer-sociallink_container">
-          <h2>Suivez-nous sur les réseaux</h2>
-          <ul class="footer-social-link--list">
-            <li class="footer-social-link__item">
-              <a href="https://fr-fr.facebook.com/">
-                <i class="fa-brands fa-facebook-f"></i>
-              </a>
-            </li>
-            <li class="footer-social-link__item">
-              <a href="https://twitter.com/?lang=fr">
-                <i class="fa-brands fa-twitter"></i>
-              </a>
-            </li>
-            <li class="footer-social-link__item">
-              <a href="https://www.instagram.com/?hl=fr">
-                <i class="fa-brands fa-instagram"></i>
-              </a>
-            </li>
-          </ul>
-        </div> 
-      </section>
-      <section class="footer-contact">
-        <div class="footer-contact--container">
-          <p>Si vous avez des questions ou besoin d'un renseignement, vous pouvez également utiliser notre formulaire de contact</p>
-          <div class="contact-btn_container">
-            <a href="/contact" class="button">Contactez-nous</a>
-          </div>
-        </div>
-      </section>
-    </div>
-    </div>  
-    </footer>
+        {% endfor %} 
+        
+        {% block javascripts %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+        <script src="{{ asset('assets/scripts/blog_carousel.js') }}"></script>
+        <script src="{{ asset('assets/scripts/hamburger_menu.js') }}"></script>
+        {% endblock %}
     
-    
-    {% for message in app.flashes('success') %}
-    <div class="alert-success">
-      {{ message }}
-    </div>
-    {% endfor %} 
-
-    {% block javascripts %}
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
-      <script src="{{ asset('assets/scripts/blog_carousel.js') }}"></script>
-      <script src="{{ asset('assets/scripts/hamburger_menu.js') }}"></script>
-    {% endblock %}
-  </body>
+    </body>
 </html>
-

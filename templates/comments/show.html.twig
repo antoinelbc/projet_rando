@@ -1,42 +1,49 @@
-{% extends 'base.html.twig' %} {% block title %}Commentaire{% endblock %} {%
-block body %}
+{% extends 'base.html.twig' %} 
+
+{% block title %}Commentaire{% endblock %} 
+
+{% block body %}
+
 <div class="global-container">
-  <h1>Commentaire</h1>
+    <h1>Commentaire</h1>
 
-  <div class="admin-table_container">
-    <table class="table table-show_comment">
-      <tbody>
-        <thead>
-            <tr>
-              <th>Id</th>
-              <th>Commentaire</th>
-              <th>Date de publication</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-        <tr>
-          <td>{{ comment.id }}</td>
-          <td>{{ comment.content }}</td>
-          <td>
-            {{ comment.publishedDate ? comment.publishedDate|date('Y-m-d H:i:s') : '' }}
-          </td>
-          <td>
-            <div class="admin-btn_container edit-btn_container">
-                <a href="{{ path('app_comments_edit', { id: comment.id }) }}">Modifier</a>
-              </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    <div class="admin-table_container">
+        <table class="table table-show_comment">
+            <tbody>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Commentaire</th>
+                        <th>Date de publication</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>{{ comment.id }}</td>
+                    <td>{{ comment.content }}</td>
+                    <td>
+                        {{ comment.publishedDate ? comment.publishedDate|date('Y-m-d H:i:s') : '' }}
+                    </td>
+                    <td>
+                        <div class="admin-btn_container edit-btn_container">
+                            <a
+                                href="{{
+                                    path('app_comments_edit', {
+                                        id: comment.id
+                                    })
+                                }}"
+                                >Modifier</a
+                            >
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-  <div class="admin-btn_container">
-    <a href="{{ path('app_comments_index') }}">Retour</a>
-  </div>
-
-  
+    <div class="admin-btn_container">
+        <a href="{{ path('app_comments_index') }}">Retour</a>
+    </div>
 </div>
-
-<!-- {{ include("comments/_delete_form.html.twig") }} -->
 
 {% endblock %}

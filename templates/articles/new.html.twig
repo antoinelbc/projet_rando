@@ -1,18 +1,25 @@
-{% extends 'base.html.twig' %} {% block title %}Nouvel Article{% endblock %} {%
-block body %}
+{% extends 'base.html.twig' %} 
+
+{% block title %}Nouvel Article{% endblock %} 
+
+{% block body %}
+
 <div class="global-container">
-<h1>Créer un nouvel article</h1>
+    <h1>Créer un nouvel article</h1>
 
-<div class="article-admin-page_container">
-  <div class="global-container">
-    <div class="article-admin-form_container">
-      {{ include("articles/_form.html.twig") }}
-    </div>
+    <div class="article-admin-page_container">
+        <div class="global-container">
+            <div class="article-admin-form_container">
+                {{ include("articles/_form.html.twig") }}
+            </div>
 
-    <div class="admin-btn_container">
-      <a class="return-btn" href="{{ path('app_articles_index') }}">Retour</a>
+            <div class="admin-btn_container">
+                <a class="return-btn" href="{{ path('app_articles_index') }}"
+                    >Retour</a
+                >
+            </div>
+        </div>
     </div>
-  </div>
 </div>
-</div>
+
 {% endblock %}

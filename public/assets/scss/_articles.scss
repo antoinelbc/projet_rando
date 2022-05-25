@@ -26,7 +26,7 @@
 
 .article_container {
   flex-direction: column;
-  background: #fefefe;
+  background: var(--white);
   padding-top: 16px;
   margin-top: 16px;
 }
@@ -91,7 +91,7 @@
 .comments-section_container {
   margin-top: 48px;
   padding-top: 40px;
-  background: #fefefe;
+  background: var(--white);
   border-top: 1px solid black;
 }
 

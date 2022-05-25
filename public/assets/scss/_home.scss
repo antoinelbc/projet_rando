@@ -13,7 +13,7 @@
   padding-bottom: 6em;
   h1 {
     font-family: "Tapestry", cursive;
-    color: #fefefe;
+    color: var(--white);
     font-size: 8rem;
     font-weight: bold;
     opacity: 0.9;
@@ -25,7 +25,7 @@
     p {
       font-family: "Tapestry", cursive;
       font-size: 4rem;
-      color: #fefefe;
+      color: var(--white);
       text-shadow: 2px 1px 2px black;
     }
   }
@@ -64,15 +64,9 @@
   padding-top: 3em;
 }
 
-.to-about_container,
-.home-soon_container,
-.home-blog_container {
-  background-image: url("../images/background-body.png");
-}
-
 .to-activities_container,
 .to-prices_container {
-  background-color: rgba(243, 243, 243, 0.6);
+  background-color: var(--pale-grey);
 }
 
 .home-activity-card,
@@ -105,7 +99,6 @@
 
 .to-about_row {
   display: flex;
-  /*   flex-wrap: wrap; */
 }
 .to-about_item {
   flex: 1 0;
@@ -130,9 +123,9 @@
   padding-bottom: 16px;
   position: relative;
   flex: 1 0;
-  background-color: #fefefe;
+  background-color: var(--white);
   border-radius: 12px 12px 12px 12px;
-  box-shadow: 1px 1px 5px #ddd;
+  box-shadow: 1px 1px 5px var(--grey);
   transition: transform 0.3s ease;
   a {
     text-decoration: none;
@@ -215,7 +208,7 @@
   width: 60em;
   margin-top: 12em;
   padding: 3em;
-  background-color: #ddd;
+  background-color: var(--grey);
   border-radius: 12px;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("../images/mountain_lake.jpg");
@@ -223,7 +216,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   h2 {
-    color: #fefefe;
+    color: var(--white);
   }
 }
 
@@ -238,12 +231,12 @@
   gap: 1em;
   span {
     font-weight: bold;
-    color: #fefefe;
+    color: var(--white);
   }
 }
 
 .fa-mountain {
-  color: #428a13;
+  color: var(--green);
 }
 
 .easy-icon {
@@ -260,7 +253,7 @@
 
 .level-list {
   gap: 16px;
-  color: #fefefe;
+  color: var(--white);
 }
 
 /******************* HOME BLOG *************************/
@@ -362,46 +355,44 @@
     text-align: center;
   }
   .home-slogan_container {
-    /*     display:none; */
     margin-bottom: 4em;
   }
   .home-header_image .home-slogan_container p {
     font-size: 2.4rem;
     margin: 0em 4em 3em 4em;
   }
-  .mountain-background{
+  .mountain-background {
     background-size: cover;
     background-repeat: no-repeat;
   }
 }
 
-@media screen and(max-width: 348px){
+@media screen and(max-width: 348px) {
   .to-about_row .to-about_item {
     min-width: 16em;
     max-width: 16em;
   }
-  .home-activity-card{
+  .home-activity-card {
     max-width: 16em;
-    .home-card_picture{
-      max-width:16em;
+    .home-card_picture {
+      max-width: 16em;
       height: 11em;
     }
-    .activity-card_info p{
-      display:none;
+    .activity-card_info p {
+      display: none;
     }
   }
-  .home-picture-transition{
+  .home-picture-transition {
     height: 22em;
   }
-  .home-prices-card{
-    min-width:18em;
+  .home-prices-card {
+    min-width: 18em;
     height: 28em;
-    .yellow-btn_container a{
+    .yellow-btn_container a {
       padding: 12px 2px;
     }
   }
-  .level_container{
-    width:18em;
+  .level_container {
+    width: 18em;
   }
 }
-

@@ -1,14 +1,19 @@
-{% extends 'base.html.twig' %} {% block title %}Modifier un commentaire{% endblock %} {%
-block body %}
+{% extends 'base.html.twig' %} 
+
+{% block title %}Modifier un commentaire{% endblock %} 
+
+{% block body %}
+
 <div class="global-container">
-  <h1>Modifier un commentaire</h1>
+    <h1>Modifier un commentaire</h1>
 
-  <div class="comments-admin-form_container">
-    {{ include("comments/_form.html.twig", { button_label: "Editer" }) }}
-  </div>
+    <div class="comments-admin-form_container">
+        {{ include("comments/_form.html.twig", { button_label: "Editer" }) }}
+    </div>
 
-  <div class="admin-btn_container">
-    <a href="{{ path('app_comments_index') }}">Retour</a>
-  </div>
+    <div class="admin-btn_container">
+        <a href="{{ path('app_comments_index') }}">Retour</a>
+    </div>
 </div>
+
 {% endblock %}

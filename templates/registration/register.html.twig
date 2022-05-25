@@ -1,29 +1,33 @@
-{% extends 'base.html.twig' %} {% block title %}Inscription{% endblock %} {%
-block body %} {% for flash_error in app.flashes('verify_email_error') %}
+{% extends 'base.html.twig' %} {% block title %}Inscription{% endblock %} 
+
+{% block body %} 
+
+{% for flash_error in app.flashes('verify_email_error') %}
 <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
 {% endfor %}
 
 <div class="register-page_container">
-  <div class="global-container">
-    <div class="register-form_container">
-      {{ form_start(registrationForm) }}
-      <h1>Créez votre compte</h1>
-      {{ form_row(registrationForm.username) }}
-      {{ form_row(registrationForm.first_name) }}
-      {{ form_row(registrationForm.last_name) }}
-      {{ form_row(registrationForm.email) }}
-      {{
-        form_row(registrationForm.plainPassword, {
-          label: "Mot de passe"
-        })
-      }}
-      {{ form_row(registrationForm.agreeTerms) }}
+    <div class="global-container">
+        <div class="register-form_container">
+            {{ form_start(registrationForm) }}
+            <h1>Créez votre compte</h1>
+            {{ form_row(registrationForm.username) }}
+            {{ form_row(registrationForm.first_name) }}
+            {{ form_row(registrationForm.last_name) }}
+            {{ form_row(registrationForm.email) }}
+            {{
+                form_row(registrationForm.plainPassword, {
+                    label: "Mot de passe"
+                })
+            }}
+            {{ form_row(registrationForm.agreeTerms) }}
 
-      <button type="submit" class="btn submit-btn submit-btn_register">
-        <i class="fa-solid fa-circle-arrow-right"></i>
-      </button>
-      {{ form_end(registrationForm) }}
+            <button type="submit" class="btn submit-btn submit-btn_register">
+                <i class="fa-solid fa-circle-arrow-right"></i>
+            </button>
+            {{ form_end(registrationForm) }}
+        </div>
     </div>
-  </div>
 </div>
+
 {% endblock %}

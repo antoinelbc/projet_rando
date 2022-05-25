@@ -2,83 +2,58 @@
 
 .general-content_container,
 .content_container {
-  display: flex;
+    display: flex;
 }
 
 /******************* ABOUT  *************************/
 
 .general-content_container {
-  padding: 32px 0px 48px 0px;
-  flex-direction: column;
-  gap: 20px;
-  h2 {
-    color: #428a13;
-  }
-  p {
-    line-height: 1.6em;
-    text-align: justify;
-  }
+    padding: 32px 0px 48px 0px;
+    flex-direction: column;
+    gap: 20px;
+    p {
+        line-height: 1.6em;
+        text-align: justify;
+    }
 }
 
-.content_container{
-  flex-wrap: wrap;
+.content_container {
+    flex-wrap: wrap;
 }
 
 .column {
-  flex: 1 593px;
+    flex: 1 593px;
 }
 
 .about-picture {
-  height: 18em;
+    height: 18em;
 }
 
 .about-page_container {
-  margin: 3em;
-  background-color: #fefefe;
-  background-image: url("../images/background-body.png");
-  .title_container {
-    display: flex;
-    justify-content: center;
-  }
-  h1 {
-    font-size: 3.2rem;
-    margin: 16px 0px;
-    position: relative;
-    display: inline;
-    text-align: center;
-  }
-  h1::after {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    background-color: #f5d24b;
-    height: 2px;
-    width: 100%;
-  }
+    .title_container {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 /******************* ABOUT RESPONSIVE *************************/
 
-@media screen and (max-width: 1313px){
-  .content_container{
-     gap: 3em;
-  }
+@media screen and (max-width: 1313px) {
+    .content_container {
+        gap: 3em;
+    }
 }
 
-@media screen and (max-width: 396px){
-  .about-page_container h2{
-    padding-top: 1em;
-  }
-  .content_container{
-    gap: 0em;
-    justify-content: center;
-    .about-picture{
-      min-width:12em;
-      height: 12em; 
+@media screen and (max-width: 396px) {
+    .about-page_container h2 {
+        padding-top: 1em;
     }
- }
-  } 
-
-
-
+    .content_container {
+        gap: 0em;
+        justify-content: center;
+        .about-picture {
+            min-width: 12em;
+            height: 12em;
+        }
+    }
+}

@@ -1,24 +1,7 @@
 .prices-page_container {
-  margin: 3em 0;
-  background-color: #fefefe;
-  background-image: url("../images/background-body.png");
   .title_container {
     display: flex;
     justify-content: center;
-  }
-  h1 {
-    margin: 16px 0px;
-    position: relative;
-    display: inline;
-  }
-  h1::after {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    background-color: #f5d24b;
-    height: 2px;
-    width: 100%;
   }
 }
 
@@ -42,14 +25,14 @@
   max-width: 22em;
   align-items: center;
   gap: 16px;
-  border: 1px solid #ddd;
-  box-shadow: 1px 1px 5px #ddd;
+  border: 1px solid var(--grey);
+  box-shadow: 1px 1px 5px var(--grey);
   border-radius: 8px;
   padding: 44px;
-  background-color: #fefefe;
+  background-color: var(--white);
   transition: transform 0.3s ease;
   h3 {
-    color: #66addc;
+    color: var(--blue);
     font-weight: bold;
     font-size: 2.2rem;
   }
@@ -60,7 +43,7 @@
   span {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #66addc;
+    color: var(--blue);
   }
 }
 
@@ -78,28 +61,28 @@
   table {
     width: 50%;
     border-collapse: collapse;
-    border: 1px solid #ddd;
+    border: 1px solid var(--grey);
     caption {
       font-weight: bold;
-      background-color: #fefefe;
-      border: 1px solid #ddd;
+      background-color: var(--white);
+      border: 1px solid var(--grey);
       padding: 24px;
     }
     thead {
-      background-color: #f5d24b;
+      background-color: var(--yellow);
       th {
         text-align: left;
         padding: 8px;
       }
     }
     tbody tr {
-      background: #fefefe;
+      background: var(--white);
       td:last-child {
         text-align: right;
       }
     }
     tbody tr:nth-child(2n) {
-      background-color: #ddd;
+      background-color: var(--grey);
     }
     td {
       padding: 8px;
@@ -113,22 +96,17 @@
 
 /******************* PRICES RESPONSIVE *************************/
 
-@media screen and (max-width: 1099px){
-  .prices-card_container{
+@media screen and (max-width: 1099px) {
+  .prices-card_container {
     justify-content: center;
   }
-  .prices-card{
+  .prices-card {
     min-width: 33em;
   }
 }
 
-@media screen and (max-width: 572px){
-  .prices-card{
+@media screen and (max-width: 572px) {
+  .prices-card {
     min-width: 18em;
-    
   }
 }
- 
-
-
- 
