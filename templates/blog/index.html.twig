@@ -2,7 +2,7 @@
 
 {% block body %}
 
-<div class="blog-page_container">
+<!-- <div class="blog-page_container">
     <div class="global-container">
         <h1>Blog</h1>
     </div>
@@ -49,6 +49,45 @@
         </div>
         {% endif %}
     </div>
-</div>
+</div> -->
 
+<div class="blog-page_container">
+    <div class="global-container">
+        <h1>Blog</h1>
+    <div class="articles-cards_container-test">
+        {% for article in articles %}
+      
+        <article class="article-card-test">
+            <div class="article-card_picture adaptive-img--contain">
+                <span>
+                    <img
+                        src="{{asset('uploads/articles/'~article.picture)}}"
+                        alt="#"
+                    />
+                </span>
+            </div>
+            <div class="article-card_info">
+                <div class="article-card_title">
+                    {{ article.title }}
+                </div>
+                <div class="article-card_date">
+                    {{ article.publishedDate ? article.publishedDate|date('d-m-Y', 'Europe/Paris') : '' }}
+                </div>
+
+                <div class="blog-btn_container">
+                    <div>
+                        <a
+                            href="{{
+                                path('app_articles_show', { id: article.id })
+                            }}"
+                            >Voir l'article</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}

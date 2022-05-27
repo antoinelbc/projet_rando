@@ -6,6 +6,18 @@ let slider = tns({
     "slideBy": 1,
     "nav": false,
     arrowKeys: false,
+    autoplay: true,
+    responsive: {
+        980: {
+            items: 3
+        },
+        640: {
+            items: 2
+        },
+        240: {
+            items: 1
+        }
+    }
 })
 
 //Fixes the bug when pressing the right arrow which shifts the window

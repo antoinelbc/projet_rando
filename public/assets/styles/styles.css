@@ -2098,12 +2098,82 @@ h1,
 }
 .article-card_info .article-card_title {
   font-weight: bold;
+  text-align: center;
 }
 
 .tns-visually-hidden {
   display: none;
 }
 
+/******************* BLOG TEST *************************/
+.articles-cards_container-test {
+  padding: 3em 0em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4em;
+  justify-content: center;
+}
+
+.article-card-test {
+  flex: 1 0;
+  background: gray;
+  padding: 26px;
+  max-width: 24em;
+  min-width: 22em;
+  border-radius: 24px;
+}
+
+/******************* BLOG HOME RESPONSIVE *************************/
+@media screen and (max-width: 1262px) {
+  .articles-cards_container {
+    gap: 0px;
+  }
+
+  .article-card {
+    max-width: 284px;
+    min-width: 284px;
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 980px) {
+  .article-card {
+    max-width: 348px;
+    min-width: 348px;
+  }
+}
+@media screen and (max-width: 788px) {
+  .article-card {
+    max-width: 264px;
+    min-width: 264px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .article-card {
+    max-width: 412px;
+    min-width: 300px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 448px) {
+  .article-card {
+    margin: 0 24px;
+  }
+}
+@media screen and (max-width: 348px) {
+  .article-card {
+    max-width: 272px;
+    min-width: 272px;
+    margin: 0 auto;
+  }
+}
+/******************* BLOG RESPONSIVE *************************/
+@media screen and (max-width: 400px) {
+  .article-card-test {
+    max-width: 22em;
+    min-width: 16em;
+    padding: 20px;
+  }
+}
 /******************* CONTACT FORM GENERAL  *************************/
 .contact-page_container,
 .contact-form_container {
