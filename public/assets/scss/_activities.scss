@@ -5,93 +5,182 @@
 .activity-card_container,
 .activity-card,
 .level-hiking {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /******************* ACTIVITIES *************************/
 
 .main-activities_container {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .activities-aside_bar {
-  height: 29em;
-  position: sticky;
-  top: 0;
-  padding-top: 16px;
+    height: 29em;
+    position: sticky;
+    top: 10em;
+    padding-top: 16px;
 }
 
 .activities-icons_container {
-  gap: 16px;
-  h2 {
-    padding-bottom: 16px;
-  }
+    gap: 16px;
+    h2 {
+        padding-bottom: 16px;
+    }
 }
 
 .activities-icon_card {
-  gap: 16px;
-  border: 1px solid #f3f3f3;
-  border-radius: 5px;
-  width: 8em;
-  padding: 2em;
-  background-color: var(--white);
-  box-shadow: 0px 1px 4px var(--grey);
-  strong {
-    color: black;
-    transition: 0.2s ease;
-  }
-  i {
-    font-size: 2.5em;
-    color: var(--yellow);
-    transition: 0.3s ease;
-  }
+    gap: 16px;
+    border: 1px solid #f3f3f3;
+    border-radius: 5px;
+    width: 8em;
+    padding: 2em;
+    background-color: var(--white);
+    box-shadow: 0px 1px 4px var(--grey);
+    strong {
+        color: black;
+        transition: 0.2s ease;
+    }
+    i {
+        font-size: 2.5em;
+        color: var(--yellow);
+        transition: 0.3s ease;
+    }
 }
 
 .activities-icon_card:hover {
-  i {
-    color: var(--green);
-  }
+    i {
+        color: var(--green);
+    }
 }
 
 .activity-card_container {
-  margin: 5em 0;
-  gap: 40px;
+    margin: 5em 0;
+    gap: 40px;
 }
 
 .activity-card {
-  width: 40em;
-  gap: 16px;
-  border: 1px solid var(--grey);
-  border-radius: 12px;
-  box-shadow: 1px 1px 5px var(--grey);
-  padding: 32px;
-  transition: transform 0.3s ease;
-  background-color: var(--white);
-  p {
-    line-height: 1.6em;
-    text-align: justify;
-  }
+    width: 40em;
+    gap: 16px;
+    border: 1px solid var(--grey);
+    border-radius: 12px;
+    box-shadow: 1px 1px 5px var(--grey);
+    padding: 32px;
+    transition: transform 0.3s ease;
+    background-color: var(--white);
+    p {
+        line-height: 1.6em;
+        text-align: justify;
+    }
 }
 
 .activity-card:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .level-hiking_container {
-  display: flex;
-  gap: 40px;
-  flex-direction: column;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
 }
 
 .card-pictures_container {
-  display: flex;
-  gap: 16px;
+    display: flex;
+    gap: 16px;
 }
 
 .card_pictures {
-  height: 12em;
-  width: 18em;
+    height: 12em;
+    width: 18em;
+}
+
+.activities-horizontal_bar,
+.level-horizontal_bar {
+    display: none;
+}
+
+/******************* ACTIVITIES RESPONSIVE *************************/
+
+@media screen and(max-width: 1294px) {
+    .activities-aside_bar {
+        display: none;
+    }
+    .activities-horizontal_bar,
+    .level-horizontal_bar {
+        display: flex;
+        justify-content: center;
+    }
+
+    .activities-horizontal_bar {
+        margin-top: 2em;
+    }
+
+    .main-activities_container {
+        display: flex;
+        flex-direction: column;
+    }
+    .activities-icons_container {
+        display: flex;
+        .icons_container {
+            display: flex;
+            gap: 8em;
+        }
+    }
+
+    .level-horizontal_bar {
+        .level-hiking_container {
+            align-items: center;
+        }
+        .level-steps_container {
+            display: flex;
+            gap: 12em;
+            align-items: end;
+        }
+    }
+}
+
+@media screen and(max-width: 688px) {
+    .activities-icons_container {
+        .icons_container {
+            gap: 2em;
+        }
+    }
+    .level-hiking_container {
+        .level-steps_container {
+            gap: 6em;
+        }
+    }
+    .activity-card {
+        width: 24em;
+        .card_pictures {
+            height: 8em;
+            width: 10em;
+        }
+    }
+}
+
+@media screen and(max-width: 476px) {
+    .activities-icons_container {
+        .icons_container {
+            flex-direction: column;
+        }
+    }
+
+    .activity-card {
+        width: 18em;
+        gap: 2em;
+        .card-pictures_container {
+            flex-direction: column;
+        }
+    }
+
+    .level-hiking_container {
+        .level-steps_container {
+            flex-direction: column;
+            align-items: center;
+            gap: 2em;
+        }
+    }
 }

@@ -7,7 +7,7 @@
     align-items: center;
 }
 
-/******************* BLOG *************************/
+/******************* BLOG HOME *************************/
 
 .articles-cards_container {
     display: flex;
@@ -57,9 +57,15 @@
     display: none;
 }
 
-/******************* BLOG TEST *************************/
+.tns-outer{
+    button{
+        display: none;
+    }
+}
 
-.articles-cards_container-test {
+/******************* BLOG *************************/
+
+.blog-articles-cards_container {
     padding: 3em 0em;
     display: flex;
     flex-wrap: wrap;
@@ -67,7 +73,7 @@
     justify-content: center;
 }
 
-.article-card-test {
+.blog-article-card {
     flex: 1 0;
     background: gray;
     padding: 26px;
@@ -112,17 +118,17 @@
 }
 
 @media screen and (max-width: 448px) {
-  .article-card {
-      margin: 0 24px;
-  }
+    .article-card {
+        margin: 0 24px;
+    }
 }
 
 @media screen and (max-width: 348px) {
-  .article-card {
-    max-width: 272px;
-    min-width: 272px;
-    margin: 0 auto;
-}
+    .article-card {
+        max-width: 272px;
+        min-width: 272px;
+        margin: 0 auto;
+    }
 }
 
 /******************* BLOG RESPONSIVE *************************/

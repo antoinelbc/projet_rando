@@ -5,6 +5,7 @@ const closeIcon = document.querySelector(".close-icon");
 const burgerIcon = document.querySelector(".burger-icon");
 const toTheTop = document.querySelector(".to-the-top");
 
+
 //Hamburger Menu
 
 function toggleHamburgerMenu() {
@@ -35,3 +36,4 @@ function goToTheTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+

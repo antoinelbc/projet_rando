@@ -48,7 +48,7 @@ h1,
 .activities-page_container,
 .blog-page_container,
 .prices-page_container {
-  margin: 3em 0;
+  margin: 3em 0em 3em 0em;
 }
 
 /******************* BACKGROUNDS *************************/
@@ -164,3 +164,41 @@ h1,
     background-color: var(--yellow);
   }
 }
+
+/******************* ANIMATIONS *************************/
+
+.js-scroll{
+  opacity: 0;
+}
+
+.js-scroll.scrolled{
+  opacity: 1;
+}
+
+.scrolled.slide-left {
+  animation: slide-in-left 1s ease-in-out both;
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+//TEST
+
+.hidden{
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+

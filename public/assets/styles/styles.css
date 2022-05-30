@@ -370,7 +370,7 @@ h1,
 .activities-page_container,
 .blog-page_container,
 .prices-page_container {
-  margin: 3em 0;
+  margin: 3em 0em 3em 0em;
 }
 
 /******************* BACKGROUNDS *************************/
@@ -485,11 +485,55 @@ h1,
   background-color: var(--yellow);
 }
 
+/******************* ANIMATIONS *************************/
+.js-scroll {
+  opacity: 0;
+}
+
+.js-scroll.scrolled {
+  opacity: 1;
+}
+
+.scrolled.slide-left {
+  animation: slide-in-left 1s ease-in-out both;
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
 /******************* MAIN MENU *************************/
+.header {
+  height: 128px;
+}
+
 .bar_container {
   display: flex;
   justify-content: space-evenly;
   box-shadow: 0px 4px 2px -2px #808080;
+  position: fixed;
+  z-index: 1000;
+  background: var(--white);
+  width: 100%;
+}
+
+.bar_container.sticky {
+  opacity: 0.95;
 }
 
 .main-nav_container {
@@ -522,7 +566,7 @@ h1,
   position: relative;
   color: black;
   transition: color 0.5s;
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   font-weight: bold;
 }
 
@@ -693,18 +737,24 @@ h1,
 }
 
 .user-block_mobile {
-  margin-top: 2em;
+  margin: 6em 1em;
   padding: 18px 0px;
-  border: 1px solid black;
+  border-radius: 28px;
+  background: rgba(245, 210, 75, 0.7);
 }
 .user-block_mobile .hello-user_container {
   padding: 0em 4em;
   font-size: 2rem;
 }
 
+.hamburger-menu, .hamburger, .to-the-top {
+  z-index: 2000;
+}
+
 /******************* RESPONSIVE NAVBAR *************************/
 @media screen and (max-width: 1079px) {
   .bar_container {
+    position: relative;
     justify-content: center;
   }
 
@@ -1867,7 +1917,7 @@ h1,
 .activities-aside_bar {
   height: 29em;
   position: sticky;
-  top: 0;
+  top: 10em;
   padding-top: 16px;
 }
 
@@ -1941,6 +1991,85 @@ h1,
   width: 18em;
 }
 
+.activities-horizontal_bar,
+.level-horizontal_bar {
+  display: none;
+}
+
+/******************* ACTIVITIES RESPONSIVE *************************/
+@media screen and (max-width: 1294px) {
+  .activities-aside_bar {
+    display: none;
+  }
+
+  .activities-horizontal_bar,
+.level-horizontal_bar {
+    display: flex;
+    justify-content: center;
+  }
+
+  .activities-horizontal_bar {
+    margin-top: 2em;
+  }
+
+  .main-activities_container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .activities-icons_container {
+    display: flex;
+  }
+  .activities-icons_container .icons_container {
+    display: flex;
+    gap: 8em;
+  }
+
+  .level-horizontal_bar .level-hiking_container {
+    align-items: center;
+  }
+  .level-horizontal_bar .level-steps_container {
+    display: flex;
+    gap: 12em;
+    align-items: end;
+  }
+}
+@media screen and (max-width: 688px) {
+  .activities-icons_container .icons_container {
+    gap: 2em;
+  }
+
+  .level-hiking_container .level-steps_container {
+    gap: 6em;
+  }
+
+  .activity-card {
+    width: 24em;
+  }
+  .activity-card .card_pictures {
+    height: 8em;
+    width: 10em;
+  }
+}
+@media screen and (max-width: 476px) {
+  .activities-icons_container .icons_container {
+    flex-direction: column;
+  }
+
+  .activity-card {
+    width: 18em;
+    gap: 2em;
+  }
+  .activity-card .card-pictures_container {
+    flex-direction: column;
+  }
+
+  .level-hiking_container .level-steps_container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
+}
 .prices-page_container .title_container {
   display: flex;
   justify-content: center;
@@ -2058,7 +2187,7 @@ h1,
   align-items: center;
 }
 
-/******************* BLOG *************************/
+/******************* BLOG HOME *************************/
 .articles-cards_container {
   display: flex;
   justify-content: space-evenly;
@@ -2105,8 +2234,12 @@ h1,
   display: none;
 }
 
-/******************* BLOG TEST *************************/
-.articles-cards_container-test {
+.tns-outer button {
+  display: none;
+}
+
+/******************* BLOG *************************/
+.blog-articles-cards_container {
   padding: 3em 0em;
   display: flex;
   flex-wrap: wrap;
@@ -2114,7 +2247,7 @@ h1,
   justify-content: center;
 }
 
-.article-card-test {
+.blog-article-card {
   flex: 1 0;
   background: gray;
   padding: 26px;
