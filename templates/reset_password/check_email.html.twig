@@ -1,7 +1,10 @@
-{% extends 'base.html.twig' %} {% block title %}Réinitialisation du mot de passe{% endblock %} 
+{% extends 'base.html.twig' %} 
+
+{% block title %}Réinitialisation du mot de passe{% endblock %} 
 
 {% block body %}
 
+<div class="global-container">
 <p>
     Un e-mail vient d'être envoyé avec un lien que vous pourrez utiliser pour
     réinitialiser votre mot de passe. Ce lien expirera dans
@@ -13,5 +16,7 @@
     Si vous ne recevez pas d'e-mail, veuillez vérifier votre dossier spam ou
     <a href="{{ path('app_forgot_password_request') }}"> renvoyer un email</a>.
 </p>
+</div>
+<div class="mountain-background"></div>
 
 {% endblock %}
