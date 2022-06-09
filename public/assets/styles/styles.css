@@ -823,7 +823,7 @@ h1,
   font-weight: 600;
 }
 
-.footer-menu__link:hover {
+.footer-menu__link:hover, .footer-legal__link:hover {
   color: var(--yellow);
 }
 
@@ -1996,6 +1996,37 @@ h1,
   display: none;
 }
 
+/******************* ACTIVITIES ACCORDION *************************/
+.level-hiking {
+  cursor: pointer;
+}
+
+.level-hiking .level-content {
+  display: none;
+}
+
+.level-hiking.is-open .level-content {
+  display: block;
+}
+
+.level-content, .level-content_horizontal {
+  margin-top: 0.8em;
+  padding: 1em;
+  border: 1px solid var(--green);
+  border-radius: 5px;
+}
+
+.level-content_list, .level-content_list_horizontal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.level-content_horizontal li {
+  text-align: center;
+}
+
 /******************* ACTIVITIES RESPONSIVE *************************/
 @media screen and (max-width: 1294px) {
   .activities-aside_bar {
@@ -2202,7 +2233,6 @@ h1,
   padding: 24px;
   background: var(--pale-grey);
   border-radius: 24px;
-  box-shadow: 5px 5px 5px solid black;
   cursor: grab;
 }
 .article-card .blog-btn_container .admin-actions_container {
@@ -2213,7 +2243,7 @@ h1,
 }
 
 .tns-item {
-  box-shadow: 1px 1px 5px var(--grey);
+  box-shadow: 0px 1px 1px var(--green);
   width: 24em;
 }
 
@@ -2249,11 +2279,12 @@ h1,
 
 .blog-article-card {
   flex: 1 0;
-  background: gray;
+  background: var(--pale-grey);
   padding: 26px;
   max-width: 24em;
   min-width: 22em;
   border-radius: 24px;
+  box-shadow: 0px 1px 1px var(--yellow);
 }
 
 /******************* BLOG HOME RESPONSIVE *************************/

@@ -23,7 +23,6 @@
     padding: 24px;
     background: var(--pale-grey);
     border-radius: 24px;
-    box-shadow: 5px 5px 5px solid black;
     cursor: grab;
     .blog-btn_container {
         .admin-actions_container {
@@ -36,7 +35,7 @@
 }
 
 .tns-item {
-    box-shadow: 1px 1px 5px var(--grey);
+    box-shadow: 0px 1px 1px var(--green);
     width: 24em;
 }
 
@@ -75,12 +74,13 @@
 
 .blog-article-card {
     flex: 1 0;
-    background: gray;
+    background: var(--pale-grey);
     padding: 26px;
     max-width: 24em;
     min-width: 22em;
     border-radius: 24px;
-}
+    box-shadow: 0px 1px 1px var(--yellow);
+  }
 
 /******************* BLOG HOME RESPONSIVE *************************/
 

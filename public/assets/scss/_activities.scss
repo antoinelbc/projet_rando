@@ -101,6 +101,38 @@
     display: none;
 }
 
+/******************* ACTIVITIES ACCORDION *************************/
+
+.level-hiking{
+    cursor: pointer;
+}
+
+.level-hiking .level-content {
+    display: none;
+  }
+  
+.level-hiking.is-open .level-content {
+    display: block;
+  }
+
+.level-content, .level-content_horizontal{
+    margin-top: 0.8em;
+    padding: 1em;
+    border: 1px solid var(--green);
+    border-radius: 5px;
+}
+
+.level-content_list, .level-content_list_horizontal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.level-content_horizontal li{
+    text-align: center;
+}
+
 /******************* ACTIVITIES RESPONSIVE *************************/
 
 @media screen and(max-width: 1294px) {
