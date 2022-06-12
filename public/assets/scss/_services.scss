@@ -46,3 +46,26 @@
     }
   }
 }
+
+.check-email_container{
+  padding-top: 10em;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.reset-pw_container {
+  padding: 2em 0em 18em 0em;
+  form{
+  display: flex;
+  flex-direction: column;
+  }
+  li{
+    /* Messages d'erreurs */
+    font-weight: bold;
+    color: #D10000;
+  };
+  .contact-btn_container{
+    justify-content: flex-start;
+  }
+}

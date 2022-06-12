@@ -19,20 +19,20 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use DateTime;
 use DateTimeZone;
 
-  /**
-     * @IsGranted("ROLE_ADMIN")
-   */
+
 #[Route('/articles')]
 class ArticlesController extends AbstractController
 {
     public function __construct(private CommentsRepository $commentsRepository){  
     }
-
+     /**
+     * @IsGranted("ROLE_ADMIN")
+     */
     #[Route('/', name: 'app_articles_index', methods: ['GET'])]
     public function index(ArticlesRepository $articlesRepository): Response
     {
         return $this->render('articles/index.html.twig', [
-            'articles' => $articlesRepository->findAll(),
+            'articles' => $articlesRepository->findBy([], ['id' => 'DESC']),
         ]);
     }
 

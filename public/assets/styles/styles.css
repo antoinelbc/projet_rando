@@ -705,7 +705,7 @@ h1,
   transform: translateX(-100%);
   transition: transform 0.2s;
   width: 30%;
-  min-width: 265px;
+  min-width: 300px;
   top: 0;
   left: 0;
   right: 0;
@@ -969,6 +969,29 @@ h1,
 }
 .reset-password-form_container form .submit-btn .fa-circle-arrow-right {
   font-size: 2.2rem;
+}
+
+.check-email_container {
+  padding-top: 10em;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.reset-pw_container {
+  padding: 2em 0em 18em 0em;
+}
+.reset-pw_container form {
+  display: flex;
+  flex-direction: column;
+}
+.reset-pw_container li {
+  /* Messages d'erreurs */
+  font-weight: bold;
+  color: #D10000;
+}
+.reset-pw_container .contact-btn_container {
+  justify-content: flex-start;
 }
 
 /******************* FORMS GENERAL *************************/
@@ -1440,6 +1463,35 @@ h1,
   outline: 1px solid var(--grey);
 }
 
+.table-show_comment td:last-of-type {
+  display: flex;
+  gap: 16px;
+}
+.table-show_comment td:last-of-type .edit-btn_container {
+  align-items: center;
+}
+.table-show_comment td:last-of-type .edit-btn_container a {
+  padding: 22px;
+}
+
+/******************* RESPONSIVE *************************/
+@media screen and (max-width: 712px) {
+  .admin-table_container table .actions-btn_container {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 586px) {
+  .comments-table_container {
+    display: block;
+    overflow-x: auto;
+  }
+}
+@media screen and (max-width: 486px) {
+  .article-table_container {
+    display: block;
+    overflow-x: auto;
+  }
+}
 .home-header_image {
   height: 40em;
   position: relative;
@@ -1549,6 +1601,12 @@ h1,
 .to-about_picture {
   height: 18em;
   min-width: 542px;
+}
+
+.to-about_container .yellow-btn_container {
+  display: flex;
+  justify-content: center;
+  padding-top: 4.5em;
 }
 
 /******************* TO ACTIVITIES *************************/

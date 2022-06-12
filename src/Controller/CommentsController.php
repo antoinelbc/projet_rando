@@ -59,7 +59,7 @@ class CommentsController extends AbstractController
     {   
         //
         if($comment->getUser() != $this->getUser()){ 
-            return $this->json(['code' => 403, 'erreur' => 'Vous ne pouvez pas modifier le message d\'un autre utilisateur  !'], 403);
+            return $this->json(['code' => 403, 'erreur' => 'Vous ne pouvez pas modifier le message d\'un autre utilisateur ! Seule la suppression est acceptée '], 403);
             }
         else{
         $form = $this->createForm(CommentsType::class, $comment);

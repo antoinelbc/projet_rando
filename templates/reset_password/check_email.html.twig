@@ -5,8 +5,9 @@
 {% block body %}
 
 <div class="global-container">
+    <div class="check-email_container">
 <p>
-    Un e-mail vient d'être envoyé avec un lien que vous pourrez utiliser pour
+    Un e-mail vient d'être envoyé à votre adresse avec un lien que vous pourrez utiliser pour
     réinitialiser votre mot de passe. Ce lien expirera dans
     {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle')
 
@@ -16,6 +17,7 @@
     Si vous ne recevez pas d'e-mail, veuillez vérifier votre dossier spam ou
     <a href="{{ path('app_forgot_password_request') }}"> renvoyer un email</a>.
 </p>
+</div>
 </div>
 <div class="mountain-background"></div>
 
