@@ -517,6 +517,28 @@ h1,
   transition: opacity 1s ease-in;
 }
 
+/******************* ALERTS *************************/
+.register-page_container, .login-page_container {
+  position: relative;
+}
+
+.alert-success {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  font-family: "Nunito", Verdana, sans-serif;
+  background-color: var(--white);
+  color: var(--blue);
+  padding: 2em;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.mail-valid {
+  top: 128px;
+}
+
 /******************* MAIN MENU *************************/
 .header {
   height: 128px;
@@ -994,6 +1016,16 @@ h1,
   justify-content: flex-start;
 }
 
+/* RESPONSIVE */
+@media screen and (max-width: 460px) {
+  .reset-password-form_container form div input {
+    width: 18em;
+  }
+  .reset-password-form_container form .submit-btn {
+    top: 3.5em;
+    left: 18.2em;
+  }
+}
 /******************* FORMS GENERAL *************************/
 .login-page_container,
 .register-page_container {

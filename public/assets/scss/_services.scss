@@ -69,3 +69,19 @@
     justify-content: flex-start;
   }
 }
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 460px){
+
+.reset-password-form_container form{
+  div input{
+    width: 18em;
+  }
+  .submit-btn {
+    top: 3.5em;
+    left: 18.2em;
+  } 
+}
+}
+

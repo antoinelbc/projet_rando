@@ -16,7 +16,6 @@ class CategoriesType extends AbstractType
             ->add('name', TextType::class, [
                 'label' => 'Nom de votre catégorie'
             ])
-            //->add('articles')
         ;
     }
 
