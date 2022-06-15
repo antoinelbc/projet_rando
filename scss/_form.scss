@@ -26,7 +26,7 @@
 }
 
 .form-input {
-  padding: 4px;
+  padding: 0.25em;
   width: 240px;
   background: var(--white);
   border: 1px solid #dadada;
@@ -70,11 +70,11 @@
   margin-bottom: 3em;
   h1 {
     text-align: center;
-    padding-top: 16px;
+    padding-top: 1em;
   }
   form {
-    width: 342px;
-    height: 72px;
+    width: 21.375em;
+    height: 4.5em;
     margin: 0 auto;
   }
   .form-field {
@@ -82,7 +82,7 @@
     position: relative;
   }
   .form-field:first-of-type {
-    padding-top: 16px;
+    padding-top: 1em;
   }
   .form-icon {
     display: flex;
@@ -106,7 +106,7 @@
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  padding: 40px;
+  padding: 2.5em;
   p {
     text-align: center;
   }
@@ -127,7 +127,7 @@
 .register-form_container form {
   height: 36em;
   width: 24em;
-  padding: 24px;
+  padding: 1.5em;
   div {
     display: flex;
     flex-direction: column;

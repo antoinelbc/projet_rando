@@ -335,7 +335,7 @@ h1,
 .blog-page_container h1,
 .prices-page_container h1 {
   font-size: 3.2rem;
-  margin: 16px 0px;
+  margin: 1em 0em;
   position: relative;
   display: inline;
   text-align: center;
@@ -363,7 +363,7 @@ h1,
 .global-container {
   margin: 0 auto;
   max-width: 1400px;
-  padding: 0px 16px;
+  padding: 0em 1em;
 }
 
 .about-page_container,
@@ -399,7 +399,7 @@ h1,
   padding-top: 1.5em;
 }
 .yellow-btn_container a {
-  padding: 12px;
+  padding: 0.75em;
   background-color: rgba(245, 210, 75, 0.7);
   color: black;
   font-weight: bold;
@@ -415,12 +415,12 @@ h1,
 .admin-btn_container {
   display: flex;
   justify-content: flex-start;
-  padding: 20px 0px;
+  padding: 1.25em 0em;
 }
 .admin-btn_container a,
 .admin-btn_container button {
   font-weight: bold;
-  padding: 16px;
+  padding: 1em;
   color: var(--green);
   background: var(--white);
   border: 1px solid var(--green);
@@ -447,7 +447,7 @@ h1,
 }
 .blog-btn_container a,
 .blog-btn_container button {
-  padding: 12px;
+  padding: 0.75em;
   color: black;
   background-color: #f7db6e;
   font-weight: 600;
@@ -471,7 +471,7 @@ h1,
 }
 .contact-btn_container .button,
 .contact-btn_container .btn {
-  padding: 12px;
+  padding: 0.75em;
   color: white;
   background-color: var(--green);
   font-weight: bold;
@@ -584,7 +584,7 @@ h1,
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  padding: 24px;
+  padding: 1.5em;
   gap: 32px;
 }
 
@@ -794,13 +794,13 @@ h1,
 }
 .footer_container {
   display: flex;
-  padding: 40px 0px;
+  padding: 2.5em 0em;
   background-color: var(--white);
   gap: 32px;
   box-shadow: 1px 1px 5px #808080;
 }
 .footer_container h2 {
-  padding-bottom: 24px;
+  padding-bottom: 1.5em;
   color: var(--green);
 }
 
@@ -814,7 +814,7 @@ h1,
 
 .footer-end_container {
   width: 30%;
-  padding-right: 16px;
+  padding-right: 1em;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -825,7 +825,7 @@ h1,
 }
 
 .footer-menu_container {
-  padding-bottom: 12px;
+  padding-bottom: 0.75em;
   box-shadow: 0px 2px 0px var(--green);
 }
 
@@ -839,7 +839,7 @@ h1,
 
 .footer-menu__item,
 .footer-legal__item {
-  padding: 8px 0px;
+  padding: 0.5em 0em;
 }
 
 .footer-menu__link,
@@ -854,7 +854,7 @@ h1,
 }
 
 .footer-legal_container {
-  padding-top: 12px;
+  padding-top: 0.75em;
 }
 
 .footer-legal--list {
@@ -872,7 +872,7 @@ h1,
 .footer-legal_row:last-of-type {
   display: flex;
   justify-content: center;
-  padding-top: 16px;
+  padding-top: 1em;
 }
 
 .footer-social-link--list {
@@ -1057,7 +1057,7 @@ h1,
 }
 
 .form-input {
-  padding: 4px;
+  padding: 0.25em;
   width: 240px;
   background: var(--white);
   border: 1px solid #dadada;
@@ -1102,11 +1102,11 @@ h1,
 }
 .login-form_container h1 {
   text-align: center;
-  padding-top: 16px;
+  padding-top: 1em;
 }
 .login-form_container form {
-  width: 342px;
-  height: 72px;
+  width: 21.375em;
+  height: 4.5em;
   margin: 0 auto;
 }
 .login-form_container .form-field {
@@ -1114,7 +1114,7 @@ h1,
   position: relative;
 }
 .login-form_container .form-field:first-of-type {
-  padding-top: 16px;
+  padding-top: 1em;
 }
 .login-form_container .form-icon {
   display: flex;
@@ -1137,7 +1137,7 @@ h1,
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  padding: 40px;
+  padding: 2.5em;
 }
 .form-info p {
   text-align: center;
@@ -1157,7 +1157,7 @@ h1,
 .register-form_container form {
   height: 36em;
   width: 24em;
-  padding: 24px;
+  padding: 1.5em;
 }
 .register-form_container form div {
   display: flex;
@@ -1244,8 +1244,8 @@ h1,
 .article_container {
   flex-direction: column;
   background: var(--white);
-  padding-top: 16px;
-  margin-top: 16px;
+  padding-top: 1em;
+  margin-top: 1em;
 }
 
 .article-image {
@@ -1267,7 +1267,7 @@ h1,
 
 .show_categories {
   background: rgba(245, 210, 75, 0.6);
-  padding: 8px;
+  padding: 0.5em;
 }
 
 .article_author-date {
@@ -1275,14 +1275,14 @@ h1,
 }
 
 .article-content_container {
-  padding-top: 40px;
+  padding-top: 2.5em;
 }
 .article-content_container p {
   line-height: 1.6em;
 }
 
 .edit-or-delete_container {
-  padding-top: 24px;
+  padding-top: 1.5em;
   margin: 0 auto;
   gap: 24px;
 }
@@ -1304,30 +1304,30 @@ h1,
 
 /******************* COMMENTS *************************/
 .comments-section_container {
-  margin-top: 48px;
-  padding-top: 40px;
+  margin-top: 3em;
+  padding-top: 2.5em;
   background: var(--white);
   border-top: 1px solid black;
 }
 
 .comments_container {
-  padding: 16px 0px 92px 0px;
+  padding: 1em 0em 5.75em 0em;
   gap: 16px;
 }
 
 .comment {
-  width: 684px;
+  width: 42.75em;
   gap: 8px;
   background: linear-gradient(117.5deg, rgba(218, 218, 218, 0.6) 76.5%, rgba(66, 138, 19, 0.6) 32.5%);
-  padding: 24px 0px;
+  padding: 1.5em 0em;
   border-radius: 4px;
-  margin-top: 24px;
+  margin-top: 1.5em;
 }
 
 .comment_info {
   width: 70%;
   justify-content: space-between;
-  padding-bottom: 4px;
+  padding-bottom: 0.25em;
   box-shadow: 0px 2px 0px black;
 }
 
@@ -1342,14 +1342,14 @@ h1,
 }
 
 .comment-submit_container {
-  padding-top: 16px;
+  padding-top: 1em;
 }
 
 .leave-comment-form_container {
   width: 50em;
   background: linear-gradient(117.5deg, rgba(218, 218, 218, 0.6) 56.5%, rgba(66, 138, 19, 0.6) 32.5%);
   gap: 16px;
-  padding: 24px;
+  padding: 1.5em;
   border-radius: 8px;
   box-shadow: 1px 1px 8px black;
 }
@@ -1358,7 +1358,7 @@ h1,
   justify-content: center;
 }
 .leave-comment-form_container textarea {
-  padding: 4px;
+  padding: 0.25em;
   border: none;
   background: white;
   border: 1px solid #dadada;
@@ -1418,7 +1418,7 @@ h1,
   background-color: var(--yellow);
 }
 .admin-table_container table thead th {
-  padding: 8px;
+  padding: 0.5em;
 }
 .admin-table_container table tbody tr {
   background: var(--white);
@@ -1440,7 +1440,7 @@ h1,
 /* FIX DELETE BUTTON BUG */
 .article-table_container .btn,
 .comments-table_container .btn {
-  padding: 16px;
+  padding: 1em;
   font-family: "Nunito", sans-serif;
   font-size: 1.6rem;
 }
@@ -1482,7 +1482,7 @@ h1,
   width: 50em;
   background: linear-gradient(117.5deg, rgba(245, 210, 75, 0.6) 56.5%, rgba(218, 218, 218, 0.6) 32.5%);
   gap: 16px;
-  padding: 24px;
+  padding: 1.5em;
   border-radius: 8px;
   box-shadow: 1px 1px 8px black;
 }
@@ -1496,7 +1496,7 @@ h1,
 }
 .article-admin-form_container form div .new-article_input,
 .comments-admin-form_container form div .new-article_input {
-  padding: 4px;
+  padding: 0.25em;
   border: none;
   background: white;
   border: 1px solid #dadada;
@@ -1546,7 +1546,7 @@ h1,
   align-items: center;
 }
 .table-show_comment td:last-of-type .edit-btn_container a {
-  padding: 22px;
+  padding: 1.375em;
 }
 
 /******************* RESPONSIVE *************************/
@@ -1694,7 +1694,7 @@ h1,
 
 .home-activity-card {
   max-width: 20em;
-  padding-bottom: 16px;
+  padding-bottom: 1em;
   position: relative;
   flex: 1 0;
   background-color: var(--white);
@@ -1720,12 +1720,12 @@ h1,
 }
 
 .activity-card-bottom {
-  padding-top: 16px;
+  padding-top: 1em;
   display: flex;
 }
 
 .activity-card_info {
-  padding: 0px 16px 40px 16px;
+  padding: 0em 1em 2.5em 1em;
   position: absolute;
   top: 0;
   left: 0;
@@ -1766,7 +1766,7 @@ h1,
   position: absolute;
   top: -10em;
   left: 2em;
-  padding: 16px;
+  padding: 1em;
   background-color: rgba(242, 242, 242, 0.9);
   border-radius: 12px;
 }
@@ -1984,7 +1984,7 @@ h1,
 
 /******************* ABOUT  *************************/
 .general-content_container {
-  padding: 32px 0px 48px 0px;
+  padding: 2em 0em 3em 0em;
   flex-direction: column;
   gap: 20px;
 }
@@ -1998,7 +1998,7 @@ h1,
 }
 
 .column {
-  flex: 1 593px;
+  flex: 1 37em;
 }
 
 .about-picture {
@@ -2051,14 +2051,14 @@ h1,
   height: 29em;
   position: sticky;
   top: 10em;
-  padding-top: 16px;
+  padding-top: 1em;
 }
 
 .activities-icons_container {
   gap: 16px;
 }
 .activities-icons_container h2 {
-  padding-bottom: 16px;
+  padding-bottom: 1em;
 }
 
 .activities-icon_card {
@@ -2095,7 +2095,7 @@ h1,
   border: 1px solid var(--grey);
   border-radius: 12px;
   box-shadow: 1px 1px 5px var(--grey);
-  padding: 32px;
+  padding: 2em;
   transition: transform 0.3s ease;
   background-color: var(--white);
 }
@@ -2262,7 +2262,7 @@ h1,
   border: 1px solid var(--grey);
   box-shadow: 1px 1px 5px var(--grey);
   border-radius: 8px;
-  padding: 44px;
+  padding: 2.75em;
   background-color: var(--white);
   transition: transform 0.3s ease;
 }
@@ -2302,14 +2302,14 @@ h1,
   font-weight: bold;
   background-color: var(--white);
   border: 1px solid var(--grey);
-  padding: 24px;
+  padding: 1.5em;
 }
 .prices-tables_container table thead {
   background-color: var(--yellow);
 }
 .prices-tables_container table thead th {
   text-align: left;
-  padding: 8px;
+  padding: 0.5em;
 }
 .prices-tables_container table tbody tr {
   background: var(--white);
@@ -2321,7 +2321,7 @@ h1,
   background-color: var(--grey);
 }
 .prices-tables_container table td {
-  padding: 8px;
+  padding: 0.5em;
 }
 
 .prices-info_container {
@@ -2355,7 +2355,7 @@ h1,
 .articles-cards_container {
   display: flex;
   justify-content: space-evenly;
-  padding: 48px 0px;
+  padding: 3em 0em;
   gap: 100px;
 }
 
@@ -2363,7 +2363,7 @@ h1,
   height: 26em;
   min-width: 328px;
   max-width: 356px;
-  padding: 24px;
+  padding: 1.5em;
   background: var(--pale-grey);
   border-radius: 24px;
   cursor: grab;
@@ -2386,7 +2386,7 @@ h1,
 
 .article-card_info {
   gap: 32px;
-  padding: 16px 0px;
+  padding: 1em 0em;
 }
 .article-card_info .article-card_title {
   font-weight: bold;
@@ -2413,7 +2413,7 @@ h1,
 .blog-article-card {
   flex: 1 0;
   background: var(--pale-grey);
-  padding: 26px;
+  padding: 1.625em;
   max-width: 24em;
   min-width: 22em;
   border-radius: 24px;
@@ -2429,7 +2429,7 @@ h1,
   .article-card {
     max-width: 284px;
     min-width: 284px;
-    padding: 24px;
+    padding: 1.5em;
   }
 }
 @media screen and (max-width: 980px) {
@@ -2453,7 +2453,7 @@ h1,
 }
 @media screen and (max-width: 448px) {
   .article-card {
-    margin: 0 24px;
+    margin: 0 1.5em;
   }
 }
 @media screen and (max-width: 348px) {
@@ -2468,7 +2468,7 @@ h1,
   .article-card-test {
     max-width: 22em;
     min-width: 16em;
-    padding: 20px;
+    padding: 1.25em;
   }
 }
 /******************* CONTACT FORM GENERAL  *************************/
@@ -2506,12 +2506,12 @@ h1,
 }
 
 .contact-form {
-  width: 700px;
-  height: 514px;
+  width: 43.75em;
+  height: 32.125em;
   position: relative;
   background-color: rgba(243, 243, 243, 0.94);
   gap: 16px;
-  padding: 24px;
+  padding: 1.5em;
   border-radius: 8px;
   border: 1px solid #dadada;
 }
@@ -2526,7 +2526,7 @@ h1,
   color: var(--green);
 }
 .contact-form .form-control {
-  padding: 4px;
+  padding: 0.25em;
   border: none;
   background: white;
   border: 1px solid #dadada;

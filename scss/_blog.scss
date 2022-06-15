@@ -12,7 +12,7 @@
 .articles-cards_container {
     display: flex;
     justify-content: space-evenly;
-    padding: 48px 0px;
+    padding: 3em 0em;
     gap: 100px;
 }
 
@@ -20,7 +20,7 @@
     height: 26em;
     min-width: 328px;
     max-width: 356px;
-    padding: 24px;
+    padding: 1.5em;
     background: var(--pale-grey);
     border-radius: 24px;
     cursor: grab;
@@ -45,7 +45,7 @@
 
 .article-card_info {
     gap: 32px;
-    padding: 16px 0px;
+    padding: 1em 0em;
     .article-card_title {
         font-weight: bold;
         text-align: center;
@@ -75,7 +75,7 @@
 .blog-article-card {
     flex: 1 0;
     background: var(--pale-grey);
-    padding: 26px;
+    padding: 1.625em;
     max-width: 24em;
     min-width: 22em;
     border-radius: 24px;
@@ -91,7 +91,7 @@
     .article-card {
         max-width: 284px;
         min-width: 284px;
-        padding: 24px;
+        padding: 1.5em;
     }
 }
 
@@ -119,7 +119,7 @@
 
 @media screen and (max-width: 448px) {
     .article-card {
-        margin: 0 24px;
+        margin: 0 1.5em;
     }
 }
 
@@ -137,6 +137,6 @@
     .article-card-test {
         max-width: 22em;
         min-width: 16em;
-        padding: 20px;
+        padding: 1.25em;
     }
 }

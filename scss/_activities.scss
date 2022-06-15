@@ -21,13 +21,13 @@
     height: 29em;
     position: sticky;
     top: 10em;
-    padding-top: 16px;
+    padding-top: 1em;
 }
 
 .activities-icons_container {
     gap: 16px;
     h2 {
-        padding-bottom: 16px;
+        padding-bottom: 1em;
     }
 }
 
@@ -67,7 +67,7 @@
     border: 1px solid var(--grey);
     border-radius: 12px;
     box-shadow: 1px 1px 5px var(--grey);
-    padding: 32px;
+    padding: 2em;
     transition: transform 0.3s ease;
     background-color: var(--white);
     p {

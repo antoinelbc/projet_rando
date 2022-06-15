@@ -35,12 +35,12 @@
 }
 
 .contact-form {
-  width: 700px;
-  height: 514px;
+  width: 43.75em;
+  height: 32.125em;
   position: relative;
   background-color: rgba(243, 243, 243, 0.94);
   gap: 16px;
-  padding: 24px;
+  padding: 1.5em;
   border-radius: 8px;
   border: 1px solid #dadada;
   h1 {
@@ -54,7 +54,7 @@
     }
   }
   .form-control {
-    padding: 4px;
+    padding: 0.25em;
     border: none;
     background: white;
     border: 1px solid #dadada;

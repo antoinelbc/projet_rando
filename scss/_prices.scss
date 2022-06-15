@@ -28,7 +28,7 @@
   border: 1px solid var(--grey);
   box-shadow: 1px 1px 5px var(--grey);
   border-radius: 8px;
-  padding: 44px;
+  padding: 2.75em;
   background-color: var(--white);
   transition: transform 0.3s ease;
   h3 {
@@ -66,13 +66,13 @@
       font-weight: bold;
       background-color: var(--white);
       border: 1px solid var(--grey);
-      padding: 24px;
+      padding: 1.5em;
     }
     thead {
       background-color: var(--yellow);
       th {
         text-align: left;
-        padding: 8px;
+        padding: 0.5em;
       }
     }
     tbody tr {
@@ -85,7 +85,7 @@
       background-color: var(--grey);
     }
     td {
-      padding: 8px;
+      padding: 0.5em;
     }
   }
 }

@@ -13,7 +13,7 @@
                 <tr>
                     <th>Id</th>
                     <th>Commentaire</th>
-                    <th>Date de publication</th>
+                    <th>Date/heure de publication</th>
                     <th>Article lié</th>
                     <th>Auteur</th>
                     <th>Actions</th>
@@ -24,11 +24,11 @@
                 <tr>
                     <td>{{ comment.id }}</td>
                     <td>{{ comment.content }}</td>
-                    <td>{{ comment.user.username }}</td>
                     <td>
                         {{ comment.publishedDate ? comment.publishedDate|date('d-m-y H:i:s', 'Europe/Paris') : '' }}
                     </td>
                     <td>{{ comment.article.title }}</td>
+                    <td>{{ comment.user.username }}</td>
                     <td class="actions-btn_container">
                    <!--      <div class="admin-btn_container">
                             <a

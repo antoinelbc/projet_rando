@@ -27,8 +27,8 @@
 .article_container {
     flex-direction: column;
     background: var(--white);
-    padding-top: 16px;
-    margin-top: 16px;
+    padding-top: 1em;
+    margin-top: 1em;
 }
 
 .article-image {
@@ -50,7 +50,7 @@
 
 .show_categories {
     background: rgba(245, 210, 75, 0.6);
-    padding: 8px;
+    padding: 0.5em;
 }
 
 .article_author-date {
@@ -58,14 +58,14 @@
 }
 
 .article-content_container {
-    padding-top: 40px;
+    padding-top: 2.5em;
     p {
         line-height: 1.6em;
     }
 }
 
 .edit-or-delete_container {
-    padding-top: 24px;
+    padding-top: 1.5em;
     margin: 0 auto;
     gap: 24px;
 }
@@ -89,35 +89,34 @@
 /******************* COMMENTS *************************/
 
 .comments-section_container {
-    margin-top: 48px;
-    padding-top: 40px;
+    margin-top: 3em;
+    padding-top: 2.5em;
     background: var(--white);
     border-top: 1px solid black;
 }
 
 .comments_container {
-    padding: 16px 0px 92px 0px;
+    padding: 1em 0em 5.75em 0em;
     gap: 16px;
 }
 
 .comment {
-    width: 684px;
+    width: 42.75em;
     gap: 8px;
     background: linear-gradient(
         117.5deg,
         rgba(218, 218, 218, 0.6) 76.5%,
         rgba(66, 138, 19, 0.6) 32.5%
     );
-    padding: 24px 0px;
+    padding: 1.5em 0em;
     border-radius: 4px;
-    margin-top: 24px;
+    margin-top: 1.5em;
 }
 
 .comment_info {
     width: 70%;
-
     justify-content: space-between;
-    padding-bottom: 4px;
+    padding-bottom: 0.25em;
     box-shadow: 0px 2px 0px black;
 }
 
@@ -132,7 +131,7 @@
 }
 
 .comment-submit_container {
-    padding-top: 16px;
+    padding-top: 1em;
 }
 
 .leave-comment-form_container {
@@ -143,7 +142,7 @@
         rgba(66, 138, 19, 0.6) 32.5%
     );
     gap: 16px;
-    padding: 24px;
+    padding: 1.5em;
     border-radius: 8px;
     box-shadow: 1px 1px 8px black;
     div {
@@ -151,7 +150,7 @@
         justify-content: center;
     }
     textarea {
-        padding: 4px;
+        padding: 0.25em;
         border: none;
         background: white;
         border: 1px solid #dadada;
