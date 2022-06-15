@@ -21,19 +21,42 @@ class RegistrationFormType extends AbstractType
         $builder
             ->add('username', TextType::class , [
                 'label' => 'Pseudo',
-                'attr' => ['class' => 'form-input']
-                ])
+                'attr' => ['class' => 'form-input'],
+                'constraints' => [
+                    new Length([
+                        'min' => 2,
+                        'minMessage' => 'Ce champ doit contenir entre 2 et 63 caractères',
+                        'max' => 63,
+                    ]),
+                ]])
             ->add('first_name', TextType::class , [
                 'label' => 'Prénom',
-                'attr' => ['class' => 'form-input']
-                ])
+                'attr' => ['class' => 'form-input'],
+                'constraints' => [
+                    new Length([
+                        'min' => 2,
+                        'minMessage' => 'Ce champ doit contenir entre 2 et 63 caractères',
+                        'max' => 63,
+                    ]),
+                ]])
             ->add('last_name', TextType::class , [
                 'label' => 'Nom',
-                'attr' => ['class' => 'form-input']
-                ])
+                'attr' => ['class' => 'form-input'],
+                'constraints' => [
+                    new Length([
+                        'min' => 2,
+                        'minMessage' => 'Ce champ doit contenir entre 2 et 63 caractères',
+                        'max' => 63,
+                    ]),
+                ]])
             ->add('email', EmailType::class, [
-                'attr' => ['class' => 'form-input']
-            ]) 
+                'attr' => ['class' => 'form-input'],
+                'constraints' => [
+                    new Length([
+                        'minMessage' => 'Ce champ ne peut pas excéder 180 caractères',
+                        'max' => 180,
+                    ]),
+            ]]) 
             ->add('agreeTerms', CheckboxType::class, [
                 'label' => 'Accepter les conditions',
                 'mapped' => false,

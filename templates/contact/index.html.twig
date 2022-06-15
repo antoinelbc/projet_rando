@@ -26,6 +26,11 @@
                 {{ form_end(contact_form) }}
             </div>
         </div>
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success contact-valid">
+                {{ message }}
+            </div>
+        {% endfor %}
     </div>
 </div>
 

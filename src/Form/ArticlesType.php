@@ -12,6 +12,9 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Validator\Constraints\File;
+use Symfony\Component\Validator\Constraints\Length;
+use Symfony\Component\Validator\Constraints\NotBlank;
+
 
 class ArticlesType extends AbstractType
 {
@@ -20,12 +23,21 @@ class ArticlesType extends AbstractType
         $builder
             ->add('title', TextType::class , [
                 'label' => 'Titre de l\'article',
-                'attr' => ['class' => 'new-article_input']
-            ])
+                'attr' => ['class' => 'new-article_input'],
+                'constraints' => [
+                    new Length([
+                        'minMessage' => 'Ce champ ne peut pas excéder 255 caractères',
+                        'max' => 255,
+                    ]),
+            ]])
             ->add('content',TextareaType::class, [
                 'label' => 'Contenu de l\'article',
-                'attr' => ['rows' => 20, 'class' => 'new-article_input']
-            ]) 
+                'attr' => ['rows' => 20, 'class' => 'new-article_input'],
+                'constraints' => [
+                    new NotBlank([
+                        'message' => 'Le contenu ne peut pas être vide',
+                    ]),
+            ]]) 
             
             //->add('published_date')
            //->add('user')

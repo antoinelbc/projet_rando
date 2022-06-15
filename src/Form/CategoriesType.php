@@ -14,7 +14,11 @@ class CategoriesType extends AbstractType
     {
         $builder
             ->add('name', TextType::class, [
-                'label' => 'Nom de votre catégorie'
+                'label' => 'Nom de votre catégorie',
+                new Length([
+                    'minMessage' => 'Une catégorie ne peut pas excéder 63 caractères',
+                    'max' => 63,
+                ]),
             ])
         ;
     }

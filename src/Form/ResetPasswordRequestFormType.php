@@ -7,6 +7,7 @@ use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Validator\Constraints\Length;
 
 class ResetPasswordRequestFormType extends AbstractType
 {
@@ -18,6 +19,10 @@ class ResetPasswordRequestFormType extends AbstractType
                 'constraints' => [
                     new NotBlank([
                         'message' => 'Merci d\'entrer votre email',
+                    ]),
+                    new Length([
+                        'minMessage' => 'Ce champ ne peut pas excéder 180 caractères',
+                        'max' => 180,
                     ]),
                 ],
             ])

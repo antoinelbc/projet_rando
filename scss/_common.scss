@@ -219,6 +219,10 @@ h1,
     font-size: 2rem;
 }
 
-.mail-valid{
+.mail-valid, .contact-valid{
   top: 128px;
+}
+
+.contact-valid{
+    padding: 1em;
 }
