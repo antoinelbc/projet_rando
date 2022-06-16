@@ -36,9 +36,7 @@ const fadeIn = () => {
     homeSlogan.classList.add('visible');
 }
 
+
 window.addEventListener('DOMContentLoaded', function () {
     fadeIn();
 })
-
-
-
