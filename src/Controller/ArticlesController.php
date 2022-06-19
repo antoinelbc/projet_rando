@@ -50,32 +50,29 @@ class ArticlesController extends AbstractController
 
             $image = $form->get('image')->getData();
 
-            // this condition is needed because the 'image' field is not required
-            // so the image file must be processed only when a file is uploaded
+            // image field not required so --> If Condition
             if ($image) {
                 $originalFilename = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME);
-                // this is needed to safely include the file name as part of the URL
+                //Include the name of the file in the URL
                 $safeFilename = $slugger->slug($originalFilename);
                 $newFilename = $safeFilename.'-'.uniqid().'.'.$image->guessExtension();
 
-                // Move the file to the directory where brochures are stored
+                // Move the file to the directory of images uploaded (configured in services.yaml)
                 try {
                     $image->move(
                         $this->getParameter('articles_directory'),
                         $newFilename
                     );
                 } catch (FileException $e) {
-                    // ... handle exception if something happens during file upload
+                    
                 }
 
-                // updates the 'imageFilename' property to store the image file name
-                // instead of its contents
+                // updates the 'imageFilename' property to store the image file name instead of its contents
                 $article->setPicture($newFilename);
             }
 
             $article->setUser($this->getUser());
             $article->setPublishedDate(new DateTime("now"));
-            //dump([$form->isSubmitted(), $form->isValid()]);
             $articlesRepository->add($article);
             return $this->redirectToRoute('app_articles_index', [], Response::HTTP_SEE_OTHER);
         }
@@ -100,7 +97,6 @@ class ArticlesController extends AbstractController
                 ->setUser($this->getUser())
                 ->setPublishedDate(new DateTime("now"));
             $this->commentsRepository->add($comment);
-            // return $this->redirectToRoute('app_comment_index', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->render('articles/show.html.twig', [

@@ -34,7 +34,7 @@ class RegistrationController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            // encode the plain password
+            // Crypt the password
             $user->setPassword(
             $userPasswordHasher->hashPassword(
                     $user,
@@ -46,7 +46,7 @@ class RegistrationController extends AbstractController
             $entityManager->flush();
 
 
-            // generate a signed url and email it to the user
+            //Send email to the user to confirm his register
             $this->emailVerifier->sendEmailConfirmation('app_verify_email', $user,
                 (new TemplatedEmail())
                     ->from(new Address('contact@antoinelbc.fr', 'L\'équipe Pyrénnées Rando Club'))
@@ -54,9 +54,9 @@ class RegistrationController extends AbstractController
                     ->subject('Confirmation de votre email')
                     ->htmlTemplate('registration/confirmation_email.html.twig')
             );
-            // do anything else you need here, like send an email
-
-            $this->addFlash('success', 'Afin de valider votre inscription, merci de cliquer sur le lien que nous venons de vous envoyer par email.');
+            
+            $this->addFlash('success', 'Afin de valider votre inscription, merci de cliquer sur le lien que nous 
+            venons de vous envoyer par email.');
             return $this->redirectToRoute('app_register');
            
         }
@@ -81,7 +81,7 @@ class RegistrationController extends AbstractController
             return $this->redirectToRoute('app_register');
         }
 
-        // validate email confirmation link, sets User::isVerified=true and persists
+        //Validate the email confirmation link, sets User::isVerified=true in the database
         try {
             $this->emailVerifier->handleEmailConfirmation($request, $user);
         } catch (VerifyEmailExceptionInterface $exception) {

@@ -7,6 +7,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Validator\Constraints\Length;
 
 class CategoriesType extends AbstractType
 {
@@ -15,11 +16,13 @@ class CategoriesType extends AbstractType
         $builder
             ->add('name', TextType::class, [
                 'label' => 'Nom de votre catégorie',
-                new Length([
-                    'minMessage' => 'Une catégorie ne peut pas excéder 63 caractères',
-                    'max' => 63,
-                ]),
-            ])
+
+                'constraints' => [
+                    new Length([
+                        'maxMessage' => 'Une catégorie ne peut pas excéder 63 caractères',
+                        'max' => 63,
+                    ]),
+            ]])
         ;
     }
 

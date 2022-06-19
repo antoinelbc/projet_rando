@@ -30,16 +30,16 @@ class ContactType extends AbstractType
             'label' => 'Votre e-mail',
             'constraints' => [
             new Length([
-                'minMessage' => 'Ce champ ne peut pas excéder 180 caractères',
                 'max' => 180,
+                'maxMessage' => 'Ce champ ne peut pas excéder 180 caractères',
             ]),
         ]])
         ->add('message', TextareaType::class, [
             'attr' => ['rows' => 10],
             'constraints' => [
                 new Length([
-                    'minMessage' => 'Votre message ne peut pas excéder 4000 caractères',
                     'max' => 4000,
+                    'maxMessage' => 'Votre message ne peut pas excéder 4000 caractères',
                 ]),
                 new NotBlank([
                     'message' => 'Le champ message ne peut pas être vide',
@@ -51,7 +51,7 @@ class ContactType extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            // Configure your form options here
+            //
         ]);
     }
 }

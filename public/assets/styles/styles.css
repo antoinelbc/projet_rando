@@ -293,6 +293,11 @@ template {
   --pale-grey: rgba(243, 243, 243, 0.6);
 }
 
+/* Fix scroll horizontal on mobile version */
+html, body {
+  overflow-x: hidden;
+}
+
 html {
   top: 0;
   left: 0;
@@ -307,7 +312,7 @@ body {
   font-size: 1.6rem;
   font-family: "Nunito", Verdana, sans-serif;
   font-weight: 400;
-  overflow-x: hidden;
+  position: relative;
 }
 
 /* 
@@ -1827,6 +1832,10 @@ h1,
 }
 
 /******************* HOME BLOG *************************/
+.home-blog_container {
+  width: 100%;
+}
+
 .home-blog-text_container {
   gap: 16px;
 }
